@@ -1,0 +1,15 @@
+{
+  "name": "language-lua-plus",
+  "main": "./lib/main",
+  "version": "0.0.0",
+  "description": "Lua grammar and snippets for Atom.",
+  "keywords": [
+    "language",
+    "lua"
+  ],
+  "repository": "https://github.com/Azganoth/language-lua-plus",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}
