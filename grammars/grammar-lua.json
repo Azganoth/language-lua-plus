@@ -1,0 +1,8 @@
+{
+  "scopeName": "source.lua",
+  "name": "Lua",
+
+  "fileTypes": [ "lua" ],
+
+  "patterns": []
+}

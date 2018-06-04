@@ -1,0 +1,32 @@
+{
+  "id": "lua",
+  "name": "Lua",
+  "type": "tree-sitter",
+  "parser": "tree-sitter-lua",
+  "legacyScopeName": "source.lua",
+
+  "fileTypes": [ "lua" ],
+
+  "folds": [
+    {
+      "start": {"type": "(", "index": "0"},
+      "end": {"type": ")", "index": "-1"}
+    },
+    {
+      "start": {"type": "[", "index": "0"},
+      "end": {"type": "]", "index": "-1"}
+    },
+    {
+      "start": {"type": "{", "index": "0"},
+      "end": {"type": "}", "index": "-1"}
+    }
+  ],
+
+  "comments": {
+    "start": "-- "
+  },
+
+  "scopes": {
+    "lua": "source.lua"
+  }
+}
