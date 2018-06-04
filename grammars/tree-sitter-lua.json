@@ -44,6 +44,7 @@
     "local_function > 'end'": "storage.type.function",
 
     "function_call > identifier": "entity.name.function",
+    "function_call > property_identifier": "entity.name.function",
     "function_call > method": "entity.name.function",
 
     "function_definition > parameters > identifier": "variable.parameter",
