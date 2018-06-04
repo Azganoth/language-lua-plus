@@ -31,7 +31,7 @@
 
     "comment": "comment",
     "string": "string",
-    "number": "constant.numberic",
+    "number": "constant.numeric",
 
     "function > function_name > identifier": "entity.name.function",
     "function > function_name > property_identifier": "entity.name.function",
