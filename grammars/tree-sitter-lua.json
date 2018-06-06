@@ -9,6 +9,19 @@
 
   "folds": [
     {
+      "type": [
+        "do_statement",
+        "if_statement",
+        "while_statement",
+        "repeat_statement",
+        "for_statement",
+        "for_in_statement",
+        "function",
+        "local_function",
+        "function_call"
+      ]
+    },
+    {
       "start": {"type": "(", "index": "0"},
       "end": {"type": ")", "index": "-1"}
     },
@@ -53,8 +66,7 @@
     "this": "variable.language",
     "self": "variable.language",
     "spread": "variable.parameter",
-    "'_G'": "variable.language",
-    "'_VERSION'": "variable.language",
+    "global_variable": "variable.language",
 
     "nil": "constant.language",
     "true": "constant.language.boolean",
