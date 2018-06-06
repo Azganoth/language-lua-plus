@@ -19,7 +19,8 @@
         "function",
         "local_function",
         "function_call"
-      ]
+      ],
+      "end": {"type": "end"}
     },
     {
       "start": {"type": "(", "index": "0"},
