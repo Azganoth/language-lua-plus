@@ -1,7 +1,7 @@
 {
   "name": "language-lua-plus",
   "main": "./lib/main",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Lua grammar and snippets for Atom.",
   "keywords": [
     "language",
