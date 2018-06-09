@@ -1,28 +1,44 @@
 {
+  "keywords": [
+    {
+      "text": "local",
+      "type": "keyword",
+      "description": "Local statement.",
+      "descriptionMoreURL": "#3.3.7"
+    }
+  ],
   "common": [
     {
-      "snippet": "${1:varName} = ${0:any}",
+      "snippet": "${1:variableName} = ${0:any}",
       "type": "variable",
-      "rightLabel": "varName = any",
+      "rightLabel": "variableName = any",
       "description": "Variable declaration.",
       "descriptionMoreURL": "#3.2",
       "replacementPrefix": "var"
     },
     {
-      "snippet": "goto ${1:labelName}",
-      "type": "snippet",
-      "rightLabel": "goto labelName",
-      "description": "The goto statement transfers the program control to a label.",
-      "descriptionMoreURL": "#3.3.4",
-      "replacementPrefix": "goto"
+      "snippet": "local ${1:variableName}${2: = ${0:any}}",
+      "type": "variable",
+      "rightLabel": "local variableName [= any]",
+      "description": "Local variable declaration.",
+      "descriptionMoreURL": "#3.3.7",
+      "replacementPrefix": "varl"
     },
     {
-      "snippet": ":: ${1:labelName} ::",
+      "snippet": ":: ${1:labelName} ::$0",
       "type": "snippet",
       "rightLabel": ":: labelName ::",
       "description": "Label statement.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "label"
+    },
+    {
+      "snippet": "goto ${1:labelName}",
+      "type": "snippet",
+      "rightLabel": "goto labelName",
+      "description": "Goto statement referring to a label.",
+      "descriptionMoreURL": "#3.3.4",
+      "replacementPrefix": "goto"
     },
     {
       "snippet": "return ${0:any}",
@@ -31,27 +47,20 @@
       "description": "Return values from a function or a chunk.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "return"
-    },
-    {
-      "text": "local",
-      "type": "keyword",
-      "description": "Local statement.",
-      "descriptionMoreURL": "#3.3.7"
-    },
-    {
-      "snippet": "local ${1:varName} ${2:= ${0:any}}",
-      "type": "variable",
-      "rightLabel": "local varName [= any]",
-      "description": "Local variable declaration.",
-      "descriptionMoreURL": "#3.3.7",
-      "replacementPrefix": "varl"
     }
   ],
   "control_structures": [
     {
+      "snippet": "${1:condition} and ${2:any} or ${3:any}",
+      "type": "snippet",
+      "rightLabel": "condition and any or any",
+      "description": "Ternary conditional expression.",
+      "replacementPrefix": "tern"
+    },
+    {
       "snippet": "do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "do 'code' end",
+      "rightLabel": "do code end",
       "description": "Explicit block.",
       "descriptionMoreURL": "#3.3.1",
       "replacementPrefix": "do"
@@ -65,9 +74,9 @@
       "replacementPrefix": "if"
     },
     {
-      "snippet": "if${1: not} ${2:condition} then\n\t'code'\nelse\n\t${0:-- code...}\nend",
+      "snippet": "if${1: not} ${2:condition} then\n\t${3:-- code...}\nelse\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "if [not] condition then 'code' end",
+      "rightLabel": "'ifblock' else 'code' end",
       "description": "If/else conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "ife"
@@ -75,7 +84,7 @@
     {
       "snippet": "elseif${1: not} ${2:condition} then\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "elseif [not] condition then 'code' end",
+      "rightLabel": "'ifblock' elseif [not] condition then 'code' end",
       "description": "Elseif conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "elif"
@@ -83,13 +92,13 @@
     {
       "snippet": "else\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "else 'code' end",
+      "rightLabel": "'ifblock' else 'code' end",
       "description": "Else conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "else"
     },
     {
-      "snippet": "while${1: not} ${1:condition} do\n\t${0:-- code...}\nend",
+      "snippet": "while${1: not} ${2:condition} do\n\t${0:-- code...}\nend",
       "type": "snippet",
       "rightLabel": "while [not] condition do 'code' end",
       "description": "While loop block.",
@@ -139,9 +148,9 @@
       "replacementPrefix": "fun"
     },
     {
-      "snippet": "${1:functionName} = function (${2:...}) 'code' end",
+      "snippet": "${1:functionName} = function (${2:...})\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "functionName = function(...) 'code end",
+      "rightLabel": "functionName = function(...) 'code' end",
       "description": "Function definition (anonymous).",
       "descriptionMoreURL": "#3.4.11",
       "replacementPrefix": "fundef"

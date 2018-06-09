@@ -51,18 +51,15 @@
     "function > function_name > property_identifier": "entity.name.function",
     "function > function_name > method": "entity.name.function",
     "function > parameters > identifier": "variable.parameter",
-    "function > 'end'": "storage.type.function",
 
     "local_function > identifier": "entity.name.function",
     "local_function > parameters > identifier": "variable.parameter",
-    "local_function > 'end'": "storage.type.function",
 
     "function_call > identifier": "entity.name.function",
     "function_call > property_identifier": "entity.name.function",
     "function_call > method": "entity.name.function",
 
     "function_definition > parameters > identifier": "variable.parameter",
-    "function_definition > 'end'": "storage.type.function",
 
     "this": "variable.language",
     "self": "variable.language",
