@@ -124,7 +124,7 @@
     {
       "snippet": "for ${1:key}, ${2:value} in pairs(${3:object}) do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>for</b> key, value <b>in</b> pairs(object) <b>do</b> <i>code</i> <b>end</b>",
+      "rightLabelHTML": "<b>for</b> key, value <b>in</b> <b>pairs</b>(object) <b>do</b> <i>code</i> <b>end</b>",
       "description": "For in loop block with pairs function.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "forp"
@@ -132,7 +132,7 @@
     {
       "snippet": "for ${1:index}, ${2:value} in ipairs(${3:object}) do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>for</b> index, value <b>in</b> ipairs(object) <b>do</b> <i>code</i> <b>end</b>",
+      "rightLabelHTML": "<b>for</b> index, value <b>in</b> <b>ipairs</b>(object) <b>do</b> <i>code</i> <b>end</b>",
       "description": "For in loop block with ipairs function.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "fori"
