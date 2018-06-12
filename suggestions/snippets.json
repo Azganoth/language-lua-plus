@@ -19,7 +19,7 @@
     {
       "snippet": "local ${1:variableName}${2: = ${0:any}}",
       "type": "variable",
-      "rightLabel": "local variableName [= any]",
+      "rightLabelHTML": "<b>local</b> variableName [= any]",
       "description": "Local variable declaration.",
       "descriptionMoreURL": "#3.3.7",
       "replacementPrefix": "varl"
@@ -27,7 +27,7 @@
     {
       "snippet": ":: ${1:labelName} ::$0",
       "type": "snippet",
-      "rightLabel": ":: labelName ::",
+      "rightLabelHTML": "<b>::</b> labelName <b>::</b>",
       "description": "Label statement.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "label"
@@ -35,7 +35,7 @@
     {
       "snippet": "goto ${1:labelName}",
       "type": "snippet",
-      "rightLabel": "goto labelName",
+      "rightLabelHTML": "<b>goto</b> labelName",
       "description": "Goto statement referring to a label.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "goto"
@@ -43,7 +43,7 @@
     {
       "snippet": "return ${0:any}",
       "type": "snippet",
-      "rightLabel": "return [any]",
+      "rightLabelHTML": "<b>return</b> [any]",
       "description": "Return values from a function or a chunk.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "return"
@@ -53,14 +53,14 @@
     {
       "snippet": "${1:condition} and ${2:any} or ${3:any}",
       "type": "snippet",
-      "rightLabel": "condition and any or any",
+      "rightLabelHTML": "condition <b>and</b> any <b>or</b> any",
       "description": "Ternary conditional expression.",
       "replacementPrefix": "tern"
     },
     {
       "snippet": "do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "do code end",
+      "rightLabelHTML": "<b>do</b> <i>code</i> <b>end</b>",
       "description": "Explicit block.",
       "descriptionMoreURL": "#3.3.1",
       "replacementPrefix": "do"
@@ -68,7 +68,7 @@
     {
       "snippet": "if${1: not} ${2:condition} then\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "if [not] condition then 'code' end",
+      "rightLabelHTML": "<b>if</b> [<b>not</b>] condition <b>then</b> <i>code</i> <b>end</b>",
       "description": "If conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "if"
@@ -76,7 +76,7 @@
     {
       "snippet": "if${1: not} ${2:condition} then\n\t${3:-- code...}\nelse\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "'ifblock' else 'code' end",
+      "rightLabelHTML": "<i>if_block</i> <b>else</b> <i>code</i> <b>end</b>",
       "description": "If/else conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "ife"
@@ -84,7 +84,7 @@
     {
       "snippet": "elseif${1: not} ${2:condition} then\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "'ifblock' elseif [not] condition then 'code' end",
+      "rightLabelHTML": "<i>if_block</i> <b>elseif</b> [<b>not</b>] condition <b>then</b> <i>code</i> <b>end</b>",
       "description": "Elseif conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "elif"
@@ -92,7 +92,7 @@
     {
       "snippet": "else\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "'ifblock' else 'code' end",
+      "rightLabelHTML": "<i>if_block</i> <b>else</b> <i>code</i> <b>end</b>",
       "description": "Else conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "else"
@@ -100,7 +100,7 @@
     {
       "snippet": "while${1: not} ${2:condition} do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "while [not] condition do 'code' end",
+      "rightLabelHTML": "<b>while</b> [<b>not</b>] condition <b>do</b> <i>code</i> <b>end</b>",
       "description": "While loop block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "while"
@@ -108,7 +108,7 @@
     {
       "snippet": "repeat\n\t${0:-- code...}\nuntil ${1:condition}",
       "type": "snippet",
-      "rightLabel": "repeat 'code' until condition",
+      "rightLabelHTML": "<b>repeat</b> <i>code</i> <b>until</b> condition",
       "description": "Repeat loop block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "repeat"
@@ -116,7 +116,7 @@
     {
       "snippet": "for ${1:i} = ${2:1}, ${3:iEnd}${4:, ${5:iSeq}} do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "for i = 1, iEnd [, iSeq] do 'code' end",
+      "rightLabelHTML": "<b>for</b> i = 1, iEnd [, iSeq] <b>do</b> <i>code</i> <b>end</b>",
       "description": "For loop block.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "for"
@@ -124,7 +124,7 @@
     {
       "snippet": "for ${1:key}, ${2:value} in pairs(${3:object}) do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "for key, value in pairs(object) do 'code' end",
+      "rightLabelHTML": "<b>for</b> key, value <b>in</b> pairs(object) <b>do</b> <i>code</i> <b>end</b>",
       "description": "For in loop block with pairs function.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "forp"
@@ -132,7 +132,7 @@
     {
       "snippet": "for ${1:index}, ${2:value} in ipairs(${3:object}) do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "for index, value in ipairs(object) do 'code' end",
+      "rightLabelHTML": "<b>for</b> index, value <b>in</b> ipairs(object) <b>do</b> <i>code</i> <b>end</b>",
       "description": "For in loop block with ipairs function.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "fori"
@@ -142,7 +142,7 @@
     {
       "snippet": "function ${1:functionName}(${2:...})\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "function functionName(...) 'code' end",
+      "rightLabelHTML": "<b>function</b> functionName(...) <i>code</i> <b>end</b>",
       "description": "Function statement.",
       "descriptionMoreURL": "#3.4.11",
       "replacementPrefix": "fun"
@@ -150,7 +150,7 @@
     {
       "snippet": "${1:functionName} = function (${2:...})\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabel": "functionName = function(...) 'code' end",
+      "rightLabelHTML": "functionName = <b>function</b>(...) <i>code</i> <b>end</b>",
       "description": "Function definition (anonymous).",
       "descriptionMoreURL": "#3.4.11",
       "replacementPrefix": "fundef"
