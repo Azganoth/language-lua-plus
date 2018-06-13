@@ -2,9 +2,7 @@
   "keywords": [
     {
       "text": "local",
-      "type": "keyword",
-      "description": "Local statement.",
-      "descriptionMoreURL": "#3.3.7"
+      "type": "keyword"
     }
   ],
   "common": [
@@ -17,7 +15,7 @@
       "replacementPrefix": "var"
     },
     {
-      "snippet": "local ${1:variableName}${2: = ${0:any}}",
+      "snippet": "local ${2:variableName} = ${0:any}",
       "type": "variable",
       "rightLabelHTML": "<b>local</b> variableName [= any]",
       "description": "Local variable declaration.",
@@ -114,7 +112,7 @@
       "replacementPrefix": "repeat"
     },
     {
-      "snippet": "for ${1:i} = ${2:1}, ${3:iEnd}${4:, ${5:iSeq}} do\n\t${0:-- code...}\nend",
+      "snippet": "for ${1:i} = ${2:1}, ${3:iEnd}, ${5:iSeq} do\n\t${0:-- code...}\nend",
       "type": "snippet",
       "rightLabelHTML": "<b>for</b> i = 1, iEnd [, iSeq] <b>do</b> <i>code</i> <b>end</b>",
       "description": "For loop block.",
@@ -150,7 +148,7 @@
     {
       "snippet": "${1:functionName} = function (${2:...})\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "functionName = <b>function</b>(...) <i>code</i> <b>end</b>",
+      "rightLabelHTML": "functionName = <b>function</b> (...) <i>code</i> <b>end</b>",
       "description": "Function definition (anonymous).",
       "descriptionMoreURL": "#3.4.11",
       "replacementPrefix": "fundef"
