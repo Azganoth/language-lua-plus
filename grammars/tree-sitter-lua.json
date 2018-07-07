@@ -41,7 +41,7 @@
   },
 
   "scopes": {
-    "lua": "source.lua",
+    "program": "source.lua",
 
     "comment": "comment",
     "string": "string",
