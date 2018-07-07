@@ -1,12 +1,12 @@
 {
-  "showDescriptions": {
+  "show_descriptions": {
     "title": "Show description",
     "description": "If enabled show description and URL on suggestions.",
     "type": "boolean",
     "default": "true",
     "order": 1
   },
-  "Suggestions": {
+  "suggestions": {
     "type": "object",
     "properties": {
       "basic": {
