@@ -236,4 +236,4 @@ x means tab stops (excluding non-word tokens)
 
 #### License
 
-This package is under a MIT license.
+This package is under a [MIT license](https://github.com/Azganoth/language-lua-plus/blob/master/LICENSE.md).

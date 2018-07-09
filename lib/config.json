@@ -6,14 +6,15 @@
     "default": "true",
     "order": 1
   },
-  "suggestions": {
+  "suggestions_lua_libraries": {
+    "title": "Suggestions: Lua Libraries",
     "type": "object",
     "properties": {
       "basic": {
         "title": "Basic Functions",
         "description": "Provide snippets for basic functions library, like 'assert', 'print', 'tostring', etc...",
         "type": "boolean",
-        "default": true,
+        "default": false,
         "order": 1
       },
       "coroutine": {

@@ -3,7 +3,7 @@
     {
       "text": "_VERSION",
       "type": "variable",
-      "rightLabelHTMLHTML": "<b>_VERSION</b>",
+      "rightLabelHTML": "<b>_VERSION</b>",
       "description": "Returns the lua api version being used (e.i., 'Lua 5.3').",
       "descriptionMoreURL": "#pdf-_VERSION",
       "replacementPrefix": "ver"
@@ -11,7 +11,7 @@
     {
       "snippet": "print '${1:Hello world!}'$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>print</b> 'message'",
+      "rightLabelHTML": "<b>print</b> 'message'",
       "description": "Prints the given string.",
       "descriptionMoreURL": "#pdf-print",
       "replacementPrefix": "prin"
@@ -19,7 +19,7 @@
     {
       "snippet": "print(${1:message})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>print</b>(message)",
+      "rightLabelHTML": "<b>print</b>(message)",
       "description": "Prints the given value, converting the given value to a string.",
       "descriptionMoreURL": "#pdf-print",
       "replacementPrefix": "print"
@@ -27,7 +27,7 @@
     {
       "snippet": "tonumber(${1:value}, ${2:base})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>tonumber</b>(value [, base])",
+      "rightLabelHTML": "<b>tonumber</b>(value [, base])",
       "description": "Returns the given argument as a number.",
       "descriptionMoreURL": "#pdf-tonumber",
       "replacementPrefix": "tonumber"
@@ -35,7 +35,7 @@
     {
       "snippet": "tostring(${1:value})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>tostring</b>(value)",
+      "rightLabelHTML": "<b>tostring</b>(value)",
       "description": "Returns the given argument as a string in a human-readable format.",
       "descriptionMoreURL": "#pdf-tostring",
       "replacementPrefix": "tostring"
@@ -43,7 +43,7 @@
     {
       "snippet": "type(${1:any})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>type</b>(any)",
+      "rightLabelHTML": "<b>type</b>(any)",
       "description": "Returns the type of its only argument, coded as a string.",
       "descriptionMoreURL": "#pdf-type",
       "replacementPrefix": "type"
@@ -51,7 +51,7 @@
     {
       "snippet": "assert(${1:value}, ${2:message})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>assert</b>(value [, message])",
+      "rightLabelHTML": "<b>assert</b>(value [, message])",
       "description": "Calls 'error' function if the 'value' is false (i.e., nil or false); otherwise, returns all its arguments.",
       "descriptionMoreURL": "#pdf-assert",
       "replacementPrefix": "assert"
@@ -59,7 +59,7 @@
     {
       "snippet": "collectgarbage(${1:option}, ${2:argument})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>collectgarbage</b>([option [, argument]])",
+      "rightLabelHTML": "<b>collectgarbage</b>([option [, argument]])",
       "description": "This function is a generic interface to the garbage collector.",
       "descriptionMoreURL": "#pdf-collectgarbage",
       "replacementPrefix": "garbage"
@@ -67,7 +67,7 @@
     {
       "snippet": "error(${1:message}, ${2:level})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>error</b>(message [, level])",
+      "rightLabelHTML": "<b>error</b>(message [, level])",
       "description": "Terminates the last protected function called and returns 'message' as the error object.",
       "descriptionMoreURL": "#pdf-error",
       "replacementPrefix": "error"
@@ -75,7 +75,7 @@
     {
       "snippet": "select(${1:index})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>select</b>(index, ···)",
+      "rightLabelHTML": "<b>select</b>(index, ···)",
       "description": "Returns all arguments after argument number 'index'.",
       "descriptionMoreURL": "#pdf-select",
       "replacementPrefix": "select"
@@ -83,7 +83,7 @@
     {
       "snippet": "next(${1:table}, ${2:index})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>next</b>(table [, index])",
+      "rightLabelHTML": "<b>next</b>(table [, index])",
       "description": "Allows a program to traverse all fields of a table.",
       "descriptionMoreURL": "#pdf-next",
       "replacementPrefix": "next"
@@ -91,7 +91,7 @@
     {
       "snippet": "getmetatable(${1:object})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>getmetatable</b>(object)",
+      "rightLabelHTML": "<b>getmetatable</b>(object)",
       "description": "Returns the 'table' metamethod field '__metatable' associated value, if the field doens't exist returns nil.",
       "descriptionMoreURL": "#pdf-getmetatable",
       "replacementPrefix": "getmetatable"
@@ -99,7 +99,7 @@
     {
       "snippet": "setmetatable(${1:table}, ${2:metatable})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>setmetatable</b>(table, metatable)",
+      "rightLabelHTML": "<b>setmetatable</b>(table, metatable)",
       "description": "Sets the metatable for the given table.",
       "descriptionMoreURL": "#pdf-setmetatable",
       "replacementPrefix": "setmetatable"
@@ -107,7 +107,7 @@
     {
       "snippet": "pairs(${1:table})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>pairs</b>(table)",
+      "rightLabelHTML": "<b>pairs</b>(table)",
       "description": "Calls the 'table' metamethod field '__pairs' with 'table' as argument, alongside with the first three results from the call.",
       "descriptionMoreURL": "#pdf-pairs",
       "replacementPrefix": "pairs"
@@ -115,7 +115,7 @@
     {
       "snippet": "ipairs(${1:table})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>ipairs</b>(table)",
+      "rightLabelHTML": "<b>ipairs</b>(table)",
       "description": "Returns three values (an iterator function, the 'table', and 0).",
       "descriptionMoreURL": "#pdf-ipairs",
       "replacementPrefix": "ipairs"
@@ -123,7 +123,7 @@
     {
       "snippet": "dofile(${1:fileName})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>dofile</b>([fileName])",
+      "rightLabelHTML": "<b>dofile</b>([fileName])",
       "description": "Opens the named file and executes its contents as a Lua chunk.",
       "descriptionMoreURL": "#pdf-dofile",
       "replacementPrefix": "dofile"
@@ -131,7 +131,7 @@
     {
       "snippet": "load(${1:chunk}, ${2:chunkName}, ${3:mode}, ${4:env})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>load</b>(chunk [, chunkName [, mode [, env]]])",
+      "rightLabelHTML": "<b>load</b>(chunk [, chunkName [, mode [, env]]])",
       "description": "Loads a chunk.",
       "descriptionMoreURL": "#pdf-load",
       "replacementPrefix": "load"
@@ -139,7 +139,7 @@
     {
       "snippet": "loadfile(${1:fileName}, ${2:mode}, ${3:env})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>loadfile</b>([fileName [, mode [, env]]])",
+      "rightLabelHTML": "<b>loadfile</b>([fileName [, mode [, env]]])",
       "description": "Similar to 'load', but gets the chunk from 'fileName' or from the standard input, if no file name is given.",
       "descriptionMoreURL": "#pdf-loadfile",
       "replacementPrefix": "loadfile"
@@ -147,7 +147,7 @@
     {
       "snippet": "pcall(${1:func}, ${2:argument})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>pcall</b>(func [, argument, ···])",
+      "rightLabelHTML": "<b>pcall</b>(func [, argument, ···])",
       "description": "Calls 'function' with the given arguments in protected mode.",
       "descriptionMoreURL": "#pdf-pcall",
       "replacementPrefix": "callp"
@@ -155,7 +155,7 @@
     {
       "snippet": "xpcall(${1:func}, ${2:msgh}, ${3:argument})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>xpcall</b>(func, msgh [, argument, ···])",
+      "rightLabelHTML": "<b>xpcall</b>(func, msgh [, argument, ···])",
       "description": "This 'function' is similar to pcall, except that it sets a new message handler.",
       "descriptionMoreURL": "#pdf-xpcall",
       "replacementPrefix": "callxp"
@@ -163,7 +163,7 @@
     {
       "snippet": "rawget(${1:table}, ${2:index})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>rawget</b>(table, index)",
+      "rightLabelHTML": "<b>rawget</b>(table, index)",
       "description": "Gets the real value of 'table[index]', without invoking the '__index' metamethod.",
       "descriptionMoreURL": "#pdf-rawget",
       "replacementPrefix": "rawget"
@@ -171,7 +171,7 @@
     {
       "snippet": "rawset(${1:table}, ${2:index}, ${3:value})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>rawset</b>(table, index, value)",
+      "rightLabelHTML": "<b>rawset</b>(table, index, value)",
       "description": "Sets the real value of 'table[index]' to value, without invoking the '__newindex' metamethod.",
       "descriptionMoreURL": "#pdf-rawset",
       "replacementPrefix": "rawset"
@@ -179,7 +179,7 @@
     {
       "snippet": "rawequal(${1:value1}, ${2:value2})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>rawequal</b>(value1, value2)",
+      "rightLabelHTML": "<b>rawequal</b>(value1, value2)",
       "description": "Checks whether 'value1' is equal to 'value2', without invoking the '__eq' metamethod. Returns a boolean. ",
       "descriptionMoreURL": "#pdf-rawequal",
       "replacementPrefix": "rawequal"
@@ -187,7 +187,7 @@
     {
       "snippet": "rawlen(${1:object})$0",
       "type": "function",
-      "rightLabelHTMLHTML": "<b>rawlen</b>(object)",
+      "rightLabelHTML": "<b>rawlen</b>(object)",
       "description": "Returns the length of the 'object', which must be a table or a string, without invoking the '__len' metamethod. Returns an integer.",
       "descriptionMoreURL": "#pdf-rawlen",
       "replacementPrefix": "rawlen"
