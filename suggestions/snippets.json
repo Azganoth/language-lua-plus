@@ -1,11 +1,13 @@
 {
-  "keywords": [
-    {
-      "text": "local",
-      "type": "keyword"
-    }
-  ],
   "common": [
+    {
+      "snippet": "local ${2:variableName} = ${0:any}",
+      "type": "variable",
+      "rightLabelHTML": "<b>local</b> variableName [= any]",
+      "description": "Local variable declaration.",
+      "descriptionMoreURL": "#3.3.7",
+      "replacementPrefix": "local"
+    },
     {
       "snippet": "${1:variableName} = ${0:any}",
       "type": "variable",
@@ -13,14 +15,6 @@
       "description": "Variable declaration.",
       "descriptionMoreURL": "#3.2",
       "replacementPrefix": "var"
-    },
-    {
-      "snippet": "local ${2:variableName} = ${0:any}",
-      "type": "variable",
-      "rightLabelHTML": "<b>local</b> variableName [= any]",
-      "description": "Local variable declaration.",
-      "descriptionMoreURL": "#3.3.7",
-      "replacementPrefix": "varl"
     },
     {
       "snippet": ":: ${1:labelName} ::$0",
