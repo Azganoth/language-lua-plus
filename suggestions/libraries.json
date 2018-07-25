@@ -6,7 +6,7 @@
       "rightLabelHTML": "<b>_VERSION</b>",
       "description": "Returns the lua api version being used (e.i., 'Lua 5.3').",
       "descriptionMoreURL": "#pdf-_VERSION",
-      "replacementPrefix": "ver"
+      "replacementPrefix": "luav"
     },
     {
       "snippet": "print '${1:Hello world!}'$0",
@@ -14,7 +14,7 @@
       "rightLabelHTML": "<b>print</b> 'message'",
       "description": "Prints the given string.",
       "descriptionMoreURL": "#pdf-print",
-      "replacementPrefix": "prin"
+      "replacementPrefix": "sprint"
     },
     {
       "snippet": "print(${1:message})$0",
