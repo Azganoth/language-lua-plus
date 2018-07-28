@@ -3,7 +3,7 @@
     {
       "snippet": ":: ${1:labelName} ::$0",
       "type": "snippet",
-      "rightLabelHTML": "<b>::</b> labelName <b>::</b>",
+      "rightLabelHTML": "<strong>::</strong> labelName <strong>::</strong>",
       "description": "Label statement.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "label"
@@ -11,7 +11,7 @@
     {
       "snippet": "goto ${1:labelName}",
       "type": "snippet",
-      "rightLabelHTML": "<b>goto</b> labelName",
+      "rightLabelHTML": "<strong>goto</strong> labelName",
       "description": "Goto statement referring to a label.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "goto"
@@ -21,7 +21,7 @@
     {
       "snippet": "do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>do</b> <u>code</u> <b>end</b>",
+      "rightLabelHTML": "<strong>do</strong> <ins>code</ins> <strong>end</strong>",
       "description": "Explicit block.",
       "descriptionMoreURL": "#3.3.1",
       "replacementPrefix": "do"
@@ -29,7 +29,7 @@
     {
       "snippet": "if${1: not} ${2:condition} then\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>if</b> [<b>not</b>] condition <b>then</b> <u>code</u> <b>end</b>",
+      "rightLabelHTML": "<strong>if</strong> [<strong>not</strong>] condition <strong>then</strong> <ins>code</ins> <strong>end</strong>",
       "description": "If conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "if"
@@ -37,7 +37,7 @@
     {
       "snippet": "if${1: not} ${2:condition} then\n\t${3:-- code...}\nelse\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<s>if_block</s> <b>else</b> <u>code</u> <b>end</b>",
+      "rightLabelHTML": "<ins>if_block</ins> <strong>else</strong> <ins>code</ins> <strong>end</strong>",
       "description": "If/else conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "ife"
@@ -45,7 +45,7 @@
     {
       "snippet": "elseif${1: not} ${2:condition} then\n\t${0:-- code...}",
       "type": "snippet",
-      "rightLabelHTML": "<s>if_block</s> <b>elseif</b> [<b>not</b>] condition <b>then</b> <u>code</u>",
+      "rightLabelHTML": "<ins>if_block</ins> <strong>elseif</strong> [<strong>not</strong>] condition <strong>then</strong> <ins>code</ins>",
       "description": "Elseif conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "elif"
@@ -53,7 +53,7 @@
     {
       "snippet": "else\n\t${0:-- code...}",
       "type": "snippet",
-      "rightLabelHTML": "<s>if_block</s> <b>else</b> <u>code</u>",
+      "rightLabelHTML": "<ins>if_block</ins> <strong>else</strong> <ins>code</ins>",
       "description": "Else conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "else"
@@ -61,7 +61,7 @@
     {
       "snippet": "while${1: not} ${2:condition} do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>while</b> [<b>not</b>] condition <b>do</b> <u>code</u> <b>end</b>",
+      "rightLabelHTML": "<strong>while</strong> [<strong>not</strong>] condition <strong>do</strong> <ins>code</ins> <strong>end</strong>",
       "description": "While loop block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "while"
@@ -69,7 +69,7 @@
     {
       "snippet": "repeat\n\t${0:-- code...}\nuntil ${1:condition}",
       "type": "snippet",
-      "rightLabelHTML": "<b>repeat</b> <u>code</u> <b>until</b> condition",
+      "rightLabelHTML": "<strong>repeat</strong> <ins>code</ins> <strong>until</strong> condition",
       "description": "Repeat loop block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "repeat"
@@ -77,7 +77,7 @@
     {
       "snippet": "for ${1:i} = ${2:1}, ${3:i_end}${4:, ${5:i_step}} do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>for</b> i = 1, i_end [, i_step] <b>do</b> <u>code</u> <b>end</b>",
+      "rightLabelHTML": "<strong>for</strong> i = 1, i_end [, i_step] <strong>do</strong> <ins>code</ins> <strong>end</strong>",
       "description": "For loop block.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "for"
@@ -85,7 +85,7 @@
     {
       "snippet": "for ${1:key}, ${2:value} in pairs(${3:table}) do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>for</b> key, value <b>in</b> <b>pairs</b>(table) <b>do</b> <u>code</u> <b>end</b>",
+      "rightLabelHTML": "<strong>for</strong> key, value <strong>in</strong> <strong>pairs</strong>(table) <strong>do</strong> <ins>code</ins> <strong>end</strong>",
       "description": "For in loop block with pairs function.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "forp"
@@ -93,7 +93,7 @@
     {
       "snippet": "for ${1:index}, ${2:value} in ipairs(${3:table}) do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>for</b> index, value <b>in</b> <b>ipairs</b>(table) <b>do</b> <u>code</u> <b>end</b>",
+      "rightLabelHTML": "<strong>for</strong> index, value <strong>in</strong> <strong>ipairs</strong>(table) <strong>do</strong> <ins>code</ins> <strong>end</strong>",
       "description": "For in loop block with ipairs function.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "fori"
@@ -101,7 +101,7 @@
     {
       "snippet": "for ${1:index} in next, ${2:table} do\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>for</b> index <b>in</b> <b>next</b>, table <b>do</b> <u>code</u> <b>end</b>",
+      "rightLabelHTML": "<strong>for</strong> index <strong>in</strong> <strong>next</strong>, table <strong>do</strong> <ins>code</ins> <strong>end</strong>",
       "description": "For in loop block with next function.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "forn"
@@ -109,7 +109,7 @@
     {
       "snippet": "${1:condition} and ${2:any} or ${3:any}",
       "type": "snippet",
-      "rightLabelHTML": "condition <b>and</b> any <b>or</b> any",
+      "rightLabelHTML": "condition <strong>and</strong> any <strong>or</strong> any",
       "description": "Ternary conditional expression.",
       "replacementPrefix": "tern"
     }
@@ -118,7 +118,7 @@
     {
       "snippet": "function ${1:functionName}(${2:...})\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>function</b> functionName(...) <u>code</u> <b>end</b>",
+      "rightLabelHTML": "<strong>function</strong> functionName(...) <ins>code</ins> <strong>end</strong>",
       "description": "Function statement.",
       "descriptionMoreURL": "#3.4.11",
       "replacementPrefix": "fun"
@@ -126,7 +126,7 @@
     {
       "snippet": "function (${1:...})\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<b>function</b> (...) <u>code</u> <b>end</b>",
+      "rightLabelHTML": "<strong>function</strong> (...) <ins>code</ins> <strong>end</strong>",
       "description": "Function definition (anonymous).",
       "descriptionMoreURL": "#3.4.11",
       "replacementPrefix": "fundef"
