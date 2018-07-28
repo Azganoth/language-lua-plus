@@ -37,7 +37,7 @@
     {
       "snippet": "if${1: not} ${2:condition} then\n\t${3:-- code...}\nelse\n\t${0:-- code...}\nend",
       "type": "snippet",
-      "rightLabelHTML": "<ins>if_block</ins> <strong>else</strong> <ins>code</ins> <strong>end</strong>",
+      "rightLabelHTML": "<del>if_block</del> <strong>else</strong> <ins>code</ins> <strong>end</strong>",
       "description": "If/else conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "ife"
@@ -45,7 +45,7 @@
     {
       "snippet": "elseif${1: not} ${2:condition} then\n\t${0:-- code...}",
       "type": "snippet",
-      "rightLabelHTML": "<ins>if_block</ins> <strong>elseif</strong> [<strong>not</strong>] condition <strong>then</strong> <ins>code</ins>",
+      "rightLabelHTML": "<del>if_block</del> <strong>elseif</strong> [<strong>not</strong>] condition <strong>then</strong> <ins>code</ins>",
       "description": "Elseif conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "elif"
@@ -53,7 +53,7 @@
     {
       "snippet": "else\n\t${0:-- code...}",
       "type": "snippet",
-      "rightLabelHTML": "<ins>if_block</ins> <strong>else</strong> <ins>code</ins>",
+      "rightLabelHTML": "<del>if_block</del> <strong>else</strong> <ins>code</ins>",
       "description": "Else conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "else"
@@ -83,7 +83,7 @@
       "replacementPrefix": "for"
     },
     {
-      "snippet": "for ${1:key}, ${2:value} in pairs(${3:table}) do\n\t${0:-- code...}\nend",
+      "snippet": "for ${1:k}, ${2:v} in pairs(${3:table}) do\n\t${0:-- code...}\nend",
       "type": "snippet",
       "rightLabelHTML": "<strong>for</strong> key, value <strong>in</strong> <strong>pairs</strong>(table) <strong>do</strong> <ins>code</ins> <strong>end</strong>",
       "description": "For in loop block with pairs function.",
@@ -91,7 +91,7 @@
       "replacementPrefix": "forp"
     },
     {
-      "snippet": "for ${1:index}, ${2:value} in ipairs(${3:table}) do\n\t${0:-- code...}\nend",
+      "snippet": "for ${1:i}, ${2:v} in ipairs(${3:table}) do\n\t${0:-- code...}\nend",
       "type": "snippet",
       "rightLabelHTML": "<strong>for</strong> index, value <strong>in</strong> <strong>ipairs</strong>(table) <strong>do</strong> <ins>code</ins> <strong>end</strong>",
       "description": "For in loop block with ipairs function.",
@@ -99,7 +99,7 @@
       "replacementPrefix": "fori"
     },
     {
-      "snippet": "for ${1:index} in next, ${2:table} do\n\t${0:-- code...}\nend",
+      "snippet": "for ${1:i} in next, ${2:table} do\n\t${0:-- code...}\nend",
       "type": "snippet",
       "rightLabelHTML": "<strong>for</strong> index <strong>in</strong> <strong>next</strong>, table <strong>do</strong> <ins>code</ins> <strong>end</strong>",
       "description": "For in loop block with next function.",
@@ -116,7 +116,7 @@
   ],
   "functions": [
     {
-      "snippet": "function ${1:functionName}(${2:...})\n\t${0:-- code...}\nend",
+      "snippet": "function ${1:functionName}($2)\n\t${0:-- code...}\nend",
       "type": "snippet",
       "rightLabelHTML": "<strong>function</strong> functionName(...) <ins>code</ins> <strong>end</strong>",
       "description": "Function statement.",
@@ -124,7 +124,7 @@
       "replacementPrefix": "fun"
     },
     {
-      "snippet": "function (${1:...})\n\t${0:-- code...}\nend",
+      "snippet": "function ($1)\n\t${0:-- code...}\nend",
       "type": "snippet",
       "rightLabelHTML": "<strong>function</strong> (...) <ins>code</ins> <strong>end</strong>",
       "description": "Function definition (anonymous).",
