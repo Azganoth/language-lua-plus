@@ -21,5 +21,117 @@
         "4.0.0": "getProvider"
       }
     }
+  },
+  "configSchema": {
+    "suggestion_description": {
+      "title": "Show description and help URL",
+      "description": "Shows below of the suggestion a description and an URL to a help page.",
+      "type": "boolean",
+      "default": true,
+      "order": 1
+    },
+    "snippets_basic": {
+      "title": "Snippets: Basic",
+      "type": "object",
+      "properties": {
+        "keyword": {
+          "title": "Keywords",
+          "description": "Enables <strong>keywords</strong> to be shown as suggestions. Examples: test.",
+          "type": "boolean",
+          "default": true,
+          "order": 1
+        },
+        "control": {
+          "title": "Control Structures",
+          "description": "Enables <strong>control structures</strong> to be shown as suggestions. Examples: test.",
+          "type": "boolean",
+          "default": true,
+          "order": 2
+        },
+        "function": {
+          "title": "Function Statements",
+          "description": "Enables <strong>function statements</strong> to be shown as suggestions. Examples: test.",
+          "type": "boolean",
+          "default": true,
+          "order": 3
+        }
+      }
+    },
+    "snippets_libraries": {
+      "title": "Snippets: Libraries",
+      "type": "object",
+      "properties": {
+        "basic": {
+          "title": "Basic Functions",
+          "description": "Enables <strong>basic functions</strong> to be shown as suggestions, e.g, assert, print, tostring.",
+          "type": "boolean",
+          "default": false,
+          "order": 1
+        },
+        "coroutine": {
+          "title": "Coroutines",
+          "description": "Enables <strong>coroutines</strong> to be shown as suggestions.",
+          "type": "boolean",
+          "default": false,
+          "order": 2
+        },
+        "package": {
+          "title": "Modules",
+          "description": "Enables <strong>modules functions</strong> to be shown as suggestions.",
+          "type": "boolean",
+          "default": false,
+          "order": 3
+        },
+        "string": {
+          "title": "String Manipulation",
+          "description": "Enables <strong>string manipulation functions</strong> to be shown as suggestions.",
+          "type": "boolean",
+          "default": false,
+          "order": 4
+        },
+        "utf8": {
+          "title": "UTF-8 Support",
+          "description": "Enables <strong>utf-8 support functions</strong> to be shown as suggestions.",
+          "type": "boolean",
+          "default": false,
+          "order": 5
+        },
+        "table": {
+          "title": "Table Manipulation",
+          "description": "Enables <strong>table manipulation functions</strong> to be shown as suggestions.",
+          "type": "boolean",
+          "default": false,
+          "order": 6
+        },
+        "math": {
+          "title": "Mathematical Functions",
+          "description": "Enables <strong>mathematical manipulation functions</strong> to be shown as suggestions.",
+          "type": "boolean",
+          "default": false,
+          "order": 7
+        },
+        "io": {
+          "title": "Input and Output Facilities",
+          "description": "Enables <strong>input and output facilities</strong> to be shown as suggestions.",
+          "type": "boolean",
+          "default": false,
+          "order": 8
+        },
+        "os": {
+          "title": "Operating System Facilities",
+          "description": "Enables <strong>operating system facilities</strong> to be shown as suggestions.",
+          "type": "boolean",
+          "default": false,
+          "order": 9
+        },
+        "debug": {
+          "title": "Debug Interface",
+          "description": "Enables <strong>debug interface functions</strong> to be shown as suggestions.",
+          "type": "boolean",
+          "default": false,
+          "order": 10
+        }
+      }
+    }
   }
 }

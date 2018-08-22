@@ -1,0 +1,123 @@
+{
+  "keyword": [
+    {
+      "text": "return",
+      "type": "keyword"
+    }
+  ],
+  "control": [
+    {
+      "snippet": "do\n\t$0\nend",
+      "type": "snippet",
+      "rightLabelHTML": "do¬»{}¬end",
+      "description": "Explicit blocks are useful to control the scope of variable declarations.",
+      "descriptionMoreURL": "#3.3.1",
+      "replacementPrefix": "do"
+    },
+    {
+      "snippet": "if${1: not} ${2:condition} then\n\t$0\nend",
+      "type": "snippet",
+      "rightLabelHTML": "if {not} {condition} then¬»{}¬end",
+      "description": "Conditional block.",
+      "descriptionMoreURL": "#3.3.4",
+      "replacementPrefix": "if"
+    },
+    {
+      "snippet": "if${1: not} ${2:condition} then\n\t$3\nelse\n\t$0\nend",
+      "type": "snippet",
+      "rightLabelHTML": "if {not} {condition} then¬»{}¬else¬»{}¬end",
+      "description": "Conditional block.",
+      "descriptionMoreURL": "#3.3.4",
+      "replacementPrefix": "ifel"
+    },
+    {
+      "snippet": "elseif${1: not} ${2:condition} then\n\t$0",
+      "type": "snippet",
+      "rightLabelHTML": "elseif {not} {condition} then¬»{}",
+      "description": "Sub-conditional block.",
+      "descriptionMoreURL": "#3.3.4",
+      "replacementPrefix": "elseif"
+    },
+    {
+      "snippet": "else\n\t$0",
+      "type": "snippet",
+      "rightLabelHTML": "else¬»{}",
+      "description": "Sub-conditional block.",
+      "descriptionMoreURL": "#3.3.4",
+      "replacementPrefix": "else"
+    },
+    {
+      "snippet": "while${1: not} ${2:condition} do\n\t$0\nend",
+      "type": "snippet",
+      "rightLabelHTML": "while {not} {condition} do¬»{}¬end",
+      "description": "While loop block.",
+      "descriptionMoreURL": "#3.3.4",
+      "replacementPrefix": "while"
+    },
+    {
+      "snippet": "repeat\n\t$0\nuntil ${1:condition}",
+      "type": "snippet",
+      "rightLabelHTML": "repeat¬»{}¬until {condition}",
+      "description": "Repeat loop block.",
+      "descriptionMoreURL": "#3.3.4",
+      "replacementPrefix": "repeat"
+    },
+    {
+      "snippet": "for ${1:i} = ${2:1}, ${4:i_stop}${3:, ${5:i_step}} do\n\t$0\nend",
+      "type": "snippet",
+      "rightLabelHTML": "for {i} = {1}, {i_stop}, {i_step} do¬»{}¬end",
+      "description": "For loop block.",
+      "descriptionMoreURL": "#3.3.5",
+      "replacementPrefix": "for"
+    },
+    {
+      "snippet": "for ${1:i} in next, ${2:table} do\n\t$0\nend",
+      "type": "snippet",
+      "rightLabelHTML": "for {index} in next, {table} do¬»{}¬end",
+      "description": "For in loop block using `next` function.",
+      "descriptionMoreURL": "#3.3.5",
+      "replacementPrefix": "forn"
+    },
+    {
+      "snippet": "for ${1:k}, ${2:v} in pairs(${3:table}) do\n\t$0\nend",
+      "type": "snippet",
+      "rightLabelHTML": "for {key}, {value} in pairs({table}) do¬»{}¬end",
+      "description": "For in loop block using `pairs` function.",
+      "descriptionMoreURL": "#3.3.5",
+      "replacementPrefix": "forp"
+    },
+    {
+      "snippet": "for ${1:i}, ${2:v} in ipairs(${3:table}) do\n\t$0\nend",
+      "type": "snippet",
+      "rightLabelHTML": "for {index}, {value} in ipairs({table}) do¬»{}¬end",
+      "description": "For in loop block using `ipairs` function.",
+      "descriptionMoreURL": "#3.3.5",
+      "replacementPrefix": "fori"
+    },
+    {
+      "snippet": "${1:condition} and ${2:true} or ${3:false}",
+      "type": "snippet",
+      "rightLabelHTML": "{condition} and {true} or {false}",
+      "description": "Ternary conditional expression.",
+      "replacementPrefix": "tern"
+    }
+  ],
+  "function": [
+    {
+      "snippet": "function ${1:functionName}(${2:...})\n\t$0\nend",
+      "type": "snippet",
+      "rightLabelHTML": "function {functionName}({...})¬»{}¬end",
+      "description": "Named function.",
+      "descriptionMoreURL": "#3.4.11",
+      "replacementPrefix": "fun"
+    },
+    {
+      "snippet": "function (${1:...})\n\t$0\nend",
+      "type": "snippet",
+      "rightLabelHTML": "function ({...})¬»{}¬end",
+      "description": "Anonymous function, a function definition is an executable expression, whose value has type `function`.",
+      "descriptionMoreURL": "#3.4.11",
+      "replacementPrefix": "fundef"
+    }
+  ]
+}

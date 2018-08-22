@@ -3,23 +3,23 @@
     {
       "text": "_VERSION",
       "type": "variable",
-      "rightLabelHTML": "<strong>_VERSION</strong>",
-      "description": "Returns the lua api version being used (e.i., 'Lua 5.3').",
+      "rightLabelHTML": "_VERSION",
+      "description": "Returns the running lua api version as a string, e.i., 'Lua 5.3'.",
       "descriptionMoreURL": "#pdf-_VERSION",
-      "replacementPrefix": "luav"
+      "replacementPrefix": "ver"
     },
     {
-      "snippet": "print '${1:Logging!}'$0",
+      "snippet": "print '${1:...}'$0",
       "type": "function",
-      "rightLabelHTML": "<strong>print</strong> 'message'",
+      "rightLabelHTML": "print '{...}'",
       "description": "Prints the given string.",
       "descriptionMoreURL": "#pdf-print",
       "replacementPrefix": "sprint"
     },
     {
-      "snippet": "print(${1:'Logging!'})$0",
+      "snippet": "print(${1:...})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>print</strong>(message)",
+      "rightLabelHTML": "print({...})",
       "description": "Prints the given value, converting the given value to a string.",
       "descriptionMoreURL": "#pdf-print",
       "replacementPrefix": "print"
@@ -27,7 +27,7 @@
     {
       "snippet": "tonumber(${1:value}, ${2:base})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>tonumber</strong>(value [, base])",
+      "rightLabelHTML": "tonumber({value}, {base})",
       "description": "Returns the given argument as a number.",
       "descriptionMoreURL": "#pdf-tonumber",
       "replacementPrefix": "tonumber"
@@ -35,7 +35,7 @@
     {
       "snippet": "tostring(${1:value})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>tostring</strong>(value)",
+      "rightLabelHTML": "tostring({value})",
       "description": "Returns the given argument as a string in a human-readable format.",
       "descriptionMoreURL": "#pdf-tostring",
       "replacementPrefix": "tostring"
@@ -43,7 +43,7 @@
     {
       "snippet": "type(${1:any})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>type</strong>(any)",
+      "rightLabelHTML": "type({any})",
       "description": "Returns the type of its only argument, coded as a string.",
       "descriptionMoreURL": "#pdf-type",
       "replacementPrefix": "type"
@@ -51,7 +51,7 @@
     {
       "snippet": "assert(${1:value}, ${2:message})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>assert</strong>(value [, message])",
+      "rightLabelHTML": "assert({value}, {message})",
       "description": "Calls 'error' function if the 'value' is false (i.e., nil or false); otherwise, returns all its arguments.",
       "descriptionMoreURL": "#pdf-assert",
       "replacementPrefix": "assert"
@@ -59,7 +59,7 @@
     {
       "snippet": "collectgarbage(${1:option}, ${2:argument})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>collectgarbage</strong>([option [, argument]])",
+      "rightLabelHTML": "collectgarbage({option}, {argument})",
       "description": "This function is a generic interface to the garbage collector.",
       "descriptionMoreURL": "#pdf-collectgarbage",
       "replacementPrefix": "garbage"
@@ -67,15 +67,15 @@
     {
       "snippet": "error(${1:message}, ${2:level})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>error</strong>(message [, level])",
+      "rightLabelHTML": "error({message}, {level})",
       "description": "Terminates the last protected function called and returns 'message' as the error object.",
       "descriptionMoreURL": "#pdf-error",
       "replacementPrefix": "error"
     },
     {
-      "snippet": "select(${1:index})$0",
+      "snippet": "select(${1:index}, ${2:...})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>select</strong>(index, ···)",
+      "rightLabelHTML": "select({index}, {...})",
       "description": "Returns all arguments after argument number 'index'.",
       "descriptionMoreURL": "#pdf-select",
       "replacementPrefix": "select"
@@ -83,7 +83,7 @@
     {
       "snippet": "next(${1:table}, ${2:index})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>next</strong>(table [, index])",
+      "rightLabelHTML": "next({table}, {index})",
       "description": "Allows a program to traverse all fields of a table.",
       "descriptionMoreURL": "#pdf-next",
       "replacementPrefix": "next"
@@ -91,7 +91,7 @@
     {
       "snippet": "getmetatable(${1:object})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>getmetatable</strong>(object)",
+      "rightLabelHTML": "getmetatable({object})",
       "description": "Returns the 'table' metamethod field '__metatable' associated value, if the field doens't exist returns nil.",
       "descriptionMoreURL": "#pdf-getmetatable",
       "replacementPrefix": "getmetatable"
@@ -99,7 +99,7 @@
     {
       "snippet": "setmetatable(${1:table}, ${2:metatable})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>setmetatable</strong>(table, metatable)",
+      "rightLabelHTML": "setmetatable({table}, {metatable})",
       "description": "Sets the metatable for the given table.",
       "descriptionMoreURL": "#pdf-setmetatable",
       "replacementPrefix": "setmetatable"
@@ -107,7 +107,7 @@
     {
       "snippet": "pairs(${1:table})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>pairs</strong>(table)",
+      "rightLabelHTML": "pairs({table})",
       "description": "Calls the 'table' metamethod field '__pairs' with 'table' as argument, alongside with the first three results from the call.",
       "descriptionMoreURL": "#pdf-pairs",
       "replacementPrefix": "pairs"
@@ -115,7 +115,7 @@
     {
       "snippet": "ipairs(${1:table})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>ipairs</strong>(table)",
+      "rightLabelHTML": "ipairs({table})",
       "description": "Returns three values (an iterator function, the 'table', and 0).",
       "descriptionMoreURL": "#pdf-ipairs",
       "replacementPrefix": "ipairs"
@@ -123,7 +123,7 @@
     {
       "snippet": "dofile(${1:fileName})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>dofile</strong>([fileName])",
+      "rightLabelHTML": "dofile({fileName})",
       "description": "Opens the named file and executes its contents as a Lua chunk.",
       "descriptionMoreURL": "#pdf-dofile",
       "replacementPrefix": "dofile"
@@ -131,7 +131,7 @@
     {
       "snippet": "load(${1:chunk}, ${2:chunkName}, ${3:mode}, ${4:env})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>load</strong>(chunk [, chunkName [, mode [, env]]])",
+      "rightLabelHTML": "load({chunk}, {chunkName}, {mode}, {env})",
       "description": "Loads a chunk.",
       "descriptionMoreURL": "#pdf-load",
       "replacementPrefix": "load"
@@ -139,7 +139,7 @@
     {
       "snippet": "loadfile(${1:fileName}, ${2:mode}, ${3:env})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>loadfile</strong>([fileName [, mode [, env]]])",
+      "rightLabelHTML": "loadfile({fileName}, {mode}, {env})",
       "description": "Similar to 'load', but gets the chunk from 'fileName' or from the standard input, if no file name is given.",
       "descriptionMoreURL": "#pdf-loadfile",
       "replacementPrefix": "loadfile"
@@ -147,7 +147,7 @@
     {
       "snippet": "pcall(${1:func}, ${2:argument})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>pcall</strong>(func [, argument, ···])",
+      "rightLabelHTML": "pcall({func}, {argument})",
       "description": "Calls 'function' with the given arguments in protected mode.",
       "descriptionMoreURL": "#pdf-pcall",
       "replacementPrefix": "callp"
@@ -155,7 +155,7 @@
     {
       "snippet": "xpcall(${1:func}, ${2:msgh}, ${3:argument})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>xpcall</strong>(func, msgh [, argument, ···])",
+      "rightLabelHTML": "xpcall({func}, {msgh}, {argument})",
       "description": "This 'function' is similar to pcall, except that it sets a new message handler.",
       "descriptionMoreURL": "#pdf-xpcall",
       "replacementPrefix": "callxp"
@@ -163,7 +163,7 @@
     {
       "snippet": "rawget(${1:table}, ${2:index})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>rawget</strong>(table, index)",
+      "rightLabelHTML": "rawget({table}, {index})",
       "description": "Gets the real value of 'table[index]', without invoking the '__index' metamethod.",
       "descriptionMoreURL": "#pdf-rawget",
       "replacementPrefix": "rawget"
@@ -171,7 +171,7 @@
     {
       "snippet": "rawset(${1:table}, ${2:index}, ${3:value})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>rawset</strong>(table, index, value)",
+      "rightLabelHTML": "rawset({table}, {index}, {value})",
       "description": "Sets the real value of 'table[index]' to value, without invoking the '__newindex' metamethod.",
       "descriptionMoreURL": "#pdf-rawset",
       "replacementPrefix": "rawset"
@@ -179,7 +179,7 @@
     {
       "snippet": "rawequal(${1:value1}, ${2:value2})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>rawequal</strong>(value1, value2)",
+      "rightLabelHTML": "rawequal({value1}, {value2})",
       "description": "Checks whether 'value1' is equal to 'value2', without invoking the '__eq' metamethod. Returns a boolean. ",
       "descriptionMoreURL": "#pdf-rawequal",
       "replacementPrefix": "rawequal"
@@ -187,7 +187,7 @@
     {
       "snippet": "rawlen(${1:object})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>rawlen</strong>(object)",
+      "rightLabelHTML": "rawlen({object})",
       "description": "Returns the length of the 'object', which must be a table or a string, without invoking the '__len' metamethod. Returns an integer.",
       "descriptionMoreURL": "#pdf-rawlen",
       "replacementPrefix": "rawlen"
@@ -197,7 +197,7 @@
     {
       "snippet": "coroutine.create(${1:func})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>coroutine</strong>.<strong>create</strong>(func)",
+      "rightLabelHTML": "coroutine.create({func})",
       "description": "Creates a new coroutine, with body 'func'.",
       "descriptionMoreURL": "#pdf-coroutine.create",
       "replacementPrefix": "corocreate"
@@ -205,7 +205,7 @@
     {
       "snippet": "coroutine.wrap(${1:func})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>coroutine</strong>.<strong>wrap</strong>(func)",
+      "rightLabelHTML": "coroutine.wrap({func})",
       "description": "Creates a new coroutine, with body 'func'.",
       "descriptionMoreURL": "#pdf-coroutine.wrap",
       "replacementPrefix": "corowrap"
@@ -213,7 +213,7 @@
     {
       "snippet": "coroutine.status(${1:coro})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>coroutine</strong>.<strong>status</strong>(coro)",
+      "rightLabelHTML": "coroutine.status({coro})",
       "description": "Returns the status of the given coroutine, as a string.",
       "descriptionMoreURL": "#pdf-coroutine.status",
       "replacementPrefix": "corostatus"
@@ -221,7 +221,7 @@
     {
       "snippet": "coroutine.running()$0",
       "type": "function",
-      "rightLabelHTML": "<strong>coroutine</strong>.<strong>running</strong>()",
+      "rightLabelHTML": "coroutine.running()",
       "description": "Returns the running coroutine and a boolean.",
       "descriptionMoreURL": "#pdf-coroutine.running",
       "replacementPrefix": "cororunning"
@@ -229,7 +229,7 @@
     {
       "snippet": "coroutine.resume(${1:coro}, ${2:value})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>coroutine</strong>.<strong>resume</strong>(coro [, value, ···])",
+      "rightLabelHTML": "coroutine.resume({coro}, {value})",
       "description": "Starts or continues the execution of a given coroutine.",
       "descriptionMoreURL": "#pdf-coroutine.resume",
       "replacementPrefix": "cororesume"
@@ -237,15 +237,15 @@
     {
       "snippet": "coroutine.isyieldable()$0",
       "type": "function",
-      "rightLabelHTML": "<strong>coroutine</strong>.<strong>isyieldable</strong>()",
+      "rightLabelHTML": "coroutine.isyieldable()",
       "description": "Returns true when the running coroutine can yield.",
       "descriptionMoreURL": "#pdf-coroutine.isyieldable",
       "replacementPrefix": "coroisyieldable"
     },
     {
-      "snippet": "coroutine.yield($1)$0",
+      "snippet": "coroutine.yield(${1:...})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>coroutine</strong>.<strong>yield</strong>([···])",
+      "rightLabelHTML": "coroutine.yield({...})",
       "description": "Suspends the execution of the calling coroutine.",
       "descriptionMoreURL": "#pdf-coroutine.yield",
       "replacementPrefix": "coroyield"
@@ -255,7 +255,7 @@
     {
       "snippet": "require '${1:modName}'$0",
       "type": "function",
-      "rightLabelHTML": "<strong>require</strong> 'modName'",
+      "rightLabelHTML": "require '{modName}'",
       "description": "Loads the given module.",
       "descriptionMoreURL": "#pdf-require",
       "replacementPrefix": "req"
@@ -263,7 +263,7 @@
     {
       "snippet": "require(${1:modName})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>require</strong>(modName)",
+      "rightLabelHTML": "require({modName})",
       "description": "Loads the given module.",
       "descriptionMoreURL": "#pdf-require",
       "replacementPrefix": "req1"
@@ -271,7 +271,7 @@
     {
       "snippet": "package.path '${1:path}'$0",
       "type": "function",
-      "rightLabelHTML": "<strong>package</strong>.<strong>path</strong> 'path'",
+      "rightLabelHTML": "package.path '{path}'",
       "description": "The path used by require to search for a Lua loader.",
       "descriptionMoreURL": "#pdf-package.path",
       "replacementPrefix": "packpath"
@@ -279,7 +279,7 @@
     {
       "snippet": "package.cpath '${1:path}'$0",
       "type": "function",
-      "rightLabelHTML": "<strong>package</strong>.<strong>cpath</strong> 'path'",
+      "rightLabelHTML": "package.cpath '{path}'",
       "description": "The path used by 'require' to search for a C loader.",
       "descriptionMoreURL": "#pdf-package.cpath",
       "replacementPrefix": "packcpath"
@@ -287,7 +287,7 @@
     {
       "snippet": "package.preload '${1:modName}'$0",
       "type": "function",
-      "rightLabelHTML": "<strong>package</strong>.<strong>preload</strong> 'modName'",
+      "rightLabelHTML": "package.preload '{modName}'",
       "description": "A table to store loaders for specific modules.",
       "descriptionMoreURL": "#pdf-package.preload",
       "replacementPrefix": "packpreload"
@@ -295,7 +295,7 @@
     {
       "snippet": "package.loaded '${1:modName}'$0",
       "type": "function",
-      "rightLabelHTML": "<strong>package</strong>.<strong>loaded</strong> 'modName'",
+      "rightLabelHTML": "package.loaded '{modName}'",
       "description": "A table used by 'require' to control which modules are already loaded.",
       "descriptionMoreURL": "#pdf-package.loaded",
       "replacementPrefix": "packloaded"
@@ -303,7 +303,7 @@
     {
       "snippet": "package.loadlib(${1:libname}, ${2:func})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>package</strong>.<strong>loadlib</strong>(libName, func)",
+      "rightLabelHTML": "package.loadlib({libName}, {func})",
       "description": "Dynamically links the host program with the C library 'libName'.",
       "descriptionMoreURL": "#pdf-package.loadlib",
       "replacementPrefix": "packloadlib"
@@ -311,7 +311,7 @@
     {
       "snippet": "package.searchers '${1:path}'$0",
       "type": "function",
-      "rightLabelHTML": "<strong>package</strong>.<strong>searchers</strong> 'path'",
+      "rightLabelHTML": "package.searchers '{path}'",
       "description": "A table used by 'require' to control how to load modules. ",
       "descriptionMoreURL": "#pdf-package.searchers",
       "replacementPrefix": "packsearchers"
@@ -319,7 +319,7 @@
     {
       "snippet": "package.searchpath(${1:name}, ${2:path}, ${3:sep}, ${4:rep})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>package</strong>.<strong>searchpath</strong>(name, path [, sep [, rep]])",
+      "rightLabelHTML": "package.searchpath({name}, {path}, {sep}, {rep})",
       "description": "Searches for the given name in the given 'path'.",
       "descriptionMoreURL": "#pdf-package.searchpath",
       "replacementPrefix": "packsearchpath"
@@ -327,7 +327,7 @@
     {
       "snippet": "package.config '${1:config}'$0",
       "type": "function",
-      "rightLabelHTML": "<strong>package</strong>.<strong>config</strong> 'config'",
+      "rightLabelHTML": "package.config '{config}'",
       "description": "A string describing some compile-time configurations for packages.",
       "descriptionMoreURL": "#pdf-package.config",
       "replacementPrefix": "packconfig"
@@ -337,7 +337,7 @@
     {
       "snippet": "string.byte(${1:s}, ${2:i}, ${3:j})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>byte</strong>(s [, i [, j]])",
+      "rightLabelHTML": "string.byte({s}, {i}, {j})",
       "description": "Returns the internal numeric codes of the characters 's[i]', 's[i+1]', ..., 's[j]'.",
       "descriptionMoreURL": "#pdf-string.byte",
       "replacementPrefix": "strbyte"
@@ -345,7 +345,7 @@
     {
       "snippet": "string.char(${1:number})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>char</strong>([number , ···])",
+      "rightLabelHTML": "string.char({number})",
       "description": "Returns a string with length equal to the number of arguments, in which each character has the internal numeric code equal to its corresponding argument.",
       "descriptionMoreURL": "#pdf-string.char",
       "replacementPrefix": "strchar"
@@ -353,7 +353,7 @@
     {
       "snippet": "string.dump(${1:func}, ${2:strip})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>dump</strong>(func, strip)",
+      "rightLabelHTML": "string.dump({func}, {strip})",
       "description": "Returns a string containing a binary representation (a binary chunk) of the given function.",
       "descriptionMoreURL": "#pdf-string.dump",
       "replacementPrefix": "strdump"
@@ -361,7 +361,7 @@
     {
       "snippet": "string.find(${1:s}, ${2:pattern}, ${3:init}, ${4:plain})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>find</strong>(s, pattern [, init [, plain]])",
+      "rightLabelHTML": "string.find({s}, {pattern}, {init}, {plain})",
       "description": "Looks for the first match of pattern in the string 's'.",
       "descriptionMoreURL": "#pdf-string.find",
       "replacementPrefix": "strfind"
@@ -369,7 +369,7 @@
     {
       "snippet": "string.format(${1:formatString}, ${2:s})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>format</strong>(formatString [, s])",
+      "rightLabelHTML": "string.format({formatString}, {s})",
       "description": "Returns a formatted version of its variable number of arguments following the description given in its first argument (which must be a string).",
       "descriptionMoreURL": "#pdf-string.format",
       "replacementPrefix": "strformat"
@@ -377,7 +377,7 @@
     {
       "snippet": "string.len(${1:s})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>len</strong>(s)",
+      "rightLabelHTML": "string.len({s})",
       "description": "Receives a string 's' and returns its length.",
       "descriptionMoreURL": "#pdf-string.len",
       "replacementPrefix": "strlen"
@@ -385,7 +385,7 @@
     {
       "snippet": "string.rep(${1:s}, ${2:n}, ${3:sep})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>rep</strong>(s, n [, sep])",
+      "rightLabelHTML": "string.rep({s}, {n}, {sep})",
       "description": "Returns a string that is the concatenation of 'n' copies of the string 's' separated by the string 'sep'.",
       "descriptionMoreURL": "#pdf-string.rep",
       "replacementPrefix": "strrep"
@@ -393,7 +393,7 @@
     {
       "snippet": "string.reverse(${1:s})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>reverse</strong>(s)",
+      "rightLabelHTML": "string.reverse({s})",
       "description": "Returns a string that is the string 's' reversed.",
       "descriptionMoreURL": "#pdf-string.reverse",
       "replacementPrefix": "strreverse"
@@ -401,7 +401,7 @@
     {
       "snippet": "string.upper(${1:s})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>upper</strong>(s)",
+      "rightLabelHTML": "string.upper({s})",
       "description": "Receives a string and returns a copy of this string 's' with all characters to uppercase.",
       "descriptionMoreURL": "#pdf-string.upper",
       "replacementPrefix": "strupper"
@@ -409,7 +409,7 @@
     {
       "snippet": "string.lower(${1:s})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>lower</strong>(s)",
+      "rightLabelHTML": "string.lower({s})",
       "description": "Receives a string and returns a copy of this string 's' with all characters to lowercase.",
       "descriptionMoreURL": "#pdf-string.lower",
       "replacementPrefix": "strlower"
@@ -417,7 +417,7 @@
     {
       "snippet": "string.gmatch(${1:s}, ${2:pattern})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>gmatch</strong>(s, pattern)",
+      "rightLabelHTML": "string.gmatch({s}, {pattern})",
       "description": "Returns an iterator function that, each time it is called, returns the next captures from 'pattern' over the string 's'.",
       "descriptionMoreURL": "#pdf-string.gmatch",
       "replacementPrefix": "strgmatch"
@@ -425,7 +425,7 @@
     {
       "snippet": "string.gsub(${1:s}, ${2:pattern}, ${3:repl}, ${4:n})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>gsub</strong>(s, pattern, repl [, n])",
+      "rightLabelHTML": "string.gsub({s}, {pattern}, {repl}, {n})",
       "description": "Replaces the part string 's' that matches 'pattern' with 'repl'.",
       "descriptionMoreURL": "#pdf-string.gsub",
       "replacementPrefix": "strgsub"
@@ -433,7 +433,7 @@
     {
       "snippet": "string.match(${1:s}, ${2:pattern}, ${3:init})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>match</strong>(s, pattern [, init])",
+      "rightLabelHTML": "string.match({s}, {pattern}, {init})",
       "description": "Looks for the first match of 'pattern' in the string 's'.",
       "descriptionMoreURL": "#pdf-string.match",
       "replacementPrefix": "strmatch"
@@ -441,7 +441,7 @@
     {
       "snippet": "string.sub(${1:s}, ${2:i}, ${3:j})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>sub</strong>(s, i [, j])",
+      "rightLabelHTML": "string.sub({s}, {i}, {j})",
       "description": "Returns the substring of string 's' that starts at 'i' and continues until 'j'; 'i' and 'j' can be negative.",
       "descriptionMoreURL": "#pdf-string.sub",
       "replacementPrefix": "strsub"
@@ -449,7 +449,7 @@
     {
       "snippet": "string.unpack(${1:fmt}, ${2:s}, ${3:pos})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>unpack</strong>(fmt, s [, pos])",
+      "rightLabelHTML": "string.unpack({fmt}, {s}, {pos})",
       "description": "Returns the values packed in string 's' according to the format string 'fmt'.",
       "descriptionMoreURL": "#pdf-string.unpack",
       "replacementPrefix": "strunpack"
@@ -457,7 +457,7 @@
     {
       "snippet": "string.pack(${1:fmt}, ${2:argument})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>pack</strong>(fmt, argument, ···)",
+      "rightLabelHTML": "string.pack({fmt}, {argument})",
       "description": "Returns a binary string containing arguments packed according to the format string 'fmt'.",
       "descriptionMoreURL": "#pdf-string.pack",
       "replacementPrefix": "strpack"
@@ -465,7 +465,7 @@
     {
       "snippet": "string.packsize(${1:fmt})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>string</strong>.<strong>packsize</strong>(fmt)",
+      "rightLabelHTML": "string.packsize({fmt})",
       "description": "Returns the size of a string resulting from 'string.pack' with the given format.",
       "descriptionMoreURL": "#pdf-string.packsize",
       "replacementPrefix": "strpacksize"
@@ -475,7 +475,7 @@
     {
       "snippet": "utf8.char(${1:number})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>utf8</strong>.<strong>char</strong>([number, ···])",
+      "rightLabelHTML": "utf8.char({number})",
       "description": "Converts each one to its corresponding UTF-8 byte sequence and returns a string with the concatenation of all these sequences.",
       "descriptionMoreURL": "#pdf-utf8.char",
       "replacementPrefix": "utfchar"
@@ -483,7 +483,7 @@
     {
       "snippet": "utf8.charpattern '${1:pattern}'$0",
       "type": "function",
-      "rightLabelHTML": "<strong>utf8</strong>.<strong>charpattern</strong> 'pattern'",
+      "rightLabelHTML": "utf8.charpattern '{pattern}'",
       "description": "The pattern (a string, not a function) '[\\0-\\x7F\\xC2-\\xF4][\\x80-\\xBF]*', which matches exactly one UTF-8 byte sequence, assuming that the subject is a valid UTF-8 string. ",
       "descriptionMoreURL": "#pdf-utf8.charpattern",
       "replacementPrefix": "utfcharpattern"
@@ -491,7 +491,7 @@
     {
       "snippet": "utf8.codes(${1:s})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>utf8</strong>.<strong>codes</strong>(s)",
+      "rightLabelHTML": "utf8.codes({s})",
       "description": "Returns values for a iterator function (for in).",
       "descriptionMoreURL": "#pdf-utf8.codes",
       "replacementPrefix": "utfcodes"
@@ -499,7 +499,7 @@
     {
       "snippet": "utf8.codepoint(${1:s}, ${2:i}, ${3:j})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>utf8</strong>.<strong>codepoint</strong>(s [, i [, j]])",
+      "rightLabelHTML": "utf8.codepoint({s}, {i}, {j})",
       "description": "Returns the codepoints (as integers) from all characters in 's' that start between byte position 'i' and 'j' (both included).",
       "descriptionMoreURL": "#pdf-utf8.codepoint",
       "replacementPrefix": "utfcodepoint"
@@ -507,7 +507,7 @@
     {
       "snippet": "utf8.len(${1:s}, ${2:i}, ${3:j})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>utf8</strong>.<strong>len</strong>(s [, i [, j]])",
+      "rightLabelHTML": "utf8.len({s}, {i}, {j})",
       "description": "Returns the number of UTF-8 characters in string 's' that start between positions 'i' and 'j' (both inclusive).",
       "descriptionMoreURL": "#pdf-utf8.len",
       "replacementPrefix": "utflen"
@@ -515,7 +515,7 @@
     {
       "snippet": "utf8.offset(${1:s}, ${2:n}, ${3:i})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>utf8</strong>.<strong>offset</strong>(s, n [, i])",
+      "rightLabelHTML": "utf8.offset({s}, {n}, {i})",
       "description": "Returns the position (in bytes) where the encoding of the 'n'-th character of 's' (counting from position 'i') starts.",
       "descriptionMoreURL": "#pdf-utf8.offset",
       "replacementPrefix": "utfoffset"
@@ -525,7 +525,7 @@
     {
       "snippet": "table.concat(${1:list}, ${2:sep}, ${3:i}, ${4:j})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>table</strong>.<strong>concat</strong>(list [, sep [, i [, j]]])",
+      "rightLabelHTML": "table.concat({list}, {sep}, {i}, {j})",
       "description": "Given a list where all elements are strings or numbers, returns the string 'list[i]'..'sep'..'list[i+1]' ··· 'sep..list[j]'.",
       "descriptionMoreURL": "#pdf-table.concat",
       "replacementPrefix": "tabconcat"
@@ -533,7 +533,7 @@
     {
       "snippet": "table.insert(${1:list}, ${3:pos}, ${2:value})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>table</strong>.<strong>insert</strong>(list, [pos,] value)",
+      "rightLabelHTML": "table.insert({list}, {pos}, {value})",
       "description": "Inserts element value at position 'pos' in 'list', shifting up the elements 'list[pos]', 'list[pos+1]', ···, 'list[#list]'.",
       "descriptionMoreURL": "#pdf-table.insert",
       "replacementPrefix": "tabinsert"
@@ -541,7 +541,7 @@
     {
       "snippet": "table.remove(${1:list}, ${2:pos})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>table</strong>.<strong>remove</strong>(list [, pos])",
+      "rightLabelHTML": "table.remove({list}, {pos})",
       "description": "Removes from 'list' the element at position 'pos', returning the value of the removed element.",
       "descriptionMoreURL": "#pdf-table.remove",
       "replacementPrefix": "tabremove"
@@ -549,7 +549,7 @@
     {
       "snippet": "table.move(${1:a1}, ${2:f}, ${3:e}, ${4:t}, ${5:a2})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>table</strong>.<strong>move</strong>(a1, f, e, t [,a2])",
+      "rightLabelHTML": "table.move({a1}, {f}, {e}, {t},{a2})",
       "description": "Moves elements from table 'a1' to table 'a2'.",
       "descriptionMoreURL": "#pdf-table.move",
       "replacementPrefix": "tabmove"
@@ -557,7 +557,7 @@
     {
       "snippet": "table.sort(${1:list}, ${2:comp})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>table</strong>.<strong>sort</strong>(list [, comp])",
+      "rightLabelHTML": "table.sort({list}, {comp})",
       "description": "Sorts list elements in a given order, in-place, from 'list[1]' to 'list[#list]'.",
       "descriptionMoreURL": "#pdf-table.sort",
       "replacementPrefix": "tabsort"
@@ -565,15 +565,15 @@
     {
       "snippet": "table.unpack(${1:list}, ${2:i}, ${3:j})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>table</strong>.<strong>unpack</strong>(list [, i [, j]])",
+      "rightLabelHTML": "table.unpack({list}, {i}, {j})",
       "description": "Returns the elements from the given list.",
       "descriptionMoreURL": "#pdf-table.unpack",
       "replacementPrefix": "tabunpack"
     },
     {
-      "snippet": "table.pack($1)$0",
+      "snippet": "table.pack(${1:...})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>table</strong>.<strong>pack</strong>(···)",
+      "rightLabelHTML": "table.pack({...})",
       "description": "Returns a new table with all parameters stored into keys 1, 2, etc. and with a field \"n\" with the total number of parameters.",
       "descriptionMoreURL": "#pdf-table.pack",
       "replacementPrefix": "tabpack"
@@ -583,7 +583,7 @@
     {
       "text": "math.pi",
       "type": "variable",
-      "rightLabelHTML": "<strong>math</strong>.<strong>pi</strong>",
+      "rightLabelHTML": "math.pi",
       "description": "The value of π.",
       "descriptionMoreURL": "#pdf-math.pi",
       "replacementPrefix": "mathpi"
@@ -591,7 +591,7 @@
     {
       "snippet": "math.abs(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>abs</strong>(x)",
+      "rightLabelHTML": "math.abs({x})",
       "description": "Returns the absolute value of 'x' (integer/float).",
       "descriptionMoreURL": "#pdf-math.abs",
       "replacementPrefix": "mathabs"
@@ -599,7 +599,7 @@
     {
       "snippet": "math.acos(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>acos</strong>(x)",
+      "rightLabelHTML": "math.acos({x})",
       "description": "Returns the arc cosine of 'x' (in radians).",
       "descriptionMoreURL": "#pdf-math.acos",
       "replacementPrefix": "mathacos"
@@ -607,7 +607,7 @@
     {
       "snippet": "math.asin(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>asin</strong>(x)",
+      "rightLabelHTML": "math.asin({x})",
       "description": "Returns the arc sine of 'x' (in radians).",
       "descriptionMoreURL": "#pdf-math.asin",
       "replacementPrefix": "mathasin"
@@ -615,7 +615,7 @@
     {
       "snippet": "math.atan(${1:y}, ${2:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>atan</strong>(y [, x])",
+      "rightLabelHTML": "math.atan({y}, {x})",
       "description": "Returns the arc tangent of 'y'/'x' (in radians), but uses the signs of both parameters to find the quadrant of the result.",
       "descriptionMoreURL": "#pdf-math.atan",
       "replacementPrefix": "mathatan"
@@ -623,7 +623,7 @@
     {
       "snippet": "math.ceil(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>ceil</strong>(x)",
+      "rightLabelHTML": "math.ceil({x})",
       "description": "Returns the smallest integral value larger than or equal to 'x'.",
       "descriptionMoreURL": "#pdf-math.ceil",
       "replacementPrefix": "mathceil"
@@ -631,7 +631,7 @@
     {
       "snippet": "math.cos(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>cos</strong>(x)",
+      "rightLabelHTML": "math.cos({x})",
       "description": "Returns the cosine of 'x' (assumed to be in radians).",
       "descriptionMoreURL": "#pdf-math.cos",
       "replacementPrefix": "mathcos"
@@ -639,7 +639,7 @@
     {
       "snippet": "math.deg(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>deg</strong>(x)",
+      "rightLabelHTML": "math.deg({x})",
       "description": "Converts the angle 'x' from radians to degrees.",
       "descriptionMoreURL": "#pdf-math.deg",
       "replacementPrefix": "mathdeg"
@@ -647,7 +647,7 @@
     {
       "snippet": "math.exp(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>exp</strong>(x)",
+      "rightLabelHTML": "math.exp({x})",
       "description": "Returns the value 'e^x' (where e is the base of natural logarithms).",
       "descriptionMoreURL": "#pdf-math.exp",
       "replacementPrefix": "mathexp"
@@ -655,7 +655,7 @@
     {
       "snippet": "math.floor(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>floor</strong>(x)",
+      "rightLabelHTML": "math.floor({x})",
       "description": "Returns the largest integral value smaller than or equal to 'x'.",
       "descriptionMoreURL": "#pdf-math.floor",
       "replacementPrefix": "mathfloor"
@@ -663,7 +663,7 @@
     {
       "snippet": "math.fmod(${1:x}, ${2:y})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>fmod</strong>(x, y)",
+      "rightLabelHTML": "math.fmod({x}, {y})",
       "description": "Returns the remainder of the division of 'x' by 'y' that rounds the quotient towards zero (integer/float).",
       "descriptionMoreURL": "#pdf-math.fmod",
       "replacementPrefix": "mathfmod"
@@ -671,7 +671,7 @@
     {
       "snippet": "math.log(${1:x}, ${2:base})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>log</strong>(x [, base])",
+      "rightLabelHTML": "math.log({x}, {base})",
       "description": "Returns the logarithm of 'x' in the given base. The default for base is 'e' (so that the function returns the natural logarithm of 'x').",
       "descriptionMoreURL": "#pdf-math.log",
       "replacementPrefix": "mathlog"
@@ -679,7 +679,7 @@
     {
       "text": "math.huge",
       "type": "variable",
-      "rightLabelHTML": "<strong>math</strong>.<strong>huge</strong>",
+      "rightLabelHTML": "math.huge",
       "description": "The float value 'HUGE_VAL', a value larger than any other numeric value.",
       "descriptionMoreURL": "#pdf-math.huge",
       "replacementPrefix": "mathhuge"
@@ -687,7 +687,7 @@
     {
       "snippet": "math.max(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>max</strong>(x, ···)",
+      "rightLabelHTML": "math.max({x})",
       "description": "Returns the argument with the maximum value, according to the Lua operator < (integer/float).",
       "descriptionMoreURL": "#pdf-math.max",
       "replacementPrefix": "mathmax"
@@ -695,7 +695,7 @@
     {
       "text": "math.maxinteger",
       "type": "variable",
-      "rightLabelHTML": "<strong>math</strong>.<strong>maxinteger</strong>",
+      "rightLabelHTML": "math.maxinteger",
       "description": "An integer with the maximum value for an integer.",
       "descriptionMoreURL": "#pdf-math.maxinteger",
       "replacementPrefix": "mathmaxinteger"
@@ -703,7 +703,7 @@
     {
       "snippet": "math.min(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>min</strong>(x, ···)",
+      "rightLabelHTML": "math.min({x})",
       "description": "Returns the argument with the minimum value, according to the Lua operator < (integer/float).",
       "descriptionMoreURL": "#pdf-math.min",
       "replacementPrefix": "mathmin"
@@ -711,7 +711,7 @@
     {
       "text": "math.mininteger",
       "type": "variable",
-      "rightLabelHTML": "<strong>math</strong>.<strong>mininteger</strong>",
+      "rightLabelHTML": "math.mininteger",
       "description": "An integer with the minimum value for an integer.",
       "descriptionMoreURL": "#pdf-math.mininteger",
       "replacementPrefix": "mathmininteger"
@@ -719,7 +719,7 @@
     {
       "snippet": "math.modf(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>modf</strong>(x)",
+      "rightLabelHTML": "math.modf({x})",
       "description": "Returns the integral part of 'x' and the fractional part of 'x'. Its second result is always a float.",
       "descriptionMoreURL": "#pdf-math.modf",
       "replacementPrefix": "mathmodf"
@@ -727,7 +727,7 @@
     {
       "snippet": "math.rad(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>rad</strong>(x)",
+      "rightLabelHTML": "math.rad({x})",
       "description": "Converts the angle 'x' from degrees to radians.",
       "descriptionMoreURL": "#pdf-math.rad",
       "replacementPrefix": "mathrad"
@@ -735,7 +735,7 @@
     {
       "snippet": "math.random(${1:m}, ${2:n})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>random</strong>([m [, n]])",
+      "rightLabelHTML": "math.random({m}, {n})",
       "description": "When called without arguments, returns a pseudo-random float with uniform distribution in the range '[0,1)'.",
       "descriptionMoreURL": "#pdf-math.random",
       "replacementPrefix": "mathrandom"
@@ -743,7 +743,7 @@
     {
       "snippet": "math.randomseed(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>randomseed</strong>(x)",
+      "rightLabelHTML": "math.randomseed({x})",
       "description": "Sets 'x' as the \"seed\" for the pseudo-random generator: equal seeds produce equal sequences of numbers.",
       "descriptionMoreURL": "#pdf-math.randomseed",
       "replacementPrefix": "mathrandomseed"
@@ -751,7 +751,7 @@
     {
       "snippet": "math.sin(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>sin</strong>(x)",
+      "rightLabelHTML": "math.sin({x})",
       "description": "Returns the sine of 'x' (assumed to be in radians).",
       "descriptionMoreURL": "#pdf-math.sin",
       "replacementPrefix": "mathsin"
@@ -759,7 +759,7 @@
     {
       "snippet": "math.sqrt(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>sqrt</strong>(x)",
+      "rightLabelHTML": "math.sqrt({x})",
       "description": "Returns the square root of 'x' (You can also use the expression 'x^0.5' to compute this value.).",
       "descriptionMoreURL": "#pdf-math.sqrt",
       "replacementPrefix": "mathsqrt"
@@ -767,7 +767,7 @@
     {
       "snippet": "math.tan(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>tan</strong>(x)",
+      "rightLabelHTML": "math.tan({x})",
       "description": "Returns the tangent of 'x' (assumed to be in radians).",
       "descriptionMoreURL": "#pdf-math.tan",
       "replacementPrefix": "mathtan"
@@ -775,7 +775,7 @@
     {
       "snippet": "math.tointeger(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>tointeger</strong>(x)",
+      "rightLabelHTML": "math.tointeger({x})",
       "description": "If the value 'x' is convertible to an integer, returns that integer. Otherwise, returns nil.",
       "descriptionMoreURL": "#pdf-math.tointeger",
       "replacementPrefix": "mathtointeger"
@@ -783,7 +783,7 @@
     {
       "snippet": "math.type(${1:x})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>type</strong>(x)",
+      "rightLabelHTML": "math.type({x})",
       "description": "Returns \"integer\" if 'x' is an integer, \"float\" if it is a float, or nil if 'x' is not a number.",
       "descriptionMoreURL": "#pdf-math.type",
       "replacementPrefix": "mathtype"
@@ -791,7 +791,7 @@
     {
       "snippet": "math.ult(${1:m}, ${2:n})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>math</strong>.<strong>ult</strong>(m, n)",
+      "rightLabelHTML": "math.ult({m}, {n})",
       "description": "Returns a boolean, true if and only if integer 'm' is below integer 'n' when they are compared as unsigned integers.",
       "descriptionMoreURL": "#pdf-math.ult",
       "replacementPrefix": "mathult"
@@ -801,7 +801,7 @@
     {
       "snippet": "io.close(${1:file})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>close</strong>([file])",
+      "rightLabelHTML": "io.close({file})",
       "description": "Equivalent to 'file:close()'. Without a file, closes the default output file.",
       "descriptionMoreURL": "#pdf-io.close",
       "replacementPrefix": "ioclose"
@@ -809,7 +809,7 @@
     {
       "snippet": "io.flush()$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>flush</strong>()",
+      "rightLabelHTML": "io.flush()",
       "description": "Equivalent to 'io.output():flush()'.",
       "descriptionMoreURL": "#pdf-io.flush",
       "replacementPrefix": "ioflush"
@@ -817,7 +817,7 @@
     {
       "snippet": "io.input(${1:file})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>input</strong>([file])",
+      "rightLabelHTML": "io.input({file})",
       "description": "When called with a file name, it opens the named file (in text mode), and sets its handle as the default input file. When called with a file handle, it simply sets this file handle as the default input file. When called without parameters, it returns the current default input file.",
       "descriptionMoreURL": "#pdf-io.input",
       "replacementPrefix": "ioinput"
@@ -825,7 +825,7 @@
     {
       "snippet": "io.lines(${1:fileName})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>lines</strong>([fileName, ···])",
+      "rightLabelHTML": "io.lines({fileName})",
       "description": "Opens the given file name in read mode and returns an iterator function that works like 'file:lines(···)' over the opened file.",
       "descriptionMoreURL": "#pdf-io.lines",
       "replacementPrefix": "iolines"
@@ -833,7 +833,7 @@
     {
       "snippet": "io.open(${1:fileName}, ${2:mode})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>open</strong>(fileName [, mode])",
+      "rightLabelHTML": "io.open({fileName}, {mode})",
       "description": "This function opens a file, in the mode specified in the string 'mode'. In case of success, it returns a new file handle.",
       "descriptionMoreURL": "#pdf-io.open",
       "replacementPrefix": "ioopen"
@@ -841,7 +841,7 @@
     {
       "snippet": "io.output(${1:file})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>output</strong>([file])",
+      "rightLabelHTML": "io.output({file})",
       "description": "Similar to 'io.input', but operates over the default output file. ",
       "descriptionMoreURL": "#pdf-io.output",
       "replacementPrefix": "iooutput"
@@ -849,15 +849,15 @@
     {
       "snippet": "io.popen(${1:prog}, ${2:mode})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>popen</strong>(prog [, mode])",
+      "rightLabelHTML": "io.popen({prog}, {mode})",
       "description": "This function is system dependent and is not available on all platforms.",
       "descriptionMoreURL": "#pdf-io.popen",
       "replacementPrefix": "iopopen"
     },
     {
-      "snippet": "io.read($1)$0",
+      "snippet": "io.read(${1:...})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>read</strong>(···)",
+      "rightLabelHTML": "io.read({...})",
       "description": "Equivalent to 'io.input():read(···)'.",
       "descriptionMoreURL": "#pdf-io.read",
       "replacementPrefix": "ioread"
@@ -865,7 +865,7 @@
     {
       "snippet": "io.tmpfile()$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>tmpfile</strong>()",
+      "rightLabelHTML": "io.tmpfile()",
       "description": "In case of success, returns a handle for a temporary file. This file is opened in update mode and it is automatically removed when the program ends.",
       "descriptionMoreURL": "#pdf-io.tmpfile",
       "replacementPrefix": "iotmpfile"
@@ -873,15 +873,15 @@
     {
       "snippet": "io.type(${1:object})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>type</strong>(object)",
+      "rightLabelHTML": "io.type({object})",
       "description": "Checks whether obj is a valid file handle. Returns the string \"file\" if 'object' is an open file handle, \"closed file\" if obj is a closed file handle, or nil if obj is not a file handle.",
       "descriptionMoreURL": "#pdf-io.type",
       "replacementPrefix": "iotype"
     },
     {
-      "snippet": "io.write($1)$0",
+      "snippet": "io.write(${1:...})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>io</strong>.<strong>write</strong>(···)",
+      "rightLabelHTML": "io.write({...})",
       "description": "Equivalent to 'io.output():write(···)'.",
       "descriptionMoreURL": "#pdf-io.write",
       "replacementPrefix": "iowrite"
@@ -889,7 +889,7 @@
     {
       "snippet": "file:close()$0",
       "type": "function",
-      "rightLabelHTML": "<strong>file</strong>:<strong>close</strong>()",
+      "rightLabelHTML": "file:close()",
       "description": "Closes 'file'.",
       "descriptionMoreURL": "#pdf-file:close",
       "replacementPrefix": "fileclose"
@@ -897,23 +897,23 @@
     {
       "snippet": "file:flush()$0",
       "type": "function",
-      "rightLabelHTML": "<strong>file</strong>:<strong>flush</strong>()",
+      "rightLabelHTML": "file:flush()",
       "description": "Saves any written data to 'file'.",
       "descriptionMoreURL": "#pdf-file:flush",
       "replacementPrefix": "fileflush"
     },
     {
-      "snippet": "file:lines()$0",
+      "snippet": "file:lines(${1:...})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>file</strong>:<strong>lines</strong>(···)",
+      "rightLabelHTML": "file:lines({...})",
       "description": "Returns an iterator function that, each time it is called, reads the file according to the given formats.",
       "descriptionMoreURL": "#pdf-file:lines",
       "replacementPrefix": "filelines"
     },
     {
-      "snippet": "file:read($1)$0",
+      "snippet": "file:read(${1:...})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>file</strong>:<strong>read</strong>(···)",
+      "rightLabelHTML": "file:read({...})",
       "description": "Reads the 'file', according to the given formats, which specify what to read.",
       "descriptionMoreURL": "#pdf-file:read",
       "replacementPrefix": "fileread"
@@ -921,7 +921,7 @@
     {
       "snippet": "file:seek(${1:whence}, ${2:offset})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>file</strong>:<strong>seek</strong>([whence [, offset]])",
+      "rightLabelHTML": "file:seek({whence}, {offset})",
       "description": "Returns the final file position, measured in bytes from the beginning of the file.",
       "descriptionMoreURL": "#pdf-file:seek",
       "replacementPrefix": "fileseek"
@@ -929,15 +929,15 @@
     {
       "snippet": "file:setvbuf(${1:mode}, ${2:size})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>file</strong>:<strong>setvbuf</strong>(mode [, size])",
+      "rightLabelHTML": "file:setvbuf({mode}, {size})",
       "description": "Sets the buffering mode for an output file.",
       "descriptionMoreURL": "#pdf-file:setvbuf",
       "replacementPrefix": "filesetvbuf"
     },
     {
-      "snippet": "file:write()$0",
+      "snippet": "file:write(${1:...})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>file</strong>:<strong>write</strong>(···)",
+      "rightLabelHTML": "file:write({...})",
       "description": "Writes the value of each of its arguments to 'file'. The arguments must be strings or numbers.",
       "descriptionMoreURL": "#pdf-file:write",
       "replacementPrefix": "filewrite"
@@ -947,7 +947,7 @@
     {
       "snippet": "os.clock()$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>clock</strong>()",
+      "rightLabelHTML": "os.clock()",
       "description": "Returns an approximation of the amount in seconds of CPU time used by the program.",
       "descriptionMoreURL": "#pdf-os.clock",
       "replacementPrefix": "osclock"
@@ -955,7 +955,7 @@
     {
       "snippet": "os.date(${1:format}, ${2:time})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>date</strong>([format [, time]])",
+      "rightLabelHTML": "os.date({format}, {time})",
       "description": "Returns a string or a table containing date and time, formatted according to the given string 'format'.",
       "descriptionMoreURL": "#pdf-os.date",
       "replacementPrefix": "osdate"
@@ -963,7 +963,7 @@
     {
       "snippet": "os.time(${1:table})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>time</strong>([table])",
+      "rightLabelHTML": "os.time({table})",
       "description": "Returns the current time when called without arguments, or a time representing the local date and time specified by the given table.",
       "descriptionMoreURL": "#pdf-os.time",
       "replacementPrefix": "ostime"
@@ -971,7 +971,7 @@
     {
       "snippet": "os.difftime(${1:t2}, ${2:t1})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>difftime</strong>(t2, t1)",
+      "rightLabelHTML": "os.difftime({t2}, {t1})",
       "description": "Returns the difference, in seconds, from time 't1' to time 't2' (where the times are values returned by 'os.time').",
       "descriptionMoreURL": "#pdf-os.difftime",
       "replacementPrefix": "osdifftime"
@@ -979,7 +979,7 @@
     {
       "snippet": "os.execute(${1:command})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>execute</strong>([command])",
+      "rightLabelHTML": "os.execute({command})",
       "description": "This function is equivalent to the ISO C function 'system'. It passes 'command' to be executed by an operating system shell.",
       "descriptionMoreURL": "#pdf-os.execute",
       "replacementPrefix": "osexecute"
@@ -987,7 +987,7 @@
     {
       "snippet": "os.exit(${1:code}, ${2:close})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>exit</strong>([code [, close]])",
+      "rightLabelHTML": "os.exit({code}, {close})",
       "description": "Calls the ISO C function exit to terminate the host program.",
       "descriptionMoreURL": "#pdf-os.exit",
       "replacementPrefix": "osexit"
@@ -995,7 +995,7 @@
     {
       "snippet": "os.remove(${1:fileName})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>remove</strong>(fileName)",
+      "rightLabelHTML": "os.remove({fileName})",
       "description": "Deletes the file (or empty directory, on POSIX systems) with the given name.",
       "descriptionMoreURL": "#pdf-os.remove",
       "replacementPrefix": "osremove"
@@ -1003,7 +1003,7 @@
     {
       "snippet": "os.rename(${1:oldName}, ${2:newName})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>rename</strong>(oldName, newName)",
+      "rightLabelHTML": "os.rename({oldName}, {newName})",
       "description": "Renames the file or directory named 'oldName' to 'newName'.",
       "descriptionMoreURL": "#pdf-os.rename",
       "replacementPrefix": "osrename"
@@ -1011,7 +1011,7 @@
     {
       "snippet": "os.getenv(${1:varName})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>getenv</strong>(varName)",
+      "rightLabelHTML": "os.getenv({varName})",
       "description": "Returns the value of the process environment variable 'varName', or nil if the variable is not defined. ",
       "descriptionMoreURL": "#pdf-os.getenv",
       "replacementPrefix": "osgetenv"
@@ -1019,7 +1019,7 @@
     {
       "snippet": "os.setlocale(${1:locale}, ${2:category})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>setlocale</strong>(locale [, category])",
+      "rightLabelHTML": "os.setlocale({locale}, {category})",
       "description": "Sets the current locale of the program.",
       "descriptionMoreURL": "#pdf-os.setlocale",
       "replacementPrefix": "ossetlocale"
@@ -1027,7 +1027,7 @@
     {
       "snippet": "os.tmpname()$0",
       "type": "function",
-      "rightLabelHTML": "<strong>os</strong>.<strong>tmpname</strong>()",
+      "rightLabelHTML": "os.tmpname()",
       "description": "Returns a string with a file name that can be used for a temporary file.",
       "descriptionMoreURL": "#pdf-os.tmpname",
       "replacementPrefix": "ostmpname"
@@ -1037,7 +1037,7 @@
     {
       "snippet": "debug.debug()$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>debug</strong>()",
+      "rightLabelHTML": "debug.debug()",
       "description": "Enters an interactive mode with the user, running each string that the user enters.",
       "descriptionMoreURL": "#pdf-debug.debug",
       "replacementPrefix": "debdebug"
@@ -1045,7 +1045,7 @@
     {
       "snippet": "debug.gethook(${1:thread})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>gethook</strong>([thread])",
+      "rightLabelHTML": "debug.gethook({thread})",
       "description": "Returns the current hook settings of the thread, as three values: the current hook function, the current hook mask, and the current hook count (as set by the 'debug.sethook' function).",
       "descriptionMoreURL": "#pdf-debug.gethook",
       "replacementPrefix": "debgethook"
@@ -1053,7 +1053,7 @@
     {
       "snippet": "debug.getinfo(${1:thread}, ${2:func}, ${3:what})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>getinfo</strong>([thread,] func [, what])",
+      "rightLabelHTML": "debug.getinfo({thread}, {func}, {what})",
       "description": "Returns a table with information about a function.",
       "descriptionMoreURL": "#pdf-debug.getinfo",
       "replacementPrefix": "debgetinfo"
@@ -1061,7 +1061,7 @@
     {
       "snippet": "debug.getlocal(${1:thread}, ${2:func}, ${3:local})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>getlocal</strong>([thread,] func, local)",
+      "rightLabelHTML": "debug.getlocal({thread}, {func}, {local})",
       "description": "This function returns the name and the value of the local variable with index 'local' of the function at level 'func' of the stack.",
       "descriptionMoreURL": "#pdf-debug.getlocal",
       "replacementPrefix": "debgetlocal"
@@ -1069,7 +1069,7 @@
     {
       "snippet": "debug.getmetatable(${1:value})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>getmetatable</strong>(value)",
+      "rightLabelHTML": "debug.getmetatable({value})",
       "description": "Returns the metatable of the given 'value' or nil if it does not have a metatable.",
       "descriptionMoreURL": "#pdf-debug.getmetatable",
       "replacementPrefix": "debgetmetatable"
@@ -1077,7 +1077,7 @@
     {
       "snippet": "debug.getregistry()$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>getregistry</strong>()",
+      "rightLabelHTML": "debug.getregistry()",
       "description": "Returns the registry table.",
       "descriptionMoreURL": "#pdf-debug.getregistry",
       "replacementPrefix": "debgetregistry"
@@ -1085,7 +1085,7 @@
     {
       "snippet": "debug.getupvalue(${1:func}, ${2:up})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>getupvalue</strong>(func, up)",
+      "rightLabelHTML": "debug.getupvalue({func}, {up})",
       "description": "This function returns the name and the value of the upvalue with index 'up' of the function 'func'.",
       "descriptionMoreURL": "#pdf-debug.getupvalue",
       "replacementPrefix": "debgetupvalue"
@@ -1093,7 +1093,7 @@
     {
       "snippet": "debug.getuservalue(${1:u})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>getuservalue</strong>(u)",
+      "rightLabelHTML": "debug.getuservalue({u})",
       "description": "Returns the Lua value associated to 'u'. If 'u' is not a full userdata, returns nil.",
       "descriptionMoreURL": "#pdf-debug.getuservalue",
       "replacementPrefix": "debgetuservalue"
@@ -1101,7 +1101,7 @@
     {
       "snippet": "debug.sethook(${1:thread}, ${2:hook}, ${3:mask}, ${4:count})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>sethook</strong>([thread,] hook, mask [, count])",
+      "rightLabelHTML": "debug.sethook({thread}, {hook}, {mask}, {count})",
       "description": "Sets the given function as a 'hook'. The string 'mask' and the number 'count' describe when the hook will be called.",
       "descriptionMoreURL": "#pdf-debug.sethook",
       "replacementPrefix": "debsethook"
@@ -1109,7 +1109,7 @@
     {
       "snippet": "debug.setlocal(${1:thread}, ${2:level}, ${3:local}, ${4:value})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>setlocal</strong>([thread,] level, local, value)",
+      "rightLabelHTML": "debug.setlocal({thread}, {level}, {local}, {value})",
       "description": "This function assigns the 'value' to the local variable with index 'local' of the function at 'level' of the stack.",
       "descriptionMoreURL": "#pdf-debug.setlocal",
       "replacementPrefix": "debsetlocal"
@@ -1117,7 +1117,7 @@
     {
       "snippet": "debug.setmetatable(${1:value}, ${2:table})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>setmetatable</strong>(value, table)",
+      "rightLabelHTML": "debug.setmetatable({value}, {table})",
       "description": "Sets the metatable for the given value to the given 'table' (which can be nil). Returns 'value'. ",
       "descriptionMoreURL": "#pdf-debug.setmetatable",
       "replacementPrefix": "debsetmetatable"
@@ -1125,7 +1125,7 @@
     {
       "snippet": "debug.setupvalue(${1:func}, ${2:up}, ${3:value})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>setupvalue</strong>(func, up, value)",
+      "rightLabelHTML": "debug.setupvalue({func}, {up}, {value})",
       "description": "This function assigns the 'value' to the upvalue with index 'up' of the function 'func'.",
       "descriptionMoreURL": "#pdf-debug.setupvalue",
       "replacementPrefix": "debsetupvalue"
@@ -1133,7 +1133,7 @@
     {
       "snippet": "debug.setuservalue(${1:udata}, ${2:value})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>setuservalue</strong>(udata, value)",
+      "rightLabelHTML": "debug.setuservalue({udata}, {value})",
       "description": "Sets the given value as the Lua 'value' associated to the given 'udata'. Returns 'udata'.",
       "descriptionMoreURL": "#pdf-debug.setuservalue",
       "replacementPrefix": "debsetuservalue"
@@ -1141,7 +1141,7 @@
     {
       "snippet": "debug.traceback(${1:thread}, ${2:message}, ${3:level})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>traceback</strong>([thread,] [message [, level]])",
+      "rightLabelHTML": "debug.traceback({thread}, {message}, {level})",
       "description": "If 'message' is present but is neither a string nor nil, this function returns 'message' without further processing.",
       "descriptionMoreURL": "#pdf-debug.traceback",
       "replacementPrefix": "debtraceback"
@@ -1149,7 +1149,7 @@
     {
       "snippet": "debug.upvalueid(${1:func}, ${2:n})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>upvalueid</strong>(func, n)",
+      "rightLabelHTML": "debug.upvalueid({func}, {n})",
       "description": "Returns a unique identifier (as a light userdata) for the upvalue numbered 'n' from the given function.",
       "descriptionMoreURL": "#pdf-debug.upvalueid",
       "replacementPrefix": "debupvalueid"
@@ -1157,7 +1157,7 @@
     {
       "snippet": "debug.upvaluejoin(${1:f1}, ${2:n1}, ${3:f2}, ${4:n2})$0",
       "type": "function",
-      "rightLabelHTML": "<strong>debug</strong>.<strong>upvaluejoin</strong>(f1, n1, f2, n2)",
+      "rightLabelHTML": "debug.upvaluejoin({f1}, {n1}, {f2}, {n2})",
       "description": "Make the 'n1'-th upvalue of the Lua closure 'f1' refer to the 'n2'-th upvalue of the Lua closure 'f2'.",
       "descriptionMoreURL": "#pdf-debug.upvaluejoin",
       "replacementPrefix": "debupvaluejoin"
