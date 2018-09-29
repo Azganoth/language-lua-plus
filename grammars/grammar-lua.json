@@ -6,13 +6,11 @@
 
   "patterns": [
     {
-      "begin": "\\b(function)\\b\\s*(([a-zA-Z_][a-zA-Z0-9_]*)([.]([a-zA-Z0-9_]+)|[:]([a-zA-Z0-9_]+))*)?\\s*(\\()",
+      "begin": "\\b(function)\\b\\s+([a-zA-Z_][a-zA-Z0-9_]*([.:][a-zA-Z0-9_]+)*)\\s*(\\()",
       "beginCaptures": {
         "1": { "name": "storage.type.function.lua" },
-        "3": { "name": "entity.name.function.lua" },
-        "5": { "name": "entity.name.function.lua" },
-        "6": { "name": "entity.name.function.lua" },
-        "7": { "name": "punctuation.definition.parameters.begin.lua" }
+        "2": { "name": "entity.name.function.lua" },
+        "4": { "name": "punctuation.definition.parameters.begin.lua" }
       },
       "end": "\\)",
       "endCaptures": {
@@ -27,22 +25,31 @@
       ]
     },
     {
-      "begin": "(?<!function)(([a-zA-Z_][a-zA-Z0-9_]*)([.]([a-zA-Z0-9_]+)|[:]([a-zA-Z0-9_]+))*)(\\()",
+      "begin": "(?<!function)([a-zA-Z_][a-zA-Z0-9_]*([.:][a-zA-Z0-9_]+)*)\\s*(\\(|{)",
       "beginCaptures": {
-        "2": { "name": "entity.name.function.lua" },
-        "4": { "name": "entity.name.function.lua" },
-        "5": { "name": "entity.name.function.lua" },
-        "6": { "name": "punctuation.definition.parameters.begin.lua" }
+        "1": { "name": "entity.name.function.lua" },
+        "3": { "name": "punctuation.definition.parameters.begin.lua" }
       },
-      "end": "\\)",
+      "end": "\\)|}",
       "endCaptures": {
         "0": { "name": "punctuation.definition.parameters.end.lua" }
       },
+      "name": "meta.functioncall.lua",
       "patterns": [
         {
           "include": "$self"
         }
       ]
+    },
+    {
+      "match": "([a-zA-Z_][a-zA-Z0-9_]*([.:][a-zA-Z0-9_]+)*)\\s*('|\")((\\\\.)|[^']*)(\\3)",
+      "name": "meta.functioncall.lua",
+      "captures": {
+        "1": { "name": "entity.name.function.lua" },
+        "3": { "name": "punctuation.definition.string.begin.lua" },
+        "5": { "name": "constant.character.escape.lua" },
+        "6": { "name": "punctuation.definition.string.end.lua" }
+      }
     },
 
     {
@@ -65,21 +72,13 @@
     },
 
     {
-      "begin": "('|\")",
-      "beginCaptures": {
-        "0": { "name": "punctuation.definition.string.begin.lua" }
-      },
-      "end": "\\1",
-      "endCaptures": {
-        "0": { "name": "punctuation.definition.string.end.lua" }
-      },
+      "match": "('|\")((\\\\.)|[^']*)(\\1)",
       "name": "string.line.lua",
-      "patterns": [
-        {
-          "match": "\\\\.",
-          "name": "constant.character.escape.lua"
-        }
-      ]
+      "captures": {
+        "1": { "name": "punctuation.definition.string.begin.lua" },
+        "3": { "name": "constant.character.escape.lua" },
+        "4": { "name": "punctuation.definition.string.end.lua" }
+      }
     },
     {
       "begin": "(?!--\\s*)\\[(=*)\\[",
@@ -90,13 +89,7 @@
       "endCaptures": {
         "0": { "name": "punctuation.definition.string.end.lua" }
       },
-      "name": "string.block.lua",
-      "patterns": [
-        {
-          "match": "\\\\.",
-          "name": "constant.character.escape.lua"
-        }
-      ]
+      "name": "string.block.lua"
     },
 
     {
@@ -105,7 +98,7 @@
     },
 
     {
-      "match": "\\b(this|self|(?<!\\.)\\.\\.\\.(?!\\.)|_G|_VERSION)\\b",
+      "match": "\\b(this|self|_G|_VERSION)\\b",
       "name": "variable.language.lua"
     },
 
@@ -138,11 +131,11 @@
     },
     {
       "match": "\\b(or|and|not)\\b",
-      "name": "keyword.operator.logical.lua"
+      "name": "keyword.operator.lua"
     },
     {
       "match": "=|<|<=|==|~=|>=|>|\\||~|&|<<|>>|\\+|-|\\*|\\/|\\/\\/|%|(?<!\\.)\\.\\.(?!\\.)|\\^|#",
-      "name": "keyword.operator.logical.lua"
+      "name": "keyword.operator.lua"
     },
     {
       "match": "\\.|,|;",
