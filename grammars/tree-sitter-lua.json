@@ -1,9 +1,8 @@
 {
-  "id": "lua",
   "name": "Lua",
+  "scopeName": "source.lua",
   "type": "tree-sitter",
   "parser": "tree-sitter-lua",
-  "legacyScopeName": "source.lua",
 
   "fileTypes": [ "lua" ],
 
