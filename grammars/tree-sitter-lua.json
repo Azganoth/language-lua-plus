@@ -69,8 +69,8 @@
 
     "function_definition > parameters > identifier": "variable.parameter",
 
-    "this": "variable.language",
     "self": "variable.language",
+    "next": "entity.name.function",
     "spread": "variable.parameter",
     "global_variable": "variable.language",
 
