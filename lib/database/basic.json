@@ -17,7 +17,7 @@
     {
       "snippet": "if${1: not} ${2:condition} then\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "if {not} {condition} then¬»{}¬end",
+      "rightLabelHTML": "if <em>not</em> <em>condition</em> then¬»{}¬end",
       "description": "Conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "if"
@@ -25,7 +25,7 @@
     {
       "snippet": "if${1: not} ${2:condition} then\n\t$3\nelse\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "if {not} {condition} then¬»{}¬else¬»{}¬end",
+      "rightLabelHTML": "if <em>not</em> <em>condition</em> then¬»{}¬else¬»{}¬end",
       "description": "Conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "ifel"
@@ -33,7 +33,7 @@
     {
       "snippet": "elseif${1: not} ${2:condition} then\n\t$0",
       "type": "snippet",
-      "rightLabelHTML": "elseif {not} {condition} then¬»{}",
+      "rightLabelHTML": "elseif <em>not</em> <em>condition</em> then¬»{}",
       "description": "Sub-conditional block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "elseif"
@@ -49,7 +49,7 @@
     {
       "snippet": "while${1: not} ${2:condition} do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "while {not} {condition} do¬»{}¬end",
+      "rightLabelHTML": "while <em>not</em> <em>condition</em> do¬»{}¬end",
       "description": "While loop block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "while"
@@ -57,39 +57,39 @@
     {
       "snippet": "repeat\n\t$0\nuntil ${1:condition}",
       "type": "snippet",
-      "rightLabelHTML": "repeat¬»{}¬until {condition}",
+      "rightLabelHTML": "repeat¬»{}¬until <em>condition</em>",
       "description": "Repeat loop block.",
       "descriptionMoreURL": "#3.3.4",
       "replacementPrefix": "repeat"
     },
     {
-      "snippet": "for ${1:i} = ${2:1}, ${4:i_stop}${3:, ${5:i_step}} do\n\t$0\nend",
+      "snippet": "for ${1:i} = ${2:1}, ${4:10}${3:, ${5:i_step}} do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "for {i} = {1}, {i_stop}, {i_step} do¬»{}¬end",
+      "rightLabelHTML": "for <em>i</em> = <em>1</em>, <em>10</em>, <em>i_step</em> do¬»{}¬end",
       "description": "For loop block.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "for"
     },
     {
-      "snippet": "for ${1:i} in next, ${2:table} do\n\t$0\nend",
+      "snippet": "for ${1:k}, ${2:v} in next, ${3:table_name} do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "for {index} in next, {table} do¬»{}¬end",
+      "rightLabelHTML": "for <em>key</em> <em>value</em> in next, <em>table_name</em> do¬»{}¬end",
       "description": "For in loop block using `next` function.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "forn"
     },
     {
-      "snippet": "for ${1:k}, ${2:v} in pairs(${3:table}) do\n\t$0\nend",
+      "snippet": "for ${1:k}, ${2:v} in pairs(${3:table_name}) do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "for {key}, {value} in pairs({table}) do¬»{}¬end",
+      "rightLabelHTML": "for <em>key</em>, <em>value</em> in pairs(<em>table_name</em>) do¬»{}¬end",
       "description": "For in loop block using `pairs` function.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "forp"
     },
     {
-      "snippet": "for ${1:i}, ${2:v} in ipairs(${3:table}) do\n\t$0\nend",
+      "snippet": "for ${1:i}, ${2:v} in ipairs(${3:table_name}) do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "for {index}, {value} in ipairs({table}) do¬»{}¬end",
+      "rightLabelHTML": "for <em>index</em>, <em>value</em> in ipairs(<em>table_name</em>) do¬»{}¬end",
       "description": "For in loop block using `ipairs` function.",
       "descriptionMoreURL": "#3.3.5",
       "replacementPrefix": "fori"
@@ -97,7 +97,7 @@
     {
       "snippet": "${1:condition} and ${2:true} or ${3:false}",
       "type": "snippet",
-      "rightLabelHTML": "{condition} and {true} or {false}",
+      "rightLabelHTML": "<em>condition</em> and <em>true</em> or <em>false</em>",
       "description": "Ternary conditional expression.",
       "replacementPrefix": "tern"
     }
@@ -106,7 +106,7 @@
     {
       "snippet": "function ${1:functionName}(${2:...})\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "function {functionName}({...})¬»{}¬end",
+      "rightLabelHTML": "function <em>functionName</em>(<em>...</em>)¬»{}¬end",
       "description": "Named function.",
       "descriptionMoreURL": "#3.4.11",
       "replacementPrefix": "fun"
@@ -114,7 +114,7 @@
     {
       "snippet": "function (${1:...})\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "function ({...})¬»{}¬end",
+      "rightLabelHTML": "function (<em>...</em>)¬»{}¬end",
       "description": "Anonymous function, a function definition is an executable expression, whose value has type `function`.",
       "descriptionMoreURL": "#3.4.11",
       "replacementPrefix": "fundef"
