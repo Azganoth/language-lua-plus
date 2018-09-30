@@ -39,12 +39,12 @@
 | `tostring`     | tostring(*value*)                         |
 | `type`         | type(*any*)                               |
 | `assert`       | assert(*value*, *message*)                |
-| `garbage`      | collectgarbage(*option*, *argument*)      |
+| `cgar`         | collectgarbage(*option*, *argument*)      |
 | `error`        | error(*message*, *level*)                 |
 | `select`       | select(*index*, *...*)                    |
 | `next`         | next(*table*, *index*)                    |
-| `getmetatable` | getmetatable(*object*)                    |
-| `setmetatable` | setmetatable(*table*, *metatable*)        |
+| `getmeta`      | getmetatable(*object*)                    |
+| `setmeta`      | setmetatable(*table*, *metatable*)        |
 | `pairs`        | pairs(*table*)                            |
 | `ipairs`       | ipairs(*table*)                           |
 | `dofile`       | dofile(*fileName*)                        |
@@ -61,20 +61,20 @@
 
 |       Prefix       |              Content              |
 | ------------------ | --------------------------------- |
-| `corocreate`       | coroutine.create(*func*)          |
-| `corowrap`         | coroutine.wrap(*func*)            |
-| `corostatus`       | coroutine.status(*coro*)          |
-| `cororunning`      | coroutine.running()               |
-| `cororesume`       | coroutine.resume(*coro*, *value*) |
-| `coroisyieldable`  | coroutine.isyieldable()           |
-| `coroyield`        | coroutine.yield(*...*)            |
+| `corcreate`        | coroutine.create(*func*)          |
+| `corwrap`          | coroutine.wrap(*func*)            |
+| `corstatus`        | coroutine.status(*coro*)          |
+| `corrunning`       | coroutine.running()               |
+| `corresume`        | coroutine.resume(*coro*, *value*) |
+| `corisyield`       | coroutine.isyieldable()           |
+| `coryield`         | coroutine.yield(*...*)            |
 
 #### Package
 
 |      Prefix      |                      Content                      |
 | ---------------- | ------------------------------------------------- |
-| `req`            | require '*modName*'                               |
-| `req1`           | require(*modName*)                                |
+| `sreq`           | require '*modName*'                               |
+| `req`            | require(*modName*)                                |
 | `packpath`       | package.path '*path*'                             |
 | `packcpath`      | package.cpath '*path*'                            |
 | `packpreload`    | package.preload '*modName*'                       |
@@ -121,9 +121,9 @@
 
 |    Prefix    |                Content                |
 | ------------ | ------------------------------------- |
-| `tabconcat`  | table.concat(*list*, *sep*, *i*, *j*) |
-| `tabinsert`  | table.insert(*list*, *pos*, *value*)  |
-| `tabremove`  | table.remove(*list*, *pos*)           |
+| `tabcon`     | table.concat(*list*, *sep*, *i*, *j*) |
+| `tabins`     | table.insert(*list*, *pos*, *value*)  |
+| `tabrem`     | table.remove(*list*, *pos*)           |
 | `tabmove`    | table.move(*a1*, *f*, *e*, *t*,*a2*)  |
 | `tabsort`    | table.sort(*list*, *comp*)            |
 | `tabunpack`  | table.unpack(*list*, *i*, *j*)        |
@@ -147,17 +147,17 @@
 | `mathlog`        | match.log(*x*, *base*)  |
 | `mathhuge`       | match.huge(*x*)         |
 | `mathmax`        | match.max(*x*)          |
-| `mathmaxinteger` | match.maxinteger        |
+| `mathmaxint`     | match.maxinteger        |
 | `mathmin`        | match.min(*x*)          |
-| `mathmininteger` | match.mininteger        |
+| `mathminint`     | match.mininteger        |
 | `mathmodf`       | match.modf(*x*)         |
 | `mathrad`        | match.rad(*x*)          |
-| `mathrandom`     | match.random(*m*, *n*)  |
-| `mathrandomseed` | match.randomseed(*x*)   |
+| `mathran`        | match.random(*m*, *n*)  |
+| `mathranseed`    | match.randomseed(*x*)   |
 | `mathsin`        | match.sin(*x*)          |
 | `mathsqrt`       | match.sqrt(*x*)         |
 | `mathtan`        | match.tan(*x*)          |
-| `mathtointeger`  | match.tointeger(*x*)    |
+| `mathtoint`      | match.tointeger(*x*)    |
 | `mathtype`       | match.type(*x*)         |
 | `mathult`        | match.ult(*m*, *n*)     |
 
@@ -191,11 +191,11 @@
 | `osclock`      | os.clock()                          |
 | `osdate`       | os.date(*format*, *time*)           |
 | `ostime`       | os.time(*table*)                    |
-| `osdifftime`   | os.difftime(*t2*, *t1*)             |
-| `osexecute`    | os.execute(*command*)               |
+| `osdiff`       | os.difftime(*t2*, *t1*)             |
+| `osexe`        | os.execute(*command*)               |
 | `osexit`       | os.exit(*code*, *close*)            |
-| `osremove`     | os.remove(*fileName*)               |
-| `osrename`     | os.rename(*oldName*, *newName*)     |
+| `osrem`        | os.remove(*fileName*)               |
+| `osren`        | os.rename(*oldName*, *newName*)     |
 | `osgetenv`     | os.getenv(*varName*)                |
 | `ossetlocale`  | os.setlocale(*locale*, *category*)  |
 | `ostmpname`    | os.tmpname()                        |
@@ -208,18 +208,18 @@
 | `debgethook`       | debug.gethook(*thread*)                             |
 | `debgetinfo`       | debug.getinfo(*thread*, *func*, *what*)             |
 | `debgetlocal`      | debug.getlocal(*thread*, *func*, *local*)           |
-| `debgetmetatable`  | debug.getmetatable(*value*)                         |
+| `debgetmeta`       | debug.getmetatable(*value*)                         |
 | `debgetregistry`   | debug.getregistry()                                 |
 | `debgetupvalue`    | debug.getupvalue(*func*, *up*)                      |
 | `debgetuservalue`  | debug.getuservalue(*u*)                             |
 | `debsethook`       | debug.sethook(*thread*, *hook*, *mask*, *count*)    |
 | `debsetlocal`      | debug.setlocal(*thread*, *level*, *local*, *value*) |
-| `debsetmetatable`  | debug.setmetatable(*value*, *table*)                |
+| `debsetmeta`       | debug.setmetatable(*value*, *table*)                |
 | `debsetupvalue`    | debug.setupvalue(*func*, *up*, *value*)             |
 | `debsetuservalue`  | debug.setuservalue(*udata*, *value*)                |
 | `debtraceback`     | debug.traceback(*thread*, *message*, *level*)       |
-| `debupvalueid`     | debug.upvalueid(*func*, *n*)                        |
-| `debupvaluejoin`   | debug.upvaluejoin(*f1*, *n1*, *f2*, *n2*)           |
+| `debupvid`         | debug.upvalueid(*func*, *n*)                        |
+| `debupvjoin`       | debug.upvaluejoin(*f1*, *n1*, *f2*, *n2*)           |
 
 #### References
 

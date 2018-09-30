@@ -62,7 +62,7 @@
       "rightLabelHTML": "collectgarbage(<em>option</em>, <em>argument</em>)",
       "description": "This function is a generic interface to the garbage collector.",
       "descriptionMoreURL": "#pdf-collectgarbage",
-      "replacementPrefix": "garbage"
+      "replacementPrefix": "cgar"
     },
     {
       "snippet": "error(${1:message}, ${2:level})$0",
@@ -94,7 +94,7 @@
       "rightLabelHTML": "getmetatable(<em>object</em>)",
       "description": "Returns the 'table' metamethod field '__metatable' associated value, if the field doens't exist returns nil.",
       "descriptionMoreURL": "#pdf-getmetatable",
-      "replacementPrefix": "getmetatable"
+      "replacementPrefix": "getmeta"
     },
     {
       "snippet": "setmetatable(${1:table}, ${2:metatable})$0",
@@ -102,7 +102,7 @@
       "rightLabelHTML": "setmetatable(<em>table</em>, <em>metatable</em>)",
       "description": "Sets the metatable for the given table.",
       "descriptionMoreURL": "#pdf-setmetatable",
-      "replacementPrefix": "setmetatable"
+      "replacementPrefix": "setmeta"
     },
     {
       "snippet": "pairs(${1:table})$0",
@@ -200,7 +200,7 @@
       "rightLabelHTML": "coroutine.create(<em>func</em>)",
       "description": "Creates a new coroutine, with body 'func'.",
       "descriptionMoreURL": "#pdf-coroutine.create",
-      "replacementPrefix": "corocreate"
+      "replacementPrefix": "corcreate"
     },
     {
       "snippet": "coroutine.wrap(${1:func})$0",
@@ -208,7 +208,7 @@
       "rightLabelHTML": "coroutine.wrap(<em>func</em>)",
       "description": "Creates a new coroutine, with body 'func'.",
       "descriptionMoreURL": "#pdf-coroutine.wrap",
-      "replacementPrefix": "corowrap"
+      "replacementPrefix": "corwrap"
     },
     {
       "snippet": "coroutine.status(${1:coro})$0",
@@ -216,7 +216,7 @@
       "rightLabelHTML": "coroutine.status(<em>coro</em>)",
       "description": "Returns the status of the given coroutine, as a string.",
       "descriptionMoreURL": "#pdf-coroutine.status",
-      "replacementPrefix": "corostatus"
+      "replacementPrefix": "corstatus"
     },
     {
       "snippet": "coroutine.running()$0",
@@ -224,7 +224,7 @@
       "rightLabelHTML": "coroutine.running()",
       "description": "Returns the running coroutine and a boolean.",
       "descriptionMoreURL": "#pdf-coroutine.running",
-      "replacementPrefix": "cororunning"
+      "replacementPrefix": "corrunning"
     },
     {
       "snippet": "coroutine.resume(${1:coro}, ${2:value})$0",
@@ -232,7 +232,7 @@
       "rightLabelHTML": "coroutine.resume(<em>coro</em>, <em>value</em>)",
       "description": "Starts or continues the execution of a given coroutine.",
       "descriptionMoreURL": "#pdf-coroutine.resume",
-      "replacementPrefix": "cororesume"
+      "replacementPrefix": "corresume"
     },
     {
       "snippet": "coroutine.isyieldable()$0",
@@ -240,7 +240,7 @@
       "rightLabelHTML": "coroutine.isyieldable()",
       "description": "Returns true when the running coroutine can yield.",
       "descriptionMoreURL": "#pdf-coroutine.isyieldable",
-      "replacementPrefix": "coroisyieldable"
+      "replacementPrefix": "corisyield"
     },
     {
       "snippet": "coroutine.yield(${1:...})$0",
@@ -248,7 +248,7 @@
       "rightLabelHTML": "coroutine.yield(<em>...</em>)",
       "description": "Suspends the execution of the calling coroutine.",
       "descriptionMoreURL": "#pdf-coroutine.yield",
-      "replacementPrefix": "coroyield"
+      "replacementPrefix": "coryield"
     }
   ],
   "package": [
@@ -258,7 +258,7 @@
       "rightLabelHTML": "require '<em>modName</em>'",
       "description": "Loads the given module.",
       "descriptionMoreURL": "#pdf-require",
-      "replacementPrefix": "req"
+      "replacementPrefix": "sreq"
     },
     {
       "snippet": "require(${1:modName})$0",
@@ -266,7 +266,7 @@
       "rightLabelHTML": "require(<em>modName</em>)",
       "description": "Loads the given module.",
       "descriptionMoreURL": "#pdf-require",
-      "replacementPrefix": "req1"
+      "replacementPrefix": "req"
     },
     {
       "snippet": "package.path '${1:path}'$0",
@@ -528,7 +528,7 @@
       "rightLabelHTML": "table.concat(<em>list</em>, <em>sep</em>, <em>i</em>, <em>j</em>)",
       "description": "Given a list where all elements are strings or numbers, returns the string 'list[i]'..'sep'..'list[i+1]' ··· 'sep..list[j]'.",
       "descriptionMoreURL": "#pdf-table.concat",
-      "replacementPrefix": "tabconcat"
+      "replacementPrefix": "tabcon"
     },
     {
       "snippet": "table.insert(${1:list}, ${3:pos}, ${2:value})$0",
@@ -536,7 +536,7 @@
       "rightLabelHTML": "table.insert(<em>list</em>, <em>pos</em>, <em>value</em>)",
       "description": "Inserts element value at position 'pos' in 'list', shifting up the elements 'list[pos]', 'list[pos+1]', ···, 'list[#list]'.",
       "descriptionMoreURL": "#pdf-table.insert",
-      "replacementPrefix": "tabinsert"
+      "replacementPrefix": "tabins"
     },
     {
       "snippet": "table.remove(${1:list}, ${2:pos})$0",
@@ -544,7 +544,7 @@
       "rightLabelHTML": "table.remove(<em>list</em>, <em>pos</em>)",
       "description": "Removes from 'list' the element at position 'pos', returning the value of the removed element.",
       "descriptionMoreURL": "#pdf-table.remove",
-      "replacementPrefix": "tabremove"
+      "replacementPrefix": "tabrem"
     },
     {
       "snippet": "table.move(${1:a1}, ${2:f}, ${3:e}, ${4:t}, ${5:a2})$0",
@@ -698,7 +698,7 @@
       "rightLabelHTML": "math.maxinteger",
       "description": "An integer with the maximum value for an integer.",
       "descriptionMoreURL": "#pdf-math.maxinteger",
-      "replacementPrefix": "mathmaxinteger"
+      "replacementPrefix": "mathmaxint"
     },
     {
       "snippet": "math.min(${1:x})$0",
@@ -714,7 +714,7 @@
       "rightLabelHTML": "math.mininteger",
       "description": "An integer with the minimum value for an integer.",
       "descriptionMoreURL": "#pdf-math.mininteger",
-      "replacementPrefix": "mathmininteger"
+      "replacementPrefix": "mathminint"
     },
     {
       "snippet": "math.modf(${1:x})$0",
@@ -738,7 +738,7 @@
       "rightLabelHTML": "math.random(<em>m</em>, <em>n</em>)",
       "description": "When called without arguments, returns a pseudo-random float with uniform distribution in the range '[0,1)'.",
       "descriptionMoreURL": "#pdf-math.random",
-      "replacementPrefix": "mathrandom"
+      "replacementPrefix": "mathran"
     },
     {
       "snippet": "math.randomseed(${1:x})$0",
@@ -746,7 +746,7 @@
       "rightLabelHTML": "math.randomseed(<em>x</em>)",
       "description": "Sets 'x' as the \"seed\" for the pseudo-random generator: equal seeds produce equal sequences of numbers.",
       "descriptionMoreURL": "#pdf-math.randomseed",
-      "replacementPrefix": "mathrandomseed"
+      "replacementPrefix": "mathranseed"
     },
     {
       "snippet": "math.sin(${1:x})$0",
@@ -778,7 +778,7 @@
       "rightLabelHTML": "math.tointeger(<em>x</em>)",
       "description": "If the value 'x' is convertible to an integer, returns that integer. Otherwise, returns nil.",
       "descriptionMoreURL": "#pdf-math.tointeger",
-      "replacementPrefix": "mathtointeger"
+      "replacementPrefix": "mathtoint"
     },
     {
       "snippet": "math.type(${1:x})$0",
@@ -974,7 +974,7 @@
       "rightLabelHTML": "os.difftime(<em>t2</em>, <em>t1</em>)",
       "description": "Returns the difference, in seconds, from time 't1' to time 't2' (where the times are values returned by 'os.time').",
       "descriptionMoreURL": "#pdf-os.difftime",
-      "replacementPrefix": "osdifftime"
+      "replacementPrefix": "osdiff"
     },
     {
       "snippet": "os.execute(${1:command})$0",
@@ -982,7 +982,7 @@
       "rightLabelHTML": "os.execute(<em>command</em>)",
       "description": "This function is equivalent to the ISO C function 'system'. It passes 'command' to be executed by an operating system shell.",
       "descriptionMoreURL": "#pdf-os.execute",
-      "replacementPrefix": "osexecute"
+      "replacementPrefix": "osexe"
     },
     {
       "snippet": "os.exit(${1:code}, ${2:close})$0",
@@ -998,7 +998,7 @@
       "rightLabelHTML": "os.remove(<em>fileName</em>)",
       "description": "Deletes the file (or empty directory, on POSIX systems) with the given name.",
       "descriptionMoreURL": "#pdf-os.remove",
-      "replacementPrefix": "osremove"
+      "replacementPrefix": "osrem"
     },
     {
       "snippet": "os.rename(${1:oldName}, ${2:newName})$0",
@@ -1006,7 +1006,7 @@
       "rightLabelHTML": "os.rename(<em>oldName</em>, <em>newName</em>)",
       "description": "Renames the file or directory named 'oldName' to 'newName'.",
       "descriptionMoreURL": "#pdf-os.rename",
-      "replacementPrefix": "osrename"
+      "replacementPrefix": "osren"
     },
     {
       "snippet": "os.getenv(${1:varName})$0",
@@ -1072,7 +1072,7 @@
       "rightLabelHTML": "debug.getmetatable(<em>value</em>)",
       "description": "Returns the metatable of the given 'value' or nil if it does not have a metatable.",
       "descriptionMoreURL": "#pdf-debug.getmetatable",
-      "replacementPrefix": "debgetmetatable"
+      "replacementPrefix": "debgetmeta"
     },
     {
       "snippet": "debug.getregistry()$0",
@@ -1120,7 +1120,7 @@
       "rightLabelHTML": "debug.setmetatable(<em>value</em>, <em>table</em>)",
       "description": "Sets the metatable for the given value to the given 'table' (which can be nil). Returns 'value'. ",
       "descriptionMoreURL": "#pdf-debug.setmetatable",
-      "replacementPrefix": "debsetmetatable"
+      "replacementPrefix": "debsetmeta"
     },
     {
       "snippet": "debug.setupvalue(${1:func}, ${2:up}, ${3:value})$0",
