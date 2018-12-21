@@ -3,8 +3,11 @@
   "version": "1.5.2",
   "description": "Lua grammar and snippets for Atom.",
   "keywords": [
+    "tree-sitter",
     "language",
-    "lua"
+    "lua",
+    "grammar",
+    "snippets"
   ],
   "license": "MIT",
   "homepage": "https://github.com/Azganoth/language-lua-plus#readme",
