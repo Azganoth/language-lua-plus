@@ -1,12 +1,12 @@
 # Language Lua Plus
 
-##### Lua grammar and snippets for Atom.
+Lua grammar and snippets for Atom.
 
-### Autocomplete-plus support
+## Autocomplete-plus support
 
 *x* means tab stops
 
-### Snippets
+## Snippets
 
 |  Prefix  |                 Description                 |                       Content                       |
 | -------- | ------------------------------------------- | --------------------------------------------------- |
@@ -26,9 +26,9 @@
 | `fun`    | Named function.                             | function *functionName*(*...*)¬»{}¬end              |
 | `fundef` | Anonymous function.                         | function (*...*)¬»{}¬end                            |
 
-### Standard libraries
+## Standard libraries
 
-#### Basic
+### Basic
 
 |     Prefix     |                  Content                  |
 | -------------- | ----------------------------------------- |
@@ -57,7 +57,7 @@
 | `rawequal`     | rawequal(*value1*, *value2*)              |
 | `rawlen`       | rawlen(*object*)                          |
 
-#### Coroutine
+### Coroutine
 
 |       Prefix       |              Content              |
 | ------------------ | --------------------------------- |
@@ -69,7 +69,7 @@
 | `corisyield`       | coroutine.isyieldable()           |
 | `coryield`         | coroutine.yield(*...*)            |
 
-#### Package
+### Package
 
 |      Prefix      |                      Content                      |
 | ---------------- | ------------------------------------------------- |
@@ -84,7 +84,7 @@
 | `packsearchpath` | package.searchpath(*name*, *path*, *sep*, *rep*)  |
 | `packconfig`     | package.config '*config*'                         |
 
-#### String
+### String
 
 |     Prefix     |                    Content                    |
 | -------------- | --------------------------------------------- |
@@ -106,7 +106,7 @@
 | `strpack`      | string.pack(*fmt*, *argument*)                |
 | `strpacksize`  | string.packsize(*fmt*)                        |
 
-#### UTF-8
+### UTF-8
 
 |      Prefix      |            Content            |
 | ---------------- | ----------------------------- |
@@ -117,7 +117,7 @@
 | `utflen`         | utf8.len(*s*, *i*, *j*)       |
 | `utfoffset`      | utf8.offset(*s*, *n*, *i*)    |
 
-#### Table
+### Table
 
 |    Prefix    |                Content                |
 | ------------ | ------------------------------------- |
@@ -129,7 +129,7 @@
 | `tabunpack`  | table.unpack(*list*, *i*, *j*)        |
 | `tabpack`    | table.pack(*...*)                     |
 
-#### Math
+### Math
 
 |      Prefix      |         Content         |
 | ---------------- | ----------------------- |
@@ -161,7 +161,7 @@
 | `mathtype`       | match.type(*x*)         |
 | `mathult`        | match.ult(*m*, *n*)     |
 
-#### IO
+### IO
 
 |     Prefix     |            Content            |
 | -------------- | ----------------------------- |
@@ -184,7 +184,7 @@
 | `filesetvbuf`  | file:setvbuf(*mode*, *size*)  |
 | `filewrite`    | file:write(*...*)             |
 
-#### OS
+### OS
 
 |     Prefix     |               Content               |
 | -------------- | ----------------------------------- |
@@ -200,7 +200,7 @@
 | `ossetlocale`  | os.setlocale(*locale*, *category*)  |
 | `ostmpname`    | os.tmpname()                        |
 
-#### Debug
+### Debug
 
 |       Prefix       |                       Content                       |
 | ------------------ | --------------------------------------------------- |
@@ -221,11 +221,11 @@
 | `debupvid`         | debug.upvalueid(*func*, *n*)                        |
 | `debupvjoin`       | debug.upvaluejoin(*f1*, *n1*, *f2*, *n2*)           |
 
-#### References
+## References
 
 - [Lua Documentation](https://www.lua.org/docs.html)
 - [Lua 5.3 Reference Manual](https://www.lua.org/manual/5.3/)
 
-#### License
+## License
 
 This package is under a [MIT license](https://github.com/Azganoth/language-lua-plus/blob/master/LICENSE.md).
