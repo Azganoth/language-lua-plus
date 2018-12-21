@@ -21,7 +21,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "tree-sitter-lua": "1.4.0"
+    "tree-sitter-lua": "1.5.3"
   },
   "devDependencies": {
     "eslint": "^5.10.0"
