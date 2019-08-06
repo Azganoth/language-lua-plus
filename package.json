@@ -35,11 +35,18 @@
   },
   "configSchema": {
     "suggestion_description": {
-      "title": "Show description and help URL",
-      "description": "Shows below of the suggestion a description and an URL to a help page.",
+      "title": "Show description",
+      "description": "Shows a description of the suggestion.",
       "type": "boolean",
       "default": true,
       "order": 1
+    },
+    "suggestion_help": {
+      "title": "Show help link",
+      "description": "Shows a link which leads to a help page from the oficial lua website. (Requires ´Show description´ to work.)",
+      "type": "boolean",
+      "default": true,
+      "order": 2
     },
     "snippets_basic": {
       "title": "Snippets: Basic",
