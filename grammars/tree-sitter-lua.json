@@ -22,10 +22,7 @@
       "end": { "index": -1 }
     },
     {
-      "type": [
-        "if_statement",
-        "elseif"
-      ],
+      "type": ["if_statement","elseif"],
       "start": { "index": 1 },
       "end": { "type": [ "else", "elseif" ] }
     },
@@ -74,7 +71,7 @@
     "spread": "variable.parameter",
     "global_variable": "variable.language",
 
-    "nil": "constant.language",
+    "nil": "constant.language.nil",
     "true": "constant.language.boolean",
     "false": "constant.language.boolean",
 
@@ -82,8 +79,10 @@
     "'function'": "storage.type.function",
     "label_statement": "storage.type.label",
 
-    "'{'": "punctuation.definition.table.begin.bracket.curly",
-    "'}'": "punctuation.definition.table.end.bracket.curly",
+    "'{'": "punctuation.definition.table.begin",
+    "'}'": "punctuation.definition.table.end",
+    "'('": "punctuation.definition.parameters.begin",
+    "')'": "punctuation.definition.parameters.end",
 
     "'do'": "keyword.control",
     "'return'": "keyword.control",
@@ -102,33 +101,36 @@
     "'or'": "keyword.operator.logical",
     "'and'": "keyword.operator.logical",
     "'not'": "keyword.operator.logical",
+    "'|'": "keyword.operator.logical",
+    "'&'": "keyword.operator.logical",
+    "'~'": "keyword.operator.logical",
 
-    "'='": "keyword.operator",
-    "'<'": "keyword.operator",
-    "'<='": "keyword.operator",
-    "'=='": "keyword.operator",
-    "'~='": "keyword.operator",
-    "'>='": "keyword.operator",
-    "'>'": "keyword.operator",
-    "'|'": "keyword.operator",
-    "'~'": "keyword.operator",
-    "'&'": "keyword.operator",
-    "'<<'": "keyword.operator",
-    "'>>'": "keyword.operator",
-    "'+'": "keyword.operator",
-    "'-'": "keyword.operator",
-    "'*'": "keyword.operator",
-    "'/'": "keyword.operator",
-    "'//'": "keyword.operator",
-    "'%'": "keyword.operator",
+    "'='": "keyword.operator.assignment",
 
-    "'..'": "keyword.operator",
-    "'^'": "keyword.operator",
+    "'<'": "keyword.operator.comparison",
+    "'<='": "keyword.operator.comparison",
+    "'=='": "keyword.operator.comparison",
+    "'~='": "keyword.operator.comparison",
+    "'>='": "keyword.operator.comparison",
+    "'>'": "keyword.operator.comparison",
 
-    "'#'": "keyword.operator",
+    "'<<'": "keyword.operator.arithmetic.bitwise",
+    "'>>'": "keyword.operator.arithmetic.bitwise",
+    "'+'": "keyword.operator.arithmetic",
+    "'-'": "keyword.operator.arithmetic",
+    "'*'": "keyword.operator.arithmetic",
+    "'/'": "keyword.operator.arithmetic",
+    "'//'": "keyword.operator.arithmetic",
+    "'%'": "keyword.operator.arithmetic",
 
-    "'.'": "meta.delimiter",
-    "','": "meta.delimiter",
-    "';'": "meta.delimiter"
+    "'..'": "keyword.operator.arithmetic",
+    "'^'": "keyword.operator.arithmetic",
+
+    "'#'": "keyword.operator.arithmetic",
+
+    "'.'": "punctuation.separator.object",
+    "','": "punctuation.separator.object",
+    "':'": "punctuation.separator.method",
+    "';'": "punctuation.separator.statement"
   }
 }
