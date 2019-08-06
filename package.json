@@ -15,7 +15,7 @@
     "url": "https://github.com/Azganoth/language-lua-plus/issues"
   },
   "repository": "https://github.com/Azganoth/language-lua-plus",
-  "author": "Ademir Ferreira <ademir.ferreiracif@gmail.com> (https://github.com/Azganoth)",
+  "author": "Ademir Ferreira <ademir.ferreira.zorah@gmail.com> (https://github.com/Azganoth)",
   "main": "./lib/main",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
