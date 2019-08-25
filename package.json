@@ -76,7 +76,7 @@
       }
     },
     "suggestions_lua_libraries": {
-      "title": "Suggestions: Built-in Lua Libraries",
+      "title": "Suggestions: Standard Lua Libraries",
       "type": "object",
       "properties": {
         "basic": {
