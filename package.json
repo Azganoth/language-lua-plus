@@ -48,8 +48,8 @@
       "default": true,
       "order": 2
     },
-    "snippets_basic": {
-      "title": "Snippets: Basic",
+    "suggestions_lua": {
+      "title": "Suggestions: Lua Keywords and Constructs",
       "type": "object",
       "properties": {
         "keyword": {
@@ -75,8 +75,8 @@
         }
       }
     },
-    "snippets_libraries": {
-      "title": "Snippets: Libraries",
+    "suggestions_lua_libraries": {
+      "title": "Suggestions: Built-in Lua Libraries",
       "type": "object",
       "properties": {
         "basic": {
