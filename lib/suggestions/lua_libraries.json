@@ -5,7 +5,7 @@
       "type": "variable",
       "rightLabelHTML": "_VERSION",
       "description": "Returns the running lua api version as a string, e.i., 'Lua 5.3'.",
-      "descriptionMoreURL": "#pdf-_VERSION",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-_VERSION",
       "replacementPrefix": "ver"
     },
     {
@@ -13,7 +13,7 @@
       "type": "function",
       "rightLabelHTML": "print '<em>...</em>'",
       "description": "Prints the given string.",
-      "descriptionMoreURL": "#pdf-print",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-print",
       "replacementPrefix": "sprint"
     },
     {
@@ -21,7 +21,7 @@
       "type": "function",
       "rightLabelHTML": "print(<em>...</em>)",
       "description": "Prints the given value, converting the given value to a string.",
-      "descriptionMoreURL": "#pdf-print",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-print",
       "replacementPrefix": "print"
     },
     {
@@ -29,7 +29,7 @@
       "type": "function",
       "rightLabelHTML": "tonumber(<em>value</em>, <em>base</em>)",
       "description": "Returns the given argument as a number.",
-      "descriptionMoreURL": "#pdf-tonumber",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-tonumber",
       "replacementPrefix": "tonumber"
     },
     {
@@ -37,7 +37,7 @@
       "type": "function",
       "rightLabelHTML": "tostring(<em>value</em>)",
       "description": "Returns the given argument as a string in a human-readable format.",
-      "descriptionMoreURL": "#pdf-tostring",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-tostring",
       "replacementPrefix": "tostring"
     },
     {
@@ -45,7 +45,7 @@
       "type": "function",
       "rightLabelHTML": "type(<em>any</em>)",
       "description": "Returns the type of its only argument, coded as a string.",
-      "descriptionMoreURL": "#pdf-type",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-type",
       "replacementPrefix": "type"
     },
     {
@@ -53,7 +53,7 @@
       "type": "function",
       "rightLabelHTML": "assert(<em>value</em>, <em>message</em>)",
       "description": "Calls 'error' function if the 'value' is false (i.e., nil or false); otherwise, returns all its arguments.",
-      "descriptionMoreURL": "#pdf-assert",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-assert",
       "replacementPrefix": "assert"
     },
     {
@@ -61,7 +61,7 @@
       "type": "function",
       "rightLabelHTML": "collectgarbage(<em>option</em>, <em>argument</em>)",
       "description": "This function is a generic interface to the garbage collector.",
-      "descriptionMoreURL": "#pdf-collectgarbage",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-collectgarbage",
       "replacementPrefix": "cgar"
     },
     {
@@ -69,7 +69,7 @@
       "type": "function",
       "rightLabelHTML": "error(<em>message</em>, <em>level</em>)",
       "description": "Terminates the last protected function called and returns 'message' as the error object.",
-      "descriptionMoreURL": "#pdf-error",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-error",
       "replacementPrefix": "error"
     },
     {
@@ -77,7 +77,7 @@
       "type": "function",
       "rightLabelHTML": "select(<em>index</em>, <em>...</em>)",
       "description": "Returns all arguments after argument number 'index'.",
-      "descriptionMoreURL": "#pdf-select",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-select",
       "replacementPrefix": "select"
     },
     {
@@ -85,7 +85,7 @@
       "type": "function",
       "rightLabelHTML": "next(<em>table</em>, <em>index</em>)",
       "description": "Allows a program to traverse all fields of a table.",
-      "descriptionMoreURL": "#pdf-next",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-next",
       "replacementPrefix": "next"
     },
     {
@@ -93,7 +93,7 @@
       "type": "function",
       "rightLabelHTML": "getmetatable(<em>object</em>)",
       "description": "Returns the 'table' metamethod field '__metatable' associated value, if the field doens't exist returns nil.",
-      "descriptionMoreURL": "#pdf-getmetatable",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-getmetatable",
       "replacementPrefix": "getmeta"
     },
     {
@@ -101,7 +101,7 @@
       "type": "function",
       "rightLabelHTML": "setmetatable(<em>table</em>, <em>metatable</em>)",
       "description": "Sets the metatable for the given table.",
-      "descriptionMoreURL": "#pdf-setmetatable",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-setmetatable",
       "replacementPrefix": "setmeta"
     },
     {
@@ -109,7 +109,7 @@
       "type": "function",
       "rightLabelHTML": "pairs(<em>table</em>)",
       "description": "Calls the 'table' metamethod field '__pairs' with 'table' as argument, alongside with the first three results from the call.",
-      "descriptionMoreURL": "#pdf-pairs",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-pairs",
       "replacementPrefix": "pairs"
     },
     {
@@ -117,7 +117,7 @@
       "type": "function",
       "rightLabelHTML": "ipairs(<em>table</em>)",
       "description": "Returns three values (an iterator function, the 'table', and 0).",
-      "descriptionMoreURL": "#pdf-ipairs",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-ipairs",
       "replacementPrefix": "ipairs"
     },
     {
@@ -125,7 +125,7 @@
       "type": "function",
       "rightLabelHTML": "dofile(<em>fileName</em>)",
       "description": "Opens the named file and executes its contents as a Lua chunk.",
-      "descriptionMoreURL": "#pdf-dofile",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-dofile",
       "replacementPrefix": "dofile"
     },
     {
@@ -133,7 +133,7 @@
       "type": "function",
       "rightLabelHTML": "load(<em>chunk</em>, <em>chunkName</em>, <em>mode</em>, <em>env</em>)",
       "description": "Loads a chunk.",
-      "descriptionMoreURL": "#pdf-load",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-load",
       "replacementPrefix": "load"
     },
     {
@@ -141,7 +141,7 @@
       "type": "function",
       "rightLabelHTML": "loadfile(<em>fileName</em>, <em>mode</em>, <em>env</em>)",
       "description": "Similar to 'load', but gets the chunk from 'fileName' or from the standard input, if no file name is given.",
-      "descriptionMoreURL": "#pdf-loadfile",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-loadfile",
       "replacementPrefix": "loadfile"
     },
     {
@@ -149,7 +149,7 @@
       "type": "function",
       "rightLabelHTML": "pcall(<em>func</em>, <em>argument</em>)",
       "description": "Calls 'function' with the given arguments in protected mode.",
-      "descriptionMoreURL": "#pdf-pcall",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-pcall",
       "replacementPrefix": "callp"
     },
     {
@@ -157,7 +157,7 @@
       "type": "function",
       "rightLabelHTML": "xpcall(<em>func</em>, <em>msgh</em>, <em>argument</em>)",
       "description": "This 'function' is similar to pcall, except that it sets a new message handler.",
-      "descriptionMoreURL": "#pdf-xpcall",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-xpcall",
       "replacementPrefix": "callxp"
     },
     {
@@ -165,7 +165,7 @@
       "type": "function",
       "rightLabelHTML": "rawget(<em>table</em>, <em>index</em>)",
       "description": "Gets the real value of 'table[index]', without invoking the '__index' metamethod.",
-      "descriptionMoreURL": "#pdf-rawget",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawget",
       "replacementPrefix": "rawget"
     },
     {
@@ -173,7 +173,7 @@
       "type": "function",
       "rightLabelHTML": "rawset(<em>table</em>, <em>index</em>, <em>value</em>)",
       "description": "Sets the real value of 'table[index]' to value, without invoking the '__newindex' metamethod.",
-      "descriptionMoreURL": "#pdf-rawset",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawset",
       "replacementPrefix": "rawset"
     },
     {
@@ -181,7 +181,7 @@
       "type": "function",
       "rightLabelHTML": "rawequal(<em>value1</em>, <em>value2</em>)",
       "description": "Checks whether 'value1' is equal to 'value2', without invoking the '__eq' metamethod. Returns a boolean. ",
-      "descriptionMoreURL": "#pdf-rawequal",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawequal",
       "replacementPrefix": "rawequal"
     },
     {
@@ -189,7 +189,7 @@
       "type": "function",
       "rightLabelHTML": "rawlen(<em>object</em>)",
       "description": "Returns the length of the 'object', which must be a table or a string, without invoking the '__len' metamethod. Returns an integer.",
-      "descriptionMoreURL": "#pdf-rawlen",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawlen",
       "replacementPrefix": "rawlen"
     }
   ],
@@ -199,7 +199,7 @@
       "type": "function",
       "rightLabelHTML": "coroutine.create(<em>func</em>)",
       "description": "Creates a new coroutine, with body 'func'.",
-      "descriptionMoreURL": "#pdf-coroutine.create",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.create",
       "replacementPrefix": "corcreate"
     },
     {
@@ -207,7 +207,7 @@
       "type": "function",
       "rightLabelHTML": "coroutine.wrap(<em>func</em>)",
       "description": "Creates a new coroutine, with body 'func'.",
-      "descriptionMoreURL": "#pdf-coroutine.wrap",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.wrap",
       "replacementPrefix": "corwrap"
     },
     {
@@ -215,7 +215,7 @@
       "type": "function",
       "rightLabelHTML": "coroutine.status(<em>coro</em>)",
       "description": "Returns the status of the given coroutine, as a string.",
-      "descriptionMoreURL": "#pdf-coroutine.status",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.status",
       "replacementPrefix": "corstatus"
     },
     {
@@ -223,7 +223,7 @@
       "type": "function",
       "rightLabelHTML": "coroutine.running()",
       "description": "Returns the running coroutine and a boolean.",
-      "descriptionMoreURL": "#pdf-coroutine.running",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.running",
       "replacementPrefix": "corrunning"
     },
     {
@@ -231,7 +231,7 @@
       "type": "function",
       "rightLabelHTML": "coroutine.resume(<em>coro</em>, <em>value</em>)",
       "description": "Starts or continues the execution of a given coroutine.",
-      "descriptionMoreURL": "#pdf-coroutine.resume",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.resume",
       "replacementPrefix": "corresume"
     },
     {
@@ -239,7 +239,7 @@
       "type": "function",
       "rightLabelHTML": "coroutine.isyieldable()",
       "description": "Returns true when the running coroutine can yield.",
-      "descriptionMoreURL": "#pdf-coroutine.isyieldable",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.isyieldable",
       "replacementPrefix": "corisyield"
     },
     {
@@ -247,7 +247,7 @@
       "type": "function",
       "rightLabelHTML": "coroutine.yield(<em>...</em>)",
       "description": "Suspends the execution of the calling coroutine.",
-      "descriptionMoreURL": "#pdf-coroutine.yield",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.yield",
       "replacementPrefix": "coryield"
     }
   ],
@@ -257,7 +257,7 @@
       "type": "function",
       "rightLabelHTML": "require '<em>modName</em>'",
       "description": "Loads the given module.",
-      "descriptionMoreURL": "#pdf-require",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-require",
       "replacementPrefix": "sreq"
     },
     {
@@ -265,7 +265,7 @@
       "type": "function",
       "rightLabelHTML": "require(<em>modName</em>)",
       "description": "Loads the given module.",
-      "descriptionMoreURL": "#pdf-require",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-require",
       "replacementPrefix": "req"
     },
     {
@@ -273,7 +273,7 @@
       "type": "function",
       "rightLabelHTML": "package.path '<em>path</em>'",
       "description": "The path used by require to search for a Lua loader.",
-      "descriptionMoreURL": "#pdf-package.path",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.path",
       "replacementPrefix": "packpath"
     },
     {
@@ -281,7 +281,7 @@
       "type": "function",
       "rightLabelHTML": "package.cpath '<em>path</em>'",
       "description": "The path used by 'require' to search for a C loader.",
-      "descriptionMoreURL": "#pdf-package.cpath",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.cpath",
       "replacementPrefix": "packcpath"
     },
     {
@@ -289,7 +289,7 @@
       "type": "function",
       "rightLabelHTML": "package.preload '<em>modName</em>'",
       "description": "A table to store loaders for specific modules.",
-      "descriptionMoreURL": "#pdf-package.preload",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.preload",
       "replacementPrefix": "packpreload"
     },
     {
@@ -297,7 +297,7 @@
       "type": "function",
       "rightLabelHTML": "package.loaded '<em>modName</em>'",
       "description": "A table used by 'require' to control which modules are already loaded.",
-      "descriptionMoreURL": "#pdf-package.loaded",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.loaded",
       "replacementPrefix": "packloaded"
     },
     {
@@ -305,7 +305,7 @@
       "type": "function",
       "rightLabelHTML": "package.loadlib(<em>libName</em>, <em>func</em>)",
       "description": "Dynamically links the host program with the C library 'libName'.",
-      "descriptionMoreURL": "#pdf-package.loadlib",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.loadlib",
       "replacementPrefix": "packloadlib"
     },
     {
@@ -313,7 +313,7 @@
       "type": "function",
       "rightLabelHTML": "package.searchers '<em>path</em>'",
       "description": "A table used by 'require' to control how to load modules. ",
-      "descriptionMoreURL": "#pdf-package.searchers",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.searchers",
       "replacementPrefix": "packsearchers"
     },
     {
@@ -321,7 +321,7 @@
       "type": "function",
       "rightLabelHTML": "package.searchpath(<em>name</em>, <em>path</em>, <em>sep</em>, <em>rep</em>)",
       "description": "Searches for the given name in the given 'path'.",
-      "descriptionMoreURL": "#pdf-package.searchpath",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.searchpath",
       "replacementPrefix": "packsearchpath"
     },
     {
@@ -329,7 +329,7 @@
       "type": "function",
       "rightLabelHTML": "package.config '<em>config</em>'",
       "description": "A string describing some compile-time configurations for packages.",
-      "descriptionMoreURL": "#pdf-package.config",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.config",
       "replacementPrefix": "packconfig"
     }
   ],
@@ -339,7 +339,7 @@
       "type": "function",
       "rightLabelHTML": "string.byte(<em>s</em>, <em>i</em>, <em>j</em>)",
       "description": "Returns the internal numeric codes of the characters 's[i]', 's[i+1]', ..., 's[j]'.",
-      "descriptionMoreURL": "#pdf-string.byte",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.byte",
       "replacementPrefix": "strbyte"
     },
     {
@@ -347,7 +347,7 @@
       "type": "function",
       "rightLabelHTML": "string.char(<em>number</em>)",
       "description": "Returns a string with length equal to the number of arguments, in which each character has the internal numeric code equal to its corresponding argument.",
-      "descriptionMoreURL": "#pdf-string.char",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.char",
       "replacementPrefix": "strchar"
     },
     {
@@ -355,7 +355,7 @@
       "type": "function",
       "rightLabelHTML": "string.dump(<em>func</em>, <em>strip</em>)",
       "description": "Returns a string containing a binary representation (a binary chunk) of the given function.",
-      "descriptionMoreURL": "#pdf-string.dump",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.dump",
       "replacementPrefix": "strdump"
     },
     {
@@ -363,7 +363,7 @@
       "type": "function",
       "rightLabelHTML": "string.find(<em>s</em>, <em>pattern</em>, <em>init</em>, <em>plain</em>)",
       "description": "Looks for the first match of pattern in the string 's'.",
-      "descriptionMoreURL": "#pdf-string.find",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.find",
       "replacementPrefix": "strfind"
     },
     {
@@ -371,7 +371,7 @@
       "type": "function",
       "rightLabelHTML": "string.format(<em>formatString</em>, <em>s</em>)",
       "description": "Returns a formatted version of its variable number of arguments following the description given in its first argument (which must be a string).",
-      "descriptionMoreURL": "#pdf-string.format",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.format",
       "replacementPrefix": "strformat"
     },
     {
@@ -379,7 +379,7 @@
       "type": "function",
       "rightLabelHTML": "string.len(<em>s</em>)",
       "description": "Receives a string 's' and returns its length.",
-      "descriptionMoreURL": "#pdf-string.len",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.len",
       "replacementPrefix": "strlen"
     },
     {
@@ -387,7 +387,7 @@
       "type": "function",
       "rightLabelHTML": "string.rep(<em>s</em>, <em>n</em>, <em>sep</em>)",
       "description": "Returns a string that is the concatenation of 'n' copies of the string 's' separated by the string 'sep'.",
-      "descriptionMoreURL": "#pdf-string.rep",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.rep",
       "replacementPrefix": "strrep"
     },
     {
@@ -395,7 +395,7 @@
       "type": "function",
       "rightLabelHTML": "string.reverse(<em>s</em>)",
       "description": "Returns a string that is the string 's' reversed.",
-      "descriptionMoreURL": "#pdf-string.reverse",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.reverse",
       "replacementPrefix": "strreverse"
     },
     {
@@ -403,7 +403,7 @@
       "type": "function",
       "rightLabelHTML": "string.upper(<em>s</em>)",
       "description": "Receives a string and returns a copy of this string 's' with all characters to uppercase.",
-      "descriptionMoreURL": "#pdf-string.upper",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.upper",
       "replacementPrefix": "strupper"
     },
     {
@@ -411,7 +411,7 @@
       "type": "function",
       "rightLabelHTML": "string.lower(<em>s</em>)",
       "description": "Receives a string and returns a copy of this string 's' with all characters to lowercase.",
-      "descriptionMoreURL": "#pdf-string.lower",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.lower",
       "replacementPrefix": "strlower"
     },
     {
@@ -419,7 +419,7 @@
       "type": "function",
       "rightLabelHTML": "string.gmatch(<em>s</em>, <em>pattern</em>)",
       "description": "Returns an iterator function that, each time it is called, returns the next captures from 'pattern' over the string 's'.",
-      "descriptionMoreURL": "#pdf-string.gmatch",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.gmatch",
       "replacementPrefix": "strgmatch"
     },
     {
@@ -427,7 +427,7 @@
       "type": "function",
       "rightLabelHTML": "string.gsub(<em>s</em>, <em>pattern</em>, <em>repl</em>, <em>n</em>)",
       "description": "Replaces the part string 's' that matches 'pattern' with 'repl'.",
-      "descriptionMoreURL": "#pdf-string.gsub",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.gsub",
       "replacementPrefix": "strgsub"
     },
     {
@@ -435,7 +435,7 @@
       "type": "function",
       "rightLabelHTML": "string.match(<em>s</em>, <em>pattern</em>, <em>init</em>)",
       "description": "Looks for the first match of 'pattern' in the string 's'.",
-      "descriptionMoreURL": "#pdf-string.match",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.match",
       "replacementPrefix": "strmatch"
     },
     {
@@ -443,7 +443,7 @@
       "type": "function",
       "rightLabelHTML": "string.sub(<em>s</em>, <em>i</em>, <em>j</em>)",
       "description": "Returns the substring of string 's' that starts at 'i' and continues until 'j'; 'i' and 'j' can be negative.",
-      "descriptionMoreURL": "#pdf-string.sub",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.sub",
       "replacementPrefix": "strsub"
     },
     {
@@ -451,7 +451,7 @@
       "type": "function",
       "rightLabelHTML": "string.unpack(<em>fmt</em>, <em>s</em>, <em>pos</em>)",
       "description": "Returns the values packed in string 's' according to the format string 'fmt'.",
-      "descriptionMoreURL": "#pdf-string.unpack",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.unpack",
       "replacementPrefix": "strunpack"
     },
     {
@@ -459,7 +459,7 @@
       "type": "function",
       "rightLabelHTML": "string.pack(<em>fmt</em>, <em>argument</em>)",
       "description": "Returns a binary string containing arguments packed according to the format string 'fmt'.",
-      "descriptionMoreURL": "#pdf-string.pack",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.pack",
       "replacementPrefix": "strpack"
     },
     {
@@ -467,7 +467,7 @@
       "type": "function",
       "rightLabelHTML": "string.packsize(<em>fmt</em>)",
       "description": "Returns the size of a string resulting from 'string.pack' with the given format.",
-      "descriptionMoreURL": "#pdf-string.packsize",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.packsize",
       "replacementPrefix": "strpacksize"
     }
   ],
@@ -477,7 +477,7 @@
       "type": "function",
       "rightLabelHTML": "utf8.char(<em>number</em>)",
       "description": "Converts each one to its corresponding UTF-8 byte sequence and returns a string with the concatenation of all these sequences.",
-      "descriptionMoreURL": "#pdf-utf8.char",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-utf8.char",
       "replacementPrefix": "utfchar"
     },
     {
@@ -485,7 +485,7 @@
       "type": "function",
       "rightLabelHTML": "utf8.charpattern '<em>pattern</em>'",
       "description": "The pattern (a string, not a function) '[\\0-\\x7F\\xC2-\\xF4][\\x80-\\xBF]*', which matches exactly one UTF-8 byte sequence, assuming that the subject is a valid UTF-8 string. ",
-      "descriptionMoreURL": "#pdf-utf8.charpattern",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-utf8.charpattern",
       "replacementPrefix": "utfcharpattern"
     },
     {
@@ -493,7 +493,7 @@
       "type": "function",
       "rightLabelHTML": "utf8.codes(<em>s</em>)",
       "description": "Returns values for a iterator function (for in).",
-      "descriptionMoreURL": "#pdf-utf8.codes",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-utf8.codes",
       "replacementPrefix": "utfcodes"
     },
     {
@@ -501,7 +501,7 @@
       "type": "function",
       "rightLabelHTML": "utf8.codepoint(<em>s</em>, <em>i</em>, <em>j</em>)",
       "description": "Returns the codepoints (as integers) from all characters in 's' that start between byte position 'i' and 'j' (both included).",
-      "descriptionMoreURL": "#pdf-utf8.codepoint",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-utf8.codepoint",
       "replacementPrefix": "utfcodepoint"
     },
     {
@@ -509,7 +509,7 @@
       "type": "function",
       "rightLabelHTML": "utf8.len(<em>s</em>, <em>i</em>, <em>j</em>)",
       "description": "Returns the number of UTF-8 characters in string 's' that start between positions 'i' and 'j' (both inclusive).",
-      "descriptionMoreURL": "#pdf-utf8.len",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-utf8.len",
       "replacementPrefix": "utflen"
     },
     {
@@ -517,7 +517,7 @@
       "type": "function",
       "rightLabelHTML": "utf8.offset(<em>s</em>, <em>n</em>, <em>i</em>)",
       "description": "Returns the position (in bytes) where the encoding of the 'n'-th character of 's' (counting from position 'i') starts.",
-      "descriptionMoreURL": "#pdf-utf8.offset",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-utf8.offset",
       "replacementPrefix": "utfoffset"
     }
   ],
@@ -527,7 +527,7 @@
       "type": "function",
       "rightLabelHTML": "table.concat(<em>list</em>, <em>sep</em>, <em>i</em>, <em>j</em>)",
       "description": "Given a list where all elements are strings or numbers, returns the string 'list[i]'..'sep'..'list[i+1]' ··· 'sep..list[j]'.",
-      "descriptionMoreURL": "#pdf-table.concat",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.concat",
       "replacementPrefix": "tabcon"
     },
     {
@@ -535,7 +535,7 @@
       "type": "function",
       "rightLabelHTML": "table.insert(<em>list</em>, <em>pos</em>, <em>value</em>)",
       "description": "Inserts element value at position 'pos' in 'list', shifting up the elements 'list[pos]', 'list[pos+1]', ···, 'list[#list]'.",
-      "descriptionMoreURL": "#pdf-table.insert",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.insert",
       "replacementPrefix": "tabins"
     },
     {
@@ -543,7 +543,7 @@
       "type": "function",
       "rightLabelHTML": "table.remove(<em>list</em>, <em>pos</em>)",
       "description": "Removes from 'list' the element at position 'pos', returning the value of the removed element.",
-      "descriptionMoreURL": "#pdf-table.remove",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.remove",
       "replacementPrefix": "tabrem"
     },
     {
@@ -551,7 +551,7 @@
       "type": "function",
       "rightLabelHTML": "table.move(<em>a1</em>, <em>f</em>, <em>e</em>, <em>t</em>,<em>a2</em>)",
       "description": "Moves elements from table 'a1' to table 'a2'.",
-      "descriptionMoreURL": "#pdf-table.move",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.move",
       "replacementPrefix": "tabmove"
     },
     {
@@ -559,7 +559,7 @@
       "type": "function",
       "rightLabelHTML": "table.sort(<em>list</em>, <em>comp</em>)",
       "description": "Sorts list elements in a given order, in-place, from 'list[1]' to 'list[#list]'.",
-      "descriptionMoreURL": "#pdf-table.sort",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.sort",
       "replacementPrefix": "tabsort"
     },
     {
@@ -567,7 +567,7 @@
       "type": "function",
       "rightLabelHTML": "table.unpack(<em>list</em>, <em>i</em>, <em>j</em>)",
       "description": "Returns the elements from the given list.",
-      "descriptionMoreURL": "#pdf-table.unpack",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.unpack",
       "replacementPrefix": "tabunpack"
     },
     {
@@ -575,7 +575,7 @@
       "type": "function",
       "rightLabelHTML": "table.pack(<em>...</em>)",
       "description": "Returns a new table with all parameters stored into keys 1, 2, etc. and with a field \"n\" with the total number of parameters.",
-      "descriptionMoreURL": "#pdf-table.pack",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.pack",
       "replacementPrefix": "tabpack"
     }
   ],
@@ -585,7 +585,7 @@
       "type": "variable",
       "rightLabelHTML": "math.pi",
       "description": "The value of π.",
-      "descriptionMoreURL": "#pdf-math.pi",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.pi",
       "replacementPrefix": "mathpi"
     },
     {
@@ -593,7 +593,7 @@
       "type": "function",
       "rightLabelHTML": "math.abs(<em>x</em>)",
       "description": "Returns the absolute value of 'x' (integer/float).",
-      "descriptionMoreURL": "#pdf-math.abs",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.abs",
       "replacementPrefix": "mathabs"
     },
     {
@@ -601,7 +601,7 @@
       "type": "function",
       "rightLabelHTML": "math.acos(<em>x</em>)",
       "description": "Returns the arc cosine of 'x' (in radians).",
-      "descriptionMoreURL": "#pdf-math.acos",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.acos",
       "replacementPrefix": "mathacos"
     },
     {
@@ -609,7 +609,7 @@
       "type": "function",
       "rightLabelHTML": "math.asin(<em>x</em>)",
       "description": "Returns the arc sine of 'x' (in radians).",
-      "descriptionMoreURL": "#pdf-math.asin",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.asin",
       "replacementPrefix": "mathasin"
     },
     {
@@ -617,7 +617,7 @@
       "type": "function",
       "rightLabelHTML": "math.atan(<em>y</em>, <em>x</em>)",
       "description": "Returns the arc tangent of 'y'/'x' (in radians), but uses the signs of both parameters to find the quadrant of the result.",
-      "descriptionMoreURL": "#pdf-math.atan",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.atan",
       "replacementPrefix": "mathatan"
     },
     {
@@ -625,7 +625,7 @@
       "type": "function",
       "rightLabelHTML": "math.ceil(<em>x</em>)",
       "description": "Returns the smallest integral value larger than or equal to 'x'.",
-      "descriptionMoreURL": "#pdf-math.ceil",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.ceil",
       "replacementPrefix": "mathceil"
     },
     {
@@ -633,7 +633,7 @@
       "type": "function",
       "rightLabelHTML": "math.cos(<em>x</em>)",
       "description": "Returns the cosine of 'x' (assumed to be in radians).",
-      "descriptionMoreURL": "#pdf-math.cos",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.cos",
       "replacementPrefix": "mathcos"
     },
     {
@@ -641,7 +641,7 @@
       "type": "function",
       "rightLabelHTML": "math.deg(<em>x</em>)",
       "description": "Converts the angle 'x' from radians to degrees.",
-      "descriptionMoreURL": "#pdf-math.deg",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.deg",
       "replacementPrefix": "mathdeg"
     },
     {
@@ -649,7 +649,7 @@
       "type": "function",
       "rightLabelHTML": "math.exp(<em>x</em>)",
       "description": "Returns the value 'e^x' (where e is the base of natural logarithms).",
-      "descriptionMoreURL": "#pdf-math.exp",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.exp",
       "replacementPrefix": "mathexp"
     },
     {
@@ -657,7 +657,7 @@
       "type": "function",
       "rightLabelHTML": "math.floor(<em>x</em>)",
       "description": "Returns the largest integral value smaller than or equal to 'x'.",
-      "descriptionMoreURL": "#pdf-math.floor",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.floor",
       "replacementPrefix": "mathfloor"
     },
     {
@@ -665,7 +665,7 @@
       "type": "function",
       "rightLabelHTML": "math.fmod(<em>x</em>, <em>y</em>)",
       "description": "Returns the remainder of the division of 'x' by 'y' that rounds the quotient towards zero (integer/float).",
-      "descriptionMoreURL": "#pdf-math.fmod",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.fmod",
       "replacementPrefix": "mathfmod"
     },
     {
@@ -673,7 +673,7 @@
       "type": "function",
       "rightLabelHTML": "math.log(<em>x</em>, <em>base</em>)",
       "description": "Returns the logarithm of 'x' in the given base. The default for base is 'e' (so that the function returns the natural logarithm of 'x').",
-      "descriptionMoreURL": "#pdf-math.log",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.log",
       "replacementPrefix": "mathlog"
     },
     {
@@ -681,7 +681,7 @@
       "type": "variable",
       "rightLabelHTML": "math.huge",
       "description": "The float value 'HUGE_VAL', a value larger than any other numeric value.",
-      "descriptionMoreURL": "#pdf-math.huge",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.huge",
       "replacementPrefix": "mathhuge"
     },
     {
@@ -689,7 +689,7 @@
       "type": "function",
       "rightLabelHTML": "math.max(<em>x</em>)",
       "description": "Returns the argument with the maximum value, according to the Lua operator < (integer/float).",
-      "descriptionMoreURL": "#pdf-math.max",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.max",
       "replacementPrefix": "mathmax"
     },
     {
@@ -697,7 +697,7 @@
       "type": "variable",
       "rightLabelHTML": "math.maxinteger",
       "description": "An integer with the maximum value for an integer.",
-      "descriptionMoreURL": "#pdf-math.maxinteger",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.maxinteger",
       "replacementPrefix": "mathmaxint"
     },
     {
@@ -705,7 +705,7 @@
       "type": "function",
       "rightLabelHTML": "math.min(<em>x</em>)",
       "description": "Returns the argument with the minimum value, according to the Lua operator < (integer/float).",
-      "descriptionMoreURL": "#pdf-math.min",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.min",
       "replacementPrefix": "mathmin"
     },
     {
@@ -713,7 +713,7 @@
       "type": "variable",
       "rightLabelHTML": "math.mininteger",
       "description": "An integer with the minimum value for an integer.",
-      "descriptionMoreURL": "#pdf-math.mininteger",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.mininteger",
       "replacementPrefix": "mathminint"
     },
     {
@@ -721,7 +721,7 @@
       "type": "function",
       "rightLabelHTML": "math.modf(<em>x</em>)",
       "description": "Returns the integral part of 'x' and the fractional part of 'x'. Its second result is always a float.",
-      "descriptionMoreURL": "#pdf-math.modf",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.modf",
       "replacementPrefix": "mathmodf"
     },
     {
@@ -729,7 +729,7 @@
       "type": "function",
       "rightLabelHTML": "math.rad(<em>x</em>)",
       "description": "Converts the angle 'x' from degrees to radians.",
-      "descriptionMoreURL": "#pdf-math.rad",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.rad",
       "replacementPrefix": "mathrad"
     },
     {
@@ -737,7 +737,7 @@
       "type": "function",
       "rightLabelHTML": "math.random(<em>m</em>, <em>n</em>)",
       "description": "When called without arguments, returns a pseudo-random float with uniform distribution in the range '[0,1)'.",
-      "descriptionMoreURL": "#pdf-math.random",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.random",
       "replacementPrefix": "mathran"
     },
     {
@@ -745,7 +745,7 @@
       "type": "function",
       "rightLabelHTML": "math.randomseed(<em>x</em>)",
       "description": "Sets 'x' as the \"seed\" for the pseudo-random generator: equal seeds produce equal sequences of numbers.",
-      "descriptionMoreURL": "#pdf-math.randomseed",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.randomseed",
       "replacementPrefix": "mathranseed"
     },
     {
@@ -753,7 +753,7 @@
       "type": "function",
       "rightLabelHTML": "math.sin(<em>x</em>)",
       "description": "Returns the sine of 'x' (assumed to be in radians).",
-      "descriptionMoreURL": "#pdf-math.sin",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.sin",
       "replacementPrefix": "mathsin"
     },
     {
@@ -761,7 +761,7 @@
       "type": "function",
       "rightLabelHTML": "math.sqrt(<em>x</em>)",
       "description": "Returns the square root of 'x' (You can also use the expression 'x^0.5' to compute this value.).",
-      "descriptionMoreURL": "#pdf-math.sqrt",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.sqrt",
       "replacementPrefix": "mathsqrt"
     },
     {
@@ -769,7 +769,7 @@
       "type": "function",
       "rightLabelHTML": "math.tan(<em>x</em>)",
       "description": "Returns the tangent of 'x' (assumed to be in radians).",
-      "descriptionMoreURL": "#pdf-math.tan",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.tan",
       "replacementPrefix": "mathtan"
     },
     {
@@ -777,7 +777,7 @@
       "type": "function",
       "rightLabelHTML": "math.tointeger(<em>x</em>)",
       "description": "If the value 'x' is convertible to an integer, returns that integer. Otherwise, returns nil.",
-      "descriptionMoreURL": "#pdf-math.tointeger",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.tointeger",
       "replacementPrefix": "mathtoint"
     },
     {
@@ -785,7 +785,7 @@
       "type": "function",
       "rightLabelHTML": "math.type(<em>x</em>)",
       "description": "Returns \"integer\" if 'x' is an integer, \"float\" if it is a float, or nil if 'x' is not a number.",
-      "descriptionMoreURL": "#pdf-math.type",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.type",
       "replacementPrefix": "mathtype"
     },
     {
@@ -793,7 +793,7 @@
       "type": "function",
       "rightLabelHTML": "math.ult(<em>m</em>, <em>n</em>)",
       "description": "Returns a boolean, true if and only if integer 'm' is below integer 'n' when they are compared as unsigned integers.",
-      "descriptionMoreURL": "#pdf-math.ult",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.ult",
       "replacementPrefix": "mathult"
     }
   ],
@@ -803,7 +803,7 @@
       "type": "function",
       "rightLabelHTML": "io.close(<em>file</em>)",
       "description": "Equivalent to 'file:close()'. Without a file, closes the default output file.",
-      "descriptionMoreURL": "#pdf-io.close",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.close",
       "replacementPrefix": "ioclose"
     },
     {
@@ -811,7 +811,7 @@
       "type": "function",
       "rightLabelHTML": "io.flush()",
       "description": "Equivalent to 'io.output():flush()'.",
-      "descriptionMoreURL": "#pdf-io.flush",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.flush",
       "replacementPrefix": "ioflush"
     },
     {
@@ -819,7 +819,7 @@
       "type": "function",
       "rightLabelHTML": "io.input(<em>file</em>)",
       "description": "When called with a file name, it opens the named file (in text mode), and sets its handle as the default input file. When called with a file handle, it simply sets this file handle as the default input file. When called without parameters, it returns the current default input file.",
-      "descriptionMoreURL": "#pdf-io.input",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.input",
       "replacementPrefix": "ioinput"
     },
     {
@@ -827,7 +827,7 @@
       "type": "function",
       "rightLabelHTML": "io.lines(<em>fileName</em>)",
       "description": "Opens the given file name in read mode and returns an iterator function that works like 'file:lines(···)' over the opened file.",
-      "descriptionMoreURL": "#pdf-io.lines",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.lines",
       "replacementPrefix": "iolines"
     },
     {
@@ -835,7 +835,7 @@
       "type": "function",
       "rightLabelHTML": "io.open(<em>fileName</em>, <em>mode</em>)",
       "description": "This function opens a file, in the mode specified in the string 'mode'. In case of success, it returns a new file handle.",
-      "descriptionMoreURL": "#pdf-io.open",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.open",
       "replacementPrefix": "ioopen"
     },
     {
@@ -843,7 +843,7 @@
       "type": "function",
       "rightLabelHTML": "io.output(<em>file</em>)",
       "description": "Similar to 'io.input', but operates over the default output file. ",
-      "descriptionMoreURL": "#pdf-io.output",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.output",
       "replacementPrefix": "iooutput"
     },
     {
@@ -851,7 +851,7 @@
       "type": "function",
       "rightLabelHTML": "io.popen(<em>prog</em>, <em>mode</em>)",
       "description": "This function is system dependent and is not available on all platforms.",
-      "descriptionMoreURL": "#pdf-io.popen",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.popen",
       "replacementPrefix": "iopopen"
     },
     {
@@ -859,7 +859,7 @@
       "type": "function",
       "rightLabelHTML": "io.read(<em>...</em>)",
       "description": "Equivalent to 'io.input():read(···)'.",
-      "descriptionMoreURL": "#pdf-io.read",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.read",
       "replacementPrefix": "ioread"
     },
     {
@@ -867,7 +867,7 @@
       "type": "function",
       "rightLabelHTML": "io.tmpfile()",
       "description": "In case of success, returns a handle for a temporary file. This file is opened in update mode and it is automatically removed when the program ends.",
-      "descriptionMoreURL": "#pdf-io.tmpfile",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.tmpfile",
       "replacementPrefix": "iotmpfile"
     },
     {
@@ -875,7 +875,7 @@
       "type": "function",
       "rightLabelHTML": "io.type(<em>object</em>)",
       "description": "Checks whether obj is a valid file handle. Returns the string \"file\" if 'object' is an open file handle, \"closed file\" if obj is a closed file handle, or nil if obj is not a file handle.",
-      "descriptionMoreURL": "#pdf-io.type",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.type",
       "replacementPrefix": "iotype"
     },
     {
@@ -883,7 +883,7 @@
       "type": "function",
       "rightLabelHTML": "io.write(<em>...</em>)",
       "description": "Equivalent to 'io.output():write(···)'.",
-      "descriptionMoreURL": "#pdf-io.write",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-io.write",
       "replacementPrefix": "iowrite"
     },
     {
@@ -891,7 +891,7 @@
       "type": "function",
       "rightLabelHTML": "file:close()",
       "description": "Closes 'file'.",
-      "descriptionMoreURL": "#pdf-file:close",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-file:close",
       "replacementPrefix": "fileclose"
     },
     {
@@ -899,7 +899,7 @@
       "type": "function",
       "rightLabelHTML": "file:flush()",
       "description": "Saves any written data to 'file'.",
-      "descriptionMoreURL": "#pdf-file:flush",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-file:flush",
       "replacementPrefix": "fileflush"
     },
     {
@@ -907,7 +907,7 @@
       "type": "function",
       "rightLabelHTML": "file:lines(<em>...</em>)",
       "description": "Returns an iterator function that, each time it is called, reads the file according to the given formats.",
-      "descriptionMoreURL": "#pdf-file:lines",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-file:lines",
       "replacementPrefix": "filelines"
     },
     {
@@ -915,7 +915,7 @@
       "type": "function",
       "rightLabelHTML": "file:read(<em>...</em>)",
       "description": "Reads the 'file', according to the given formats, which specify what to read.",
-      "descriptionMoreURL": "#pdf-file:read",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-file:read",
       "replacementPrefix": "fileread"
     },
     {
@@ -923,7 +923,7 @@
       "type": "function",
       "rightLabelHTML": "file:seek(<em>whence</em>, <em>offset</em>)",
       "description": "Returns the final file position, measured in bytes from the beginning of the file.",
-      "descriptionMoreURL": "#pdf-file:seek",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-file:seek",
       "replacementPrefix": "fileseek"
     },
     {
@@ -931,7 +931,7 @@
       "type": "function",
       "rightLabelHTML": "file:setvbuf(<em>mode</em>, <em>size</em>)",
       "description": "Sets the buffering mode for an output file.",
-      "descriptionMoreURL": "#pdf-file:setvbuf",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-file:setvbuf",
       "replacementPrefix": "filesetvbuf"
     },
     {
@@ -939,7 +939,7 @@
       "type": "function",
       "rightLabelHTML": "file:write(<em>...</em>)",
       "description": "Writes the value of each of its arguments to 'file'. The arguments must be strings or numbers.",
-      "descriptionMoreURL": "#pdf-file:write",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-file:write",
       "replacementPrefix": "filewrite"
     }
   ],
@@ -949,7 +949,7 @@
       "type": "function",
       "rightLabelHTML": "os.clock()",
       "description": "Returns an approximation of the amount in seconds of CPU time used by the program.",
-      "descriptionMoreURL": "#pdf-os.clock",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.clock",
       "replacementPrefix": "osclock"
     },
     {
@@ -957,7 +957,7 @@
       "type": "function",
       "rightLabelHTML": "os.date(<em>format</em>, <em>time</em>)",
       "description": "Returns a string or a table containing date and time, formatted according to the given string 'format'.",
-      "descriptionMoreURL": "#pdf-os.date",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.date",
       "replacementPrefix": "osdate"
     },
     {
@@ -965,7 +965,7 @@
       "type": "function",
       "rightLabelHTML": "os.time(<em>table</em>)",
       "description": "Returns the current time when called without arguments, or a time representing the local date and time specified by the given table.",
-      "descriptionMoreURL": "#pdf-os.time",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.time",
       "replacementPrefix": "ostime"
     },
     {
@@ -973,7 +973,7 @@
       "type": "function",
       "rightLabelHTML": "os.difftime(<em>t2</em>, <em>t1</em>)",
       "description": "Returns the difference, in seconds, from time 't1' to time 't2' (where the times are values returned by 'os.time').",
-      "descriptionMoreURL": "#pdf-os.difftime",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.difftime",
       "replacementPrefix": "osdiff"
     },
     {
@@ -981,7 +981,7 @@
       "type": "function",
       "rightLabelHTML": "os.execute(<em>command</em>)",
       "description": "This function is equivalent to the ISO C function 'system'. It passes 'command' to be executed by an operating system shell.",
-      "descriptionMoreURL": "#pdf-os.execute",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.execute",
       "replacementPrefix": "osexe"
     },
     {
@@ -989,7 +989,7 @@
       "type": "function",
       "rightLabelHTML": "os.exit(<em>code</em>, <em>close</em>)",
       "description": "Calls the ISO C function exit to terminate the host program.",
-      "descriptionMoreURL": "#pdf-os.exit",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.exit",
       "replacementPrefix": "osexit"
     },
     {
@@ -997,7 +997,7 @@
       "type": "function",
       "rightLabelHTML": "os.remove(<em>fileName</em>)",
       "description": "Deletes the file (or empty directory, on POSIX systems) with the given name.",
-      "descriptionMoreURL": "#pdf-os.remove",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.remove",
       "replacementPrefix": "osrem"
     },
     {
@@ -1005,7 +1005,7 @@
       "type": "function",
       "rightLabelHTML": "os.rename(<em>oldName</em>, <em>newName</em>)",
       "description": "Renames the file or directory named 'oldName' to 'newName'.",
-      "descriptionMoreURL": "#pdf-os.rename",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.rename",
       "replacementPrefix": "osren"
     },
     {
@@ -1013,7 +1013,7 @@
       "type": "function",
       "rightLabelHTML": "os.getenv(<em>varName</em>)",
       "description": "Returns the value of the process environment variable 'varName', or nil if the variable is not defined. ",
-      "descriptionMoreURL": "#pdf-os.getenv",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.getenv",
       "replacementPrefix": "osgetenv"
     },
     {
@@ -1021,7 +1021,7 @@
       "type": "function",
       "rightLabelHTML": "os.setlocale(<em>locale</em>, <em>category</em>)",
       "description": "Sets the current locale of the program.",
-      "descriptionMoreURL": "#pdf-os.setlocale",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.setlocale",
       "replacementPrefix": "ossetlocale"
     },
     {
@@ -1029,7 +1029,7 @@
       "type": "function",
       "rightLabelHTML": "os.tmpname()",
       "description": "Returns a string with a file name that can be used for a temporary file.",
-      "descriptionMoreURL": "#pdf-os.tmpname",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.tmpname",
       "replacementPrefix": "ostmpname"
     }
   ],
@@ -1039,7 +1039,7 @@
       "type": "function",
       "rightLabelHTML": "debug.debug()",
       "description": "Enters an interactive mode with the user, running each string that the user enters.",
-      "descriptionMoreURL": "#pdf-debug.debug",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.debug",
       "replacementPrefix": "debdebug"
     },
     {
@@ -1047,7 +1047,7 @@
       "type": "function",
       "rightLabelHTML": "debug.gethook(<em>thread</em>)",
       "description": "Returns the current hook settings of the thread, as three values: the current hook function, the current hook mask, and the current hook count (as set by the 'debug.sethook' function).",
-      "descriptionMoreURL": "#pdf-debug.gethook",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.gethook",
       "replacementPrefix": "debgethook"
     },
     {
@@ -1055,7 +1055,7 @@
       "type": "function",
       "rightLabelHTML": "debug.getinfo(<em>thread</em>, <em>func</em>, <em>what</em>)",
       "description": "Returns a table with information about a function.",
-      "descriptionMoreURL": "#pdf-debug.getinfo",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.getinfo",
       "replacementPrefix": "debgetinfo"
     },
     {
@@ -1063,7 +1063,7 @@
       "type": "function",
       "rightLabelHTML": "debug.getlocal(<em>thread</em>, <em>func</em>, <em>local</em>)",
       "description": "This function returns the name and the value of the local variable with index 'local' of the function at level 'func' of the stack.",
-      "descriptionMoreURL": "#pdf-debug.getlocal",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.getlocal",
       "replacementPrefix": "debgetlocal"
     },
     {
@@ -1071,7 +1071,7 @@
       "type": "function",
       "rightLabelHTML": "debug.getmetatable(<em>value</em>)",
       "description": "Returns the metatable of the given 'value' or nil if it does not have a metatable.",
-      "descriptionMoreURL": "#pdf-debug.getmetatable",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.getmetatable",
       "replacementPrefix": "debgetmeta"
     },
     {
@@ -1079,7 +1079,7 @@
       "type": "function",
       "rightLabelHTML": "debug.getregistry()",
       "description": "Returns the registry table.",
-      "descriptionMoreURL": "#pdf-debug.getregistry",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.getregistry",
       "replacementPrefix": "debgetregistry"
     },
     {
@@ -1087,7 +1087,7 @@
       "type": "function",
       "rightLabelHTML": "debug.getupvalue(<em>func</em>, <em>up</em>)",
       "description": "This function returns the name and the value of the upvalue with index 'up' of the function 'func'.",
-      "descriptionMoreURL": "#pdf-debug.getupvalue",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.getupvalue",
       "replacementPrefix": "debgetupvalue"
     },
     {
@@ -1095,7 +1095,7 @@
       "type": "function",
       "rightLabelHTML": "debug.getuservalue(<em>u</em>)",
       "description": "Returns the Lua value associated to 'u'. If 'u' is not a full userdata, returns nil.",
-      "descriptionMoreURL": "#pdf-debug.getuservalue",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.getuservalue",
       "replacementPrefix": "debgetuservalue"
     },
     {
@@ -1103,7 +1103,7 @@
       "type": "function",
       "rightLabelHTML": "debug.sethook(<em>thread</em>, <em>hook</em>, <em>mask</em>, <em>count</em>)",
       "description": "Sets the given function as a 'hook'. The string 'mask' and the number 'count' describe when the hook will be called.",
-      "descriptionMoreURL": "#pdf-debug.sethook",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.sethook",
       "replacementPrefix": "debsethook"
     },
     {
@@ -1111,7 +1111,7 @@
       "type": "function",
       "rightLabelHTML": "debug.setlocal(<em>thread</em>, <em>level</em>, <em>local</em>, <em>value</em>)",
       "description": "This function assigns the 'value' to the local variable with index 'local' of the function at 'level' of the stack.",
-      "descriptionMoreURL": "#pdf-debug.setlocal",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.setlocal",
       "replacementPrefix": "debsetlocal"
     },
     {
@@ -1119,7 +1119,7 @@
       "type": "function",
       "rightLabelHTML": "debug.setmetatable(<em>value</em>, <em>table</em>)",
       "description": "Sets the metatable for the given value to the given 'table' (which can be nil). Returns 'value'. ",
-      "descriptionMoreURL": "#pdf-debug.setmetatable",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.setmetatable",
       "replacementPrefix": "debsetmeta"
     },
     {
@@ -1127,7 +1127,7 @@
       "type": "function",
       "rightLabelHTML": "debug.setupvalue(<em>func</em>, <em>up</em>, <em>value</em>)",
       "description": "This function assigns the 'value' to the upvalue with index 'up' of the function 'func'.",
-      "descriptionMoreURL": "#pdf-debug.setupvalue",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.setupvalue",
       "replacementPrefix": "debsetupvalue"
     },
     {
@@ -1135,7 +1135,7 @@
       "type": "function",
       "rightLabelHTML": "debug.setuservalue(<em>udata</em>, <em>value</em>)",
       "description": "Sets the given value as the Lua 'value' associated to the given 'udata'. Returns 'udata'.",
-      "descriptionMoreURL": "#pdf-debug.setuservalue",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.setuservalue",
       "replacementPrefix": "debsetuservalue"
     },
     {
@@ -1143,7 +1143,7 @@
       "type": "function",
       "rightLabelHTML": "debug.traceback(<em>thread</em>, <em>message</em>, <em>level</em>)",
       "description": "If 'message' is present but is neither a string nor nil, this function returns 'message' without further processing.",
-      "descriptionMoreURL": "#pdf-debug.traceback",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.traceback",
       "replacementPrefix": "debtraceback"
     },
     {
@@ -1151,7 +1151,7 @@
       "type": "function",
       "rightLabelHTML": "debug.upvalueid(<em>func</em>, <em>n</em>)",
       "description": "Returns a unique identifier (as a light userdata) for the upvalue numbered 'n' from the given function.",
-      "descriptionMoreURL": "#pdf-debug.upvalueid",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.upvalueid",
       "replacementPrefix": "debupvalueid"
     },
     {
@@ -1159,7 +1159,7 @@
       "type": "function",
       "rightLabelHTML": "debug.upvaluejoin(<em>f1</em>, <em>n1</em>, <em>f2</em>, <em>n2</em>)",
       "description": "Make the 'n1'-th upvalue of the Lua closure 'f1' refer to the 'n2'-th upvalue of the Lua closure 'f2'.",
-      "descriptionMoreURL": "#pdf-debug.upvaluejoin",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-debug.upvaluejoin",
       "replacementPrefix": "debupvaluejoin"
     }
   ]

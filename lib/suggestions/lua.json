@@ -11,7 +11,7 @@
       "type": "snippet",
       "rightLabelHTML": "do¬»{}¬end",
       "description": "Explicit blocks are useful to control the scope of variable declarations.",
-      "descriptionMoreURL": "#3.3.1",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.1",
       "replacementPrefix": "do"
     },
     {
@@ -19,7 +19,7 @@
       "type": "snippet",
       "rightLabelHTML": "if <em>not</em> <em>condition</em> then¬»{}¬end",
       "description": "Conditional block.",
-      "descriptionMoreURL": "#3.3.4",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "if"
     },
     {
@@ -27,7 +27,7 @@
       "type": "snippet",
       "rightLabelHTML": "if <em>not</em> <em>condition</em> then¬»{}¬else¬»{}¬end",
       "description": "Conditional block.",
-      "descriptionMoreURL": "#3.3.4",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "ifel"
     },
     {
@@ -35,7 +35,7 @@
       "type": "snippet",
       "rightLabelHTML": "elseif <em>not</em> <em>condition</em> then¬»{}",
       "description": "Sub-conditional block.",
-      "descriptionMoreURL": "#3.3.4",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "elseif"
     },
     {
@@ -43,7 +43,7 @@
       "type": "snippet",
       "rightLabelHTML": "else¬»{}",
       "description": "Sub-conditional block.",
-      "descriptionMoreURL": "#3.3.4",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "else"
     },
     {
@@ -51,7 +51,7 @@
       "type": "snippet",
       "rightLabelHTML": "while <em>not</em> <em>condition</em> do¬»{}¬end",
       "description": "While loop block.",
-      "descriptionMoreURL": "#3.3.4",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "while"
     },
     {
@@ -59,7 +59,7 @@
       "type": "snippet",
       "rightLabelHTML": "repeat¬»{}¬until <em>condition</em>",
       "description": "Repeat loop block.",
-      "descriptionMoreURL": "#3.3.4",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "repeat"
     },
     {
@@ -67,7 +67,7 @@
       "type": "snippet",
       "rightLabelHTML": "for <em>i</em> = <em>1</em>, <em>10</em>, <em>i_step</em> do¬»{}¬end",
       "description": "For loop block.",
-      "descriptionMoreURL": "#3.3.5",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.5",
       "replacementPrefix": "for"
     },
     {
@@ -75,7 +75,7 @@
       "type": "snippet",
       "rightLabelHTML": "for <em>key</em> <em>value</em> in next, <em>table_name</em> do¬»{}¬end",
       "description": "For in loop block using `next` function.",
-      "descriptionMoreURL": "#3.3.5",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.5",
       "replacementPrefix": "forn"
     },
     {
@@ -83,7 +83,7 @@
       "type": "snippet",
       "rightLabelHTML": "for <em>key</em>, <em>value</em> in pairs(<em>table_name</em>) do¬»{}¬end",
       "description": "For in loop block using `pairs` function.",
-      "descriptionMoreURL": "#3.3.5",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.5",
       "replacementPrefix": "forp"
     },
     {
@@ -91,7 +91,7 @@
       "type": "snippet",
       "rightLabelHTML": "for <em>index</em>, <em>value</em> in ipairs(<em>table_name</em>) do¬»{}¬end",
       "description": "For in loop block using `ipairs` function.",
-      "descriptionMoreURL": "#3.3.5",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.5",
       "replacementPrefix": "fori"
     },
     {
@@ -108,7 +108,7 @@
       "type": "snippet",
       "rightLabelHTML": "function <em>functionName</em>(<em>...</em>)¬»{}¬end",
       "description": "Named function.",
-      "descriptionMoreURL": "#3.4.11",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.4.11",
       "replacementPrefix": "fun"
     },
     {
@@ -116,7 +116,7 @@
       "type": "snippet",
       "rightLabelHTML": "function (<em>...</em>)¬»{}¬end",
       "description": "Anonymous function, a function definition is an executable expression, whose value has type `function`.",
-      "descriptionMoreURL": "#3.4.11",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.4.11",
       "replacementPrefix": "fundef"
     }
   ]
