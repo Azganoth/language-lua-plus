@@ -43,7 +43,7 @@
     },
     "suggestion_help": {
       "title": "Show help link",
-      "description": "Shows a link which leads to a help page from the oficial lua website. (Requires ´Show description´ to work.)",
+      "description": "Shows a link which leads to a help page from the oficial lua website. (Requires <em>Show description</em> to work.)",
       "type": "boolean",
       "default": true,
       "order": 2
@@ -54,21 +54,21 @@
       "properties": {
         "keyword": {
           "title": "Keywords",
-          "description": "Enables <strong>keywords</strong> to be shown as suggestions. Examples: test.",
+          "description": "Enables <strong>keywords</strong> to be shown as suggestions.",
           "type": "boolean",
           "default": true,
           "order": 1
         },
         "control": {
           "title": "Control Structures",
-          "description": "Enables <strong>control structures</strong> to be shown as suggestions. Examples: test.",
+          "description": "Enables <strong>control structures</strong> to be shown as suggestions.",
           "type": "boolean",
           "default": true,
           "order": 2
         },
         "function": {
           "title": "Function Statements",
-          "description": "Enables <strong>function statements</strong> to be shown as suggestions. Examples: test.",
+          "description": "Enables <strong>function statements</strong> to be shown as suggestions.",
           "type": "boolean",
           "default": true,
           "order": 3
