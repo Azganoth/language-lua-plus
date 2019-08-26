@@ -9,15 +9,15 @@
     {
       "snippet": "do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "do¬»{}¬end",
-      "description": "Explicit blocks are useful to control the scope of variable declarations.",
+      "rightLabelHTML": "do¬»¬end",
+      "description": "Explicit block.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.1",
       "replacementPrefix": "do"
     },
     {
       "snippet": "if${1: not} ${2:condition} then\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "if <em>not</em> <em>condition</em> then¬»{}¬end",
+      "rightLabelHTML": "if[ not] condition then¬»¬end",
       "description": "Conditional block.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "if"
@@ -25,39 +25,39 @@
     {
       "snippet": "if${1: not} ${2:condition} then\n\t$3\nelse\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "if <em>not</em> <em>condition</em> then¬»{}¬else¬»{}¬end",
-      "description": "Conditional block.",
+      "rightLabelHTML": "if[ not] condition then¬»¬else¬»¬end",
+      "description": "Conditional block with else.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "ifel"
     },
     {
       "snippet": "elseif${1: not} ${2:condition} then\n\t$0",
       "type": "snippet",
-      "rightLabelHTML": "elseif <em>not</em> <em>condition</em> then¬»{}",
-      "description": "Sub-conditional block.",
+      "rightLabelHTML": "elseif[ not] condition then¬»",
+      "description": "Partial-conditional block.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "elseif"
     },
     {
       "snippet": "else\n\t$0",
       "type": "snippet",
-      "rightLabelHTML": "else¬»{}",
-      "description": "Sub-conditional block.",
+      "rightLabelHTML": "else¬»",
+      "description": "Partial-conditional block.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "else"
     },
     {
       "snippet": "while${1: not} ${2:condition} do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "while <em>not</em> <em>condition</em> do¬»{}¬end",
+      "rightLabelHTML": "while[ not] condition do¬»¬end",
       "description": "While loop block.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "while"
     },
     {
-      "snippet": "repeat\n\t$0\nuntil ${1:condition}",
+      "snippet": "repeat\n\t$0\nuntil${1: not} ${2:condition}",
       "type": "snippet",
-      "rightLabelHTML": "repeat¬»{}¬until <em>condition</em>",
+      "rightLabelHTML": "repeat¬»¬until[ not] condition",
       "description": "Repeat loop block.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.4",
       "replacementPrefix": "repeat"
@@ -65,59 +65,59 @@
     {
       "snippet": "for ${1:i} = ${2:1}, ${4:10}${3:, ${5:i_step}} do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "for <em>i</em> = <em>1</em>, <em>10</em>, <em>i_step</em> do¬»{}¬end",
+      "rightLabelHTML": "for i = 1, 10[, i_step] do¬»¬end",
       "description": "For loop block.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.5",
       "replacementPrefix": "for"
     },
     {
-      "snippet": "for ${1:k}, ${2:v} in next, ${3:table_name} do\n\t$0\nend",
+      "snippet": "for ${1:k}, ${2:v} in next, ${3:tbl} do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "for <em>key</em> <em>value</em> in next, <em>table_name</em> do¬»{}¬end",
-      "description": "For in loop block using `next` function.",
+      "rightLabelHTML": "for k, v in next, tbl do¬»¬end",
+      "description": "For in loop block using function(next).",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.5",
       "replacementPrefix": "forn"
     },
     {
-      "snippet": "for ${1:k}, ${2:v} in pairs(${3:table_name}) do\n\t$0\nend",
+      "snippet": "for ${1:k}, ${2:v} in pairs(${3:tbl}) do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "for <em>key</em>, <em>value</em> in pairs(<em>table_name</em>) do¬»{}¬end",
-      "description": "For in loop block using `pairs` function.",
+      "rightLabelHTML": "for k, v in pairs(tbl) do¬»¬end",
+      "description": "For in loop block using function(pairs).",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.5",
       "replacementPrefix": "forp"
     },
     {
-      "snippet": "for ${1:i}, ${2:v} in ipairs(${3:table_name}) do\n\t$0\nend",
+      "snippet": "for ${1:i}, ${2:v} in ipairs(${3:tbl}) do\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "for <em>index</em>, <em>value</em> in ipairs(<em>table_name</em>) do¬»{}¬end",
-      "description": "For in loop block using `ipairs` function.",
+      "rightLabelHTML": "for i, v in ipairs(tbl) do¬»¬end",
+      "description": "For in loop block using function(ipairs).",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.3.5",
       "replacementPrefix": "fori"
     },
     {
       "snippet": "${1:condition} and ${2:true} or ${3:false}",
       "type": "snippet",
-      "rightLabelHTML": "<em>condition</em> and <em>true</em> or <em>false</em>",
+      "rightLabelHTML": "condition and true or false",
       "description": "Ternary conditional expression.",
       "replacementPrefix": "tern"
     }
   ],
   "function": [
     {
-      "snippet": "function ${1:functionName}(${2:...})\n\t$0\nend",
+      "snippet": "function ${1:func}(${2:params})\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "function <em>functionName</em>(<em>...</em>)¬»{}¬end",
+      "rightLabelHTML": "function func(params)¬»¬end",
       "description": "Named function.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.4.11",
-      "replacementPrefix": "fun"
+      "replacementPrefix": "func"
     },
     {
-      "snippet": "function (${1:...})\n\t$0\nend",
+      "snippet": "function (${1:params})\n\t$0\nend",
       "type": "snippet",
-      "rightLabelHTML": "function (<em>...</em>)¬»{}¬end",
-      "description": "Anonymous function, a function definition is an executable expression, whose value has type `function`.",
+      "rightLabelHTML": "function (params)¬»¬end",
+      "description": "Anonymous function.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#3.4.11",
-      "replacementPrefix": "fundef"
+      "replacementPrefix": "funcdef"
     }
   ]
 }
