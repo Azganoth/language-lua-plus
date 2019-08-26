@@ -25,6 +25,142 @@
       "replacementPrefix": "print"
     },
     {
+      "snippet": "assert(${1:value}${2:, ${3:msg}})$0",
+      "type": "function",
+      "rightLabelHTML": "assert(value[, msg])",
+      "description": "If the value is false or nil, an error is thrown with the given message.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-assert",
+      "replacementPrefix": "assert"
+    },
+    {
+      "snippet": "collectgarbage(${1:${2:action}${3:, ${4:arg}}})$0",
+      "type": "function",
+      "rightLabelHTML": "collectgarbage([action[, arg]])",
+      "description": "Executes the specified action on the garbage collector.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-collectgarbage",
+      "replacementPrefix": "cgar"
+    },
+    {
+      "snippet": "dofile(${1:file})$0",
+      "type": "function",
+      "rightLabelHTML": "dofile([file])",
+      "description": "Opens the named file and executes its contents as a Lua chunk.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-dofile",
+      "replacementPrefix": "dofile"
+    },
+    {
+      "snippet": "error(${1:msg}${2:, ${3:level}})$0",
+      "type": "function",
+      "rightLabelHTML": "error(msg[, level])",
+      "description": "Throws a Lua error and breaks out of the current call stack.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-error",
+      "replacementPrefix": "error"
+    },
+    {
+      "snippet": "getmetatable(${1:obj})$0",
+      "type": "function",
+      "rightLabelHTML": "getmetatable(obj)",
+      "description": "Returns the metatable of an object. This function ignores the metatable's __metatable field.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-getmetatable",
+      "replacementPrefix": "getmeta"
+    },
+    {
+      "snippet": "ipairs(${1:tbl})$0",
+      "type": "function",
+      "rightLabelHTML": "ipairs(tbl)",
+      "description": "Returns an iterator function for a for loop, to return ordered key-value pairs from a table.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-ipairs",
+      "replacementPrefix": "ipairs"
+    },
+    {
+      "snippet": "load(${1:chunk}${2:, ${3:chunk_name}${4:, ${5:mode}${6:, ${7:env}}}})$0",
+      "type": "function",
+      "rightLabelHTML": "load(chunk[, chunk_name[, mode[, env]]])",
+      "description": "Loads a chunk.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-load",
+      "replacementPrefix": "load"
+    },
+    {
+      "snippet": "loadfile(${1:file}${2:, ${3:mode}${4:, ${5:env}}})$0",
+      "type": "function",
+      "rightLabelHTML": "loadfile([file[, mode[, env]]])",
+      "description": "Loads a chunk from the named file or from the standard input, if no file name is given.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-loadfile",
+      "replacementPrefix": "loadfile"
+    },
+    {
+      "snippet": "next(${1:tbl}, ${2:index})$0",
+      "type": "function",
+      "rightLabelHTML": "next(tbl, index)",
+      "description": "Returns the next key and value pair in the table.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-next",
+      "replacementPrefix": "next"
+    },
+    {
+      "snippet": "pairs(${1:tbl})$0",
+      "type": "function",
+      "rightLabelHTML": "pairs(tbl)",
+      "description": "Returns an iterator function(next) for a for loop that will return the values of the specified table in an arbitrary order.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-pairs",
+      "replacementPrefix": "pairs"
+    },
+    {
+      "snippet": "pcall(${1:func}$2:, ${3:args}})$0",
+      "type": "function",
+      "rightLabelHTML": "pcall(func[, args])",
+      "description": "Calls a function and catches an error that can be thrown while the execution of the call.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-pcall",
+      "replacementPrefix": "pcall"
+    },
+    {
+      "snippet": "rawequal(${1:value1}, ${2:value2})$0",
+      "type": "function",
+      "rightLabelHTML": "rawequal(value1, value2)",
+      "description": "Compares the two values without calling their __eq operator.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawequal",
+      "replacementPrefix": "rawequal"
+    },
+    {
+      "snippet": "rawget(${1:tbl}, ${2:index})$0",
+      "type": "function",
+      "rightLabelHTML": "rawget(tbl, index)",
+      "description": "Gets the value with the specified key from the table without calling the __index method.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawget",
+      "replacementPrefix": "rawget"
+    },
+    {
+      "snippet": "rawlen(${1:obj})$0",
+      "type": "function",
+      "rightLabelHTML": "rawlen(obj)",
+      "description": "Returns the length of the object, which must be a table or a string, without invoking the __len method. Returns an integer.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawlen",
+      "replacementPrefix": "rawlen"
+    },
+    {
+      "snippet": "rawset(${1:tbl}, ${2:index}, ${3:value})$0",
+      "type": "function",
+      "rightLabelHTML": "rawset(tbl, index, value)",
+      "description": "Sets the value with the specified key from the table without calling the __newindex method.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawset",
+      "replacementPrefix": "rawset"
+    },
+    {
+      "snippet": "select(${1:arg}, ${2:args})$0",
+      "type": "function",
+      "rightLabelHTML": "select(arg, args)",
+      "description": "Selects a single argument from the given arguments or gets the count of values in it.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-select",
+      "replacementPrefix": "select"
+    },
+    {
+      "snippet": "setmetatable(${1:obj}, ${2:metatbl})$0",
+      "type": "function",
+      "rightLabelHTML": "setmetatable(obj, metatbl)",
+      "description": "Sets, changes or removes a object's metatable. Returns the given object.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-setmetatable",
+      "replacementPrefix": "setmeta"
+    },
+    {
       "snippet": "tonumber(${1:value}${2:, ${3:base}})$0",
       "type": "function",
       "rightLabelHTML": "tonumber(value[, base])",
@@ -49,148 +185,12 @@
       "replacementPrefix": "type"
     },
     {
-      "snippet": "assert(${1:value}${2:, ${3:msg}})$0",
-      "type": "function",
-      "rightLabelHTML": "assert(value[, msg])",
-      "description": "If the value is false or nil, an error is thrown with the given message.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-assert",
-      "replacementPrefix": "assert"
-    },
-    {
-      "snippet": "collectgarbage(${1:${2:action}${3:, ${4:arg}}})$0",
-      "type": "function",
-      "rightLabelHTML": "collectgarbage([action[, arg]])",
-      "description": "Executes the specified action on the garbage collector.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-collectgarbage",
-      "replacementPrefix": "cgar"
-    },
-    {
-      "snippet": "error(${1:msg}${2:, ${3:level}})$0",
-      "type": "function",
-      "rightLabelHTML": "error(msg[, level])",
-      "description": "Throws a Lua error and breaks out of the current call stack.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-error",
-      "replacementPrefix": "error"
-    },
-    {
-      "snippet": "select(${1:param}, ${2:args})$0",
-      "type": "function",
-      "rightLabelHTML": "select(param, args)",
-      "description": "Selects a single argument from the given arguments or gets the count of values in it.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-select",
-      "replacementPrefix": "select"
-    },
-    {
-      "snippet": "next(${1:tbl}, ${2:index})$0",
-      "type": "function",
-      "rightLabelHTML": "next(tbl, index)",
-      "description": "Returns the next key and value pair in the table.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-next",
-      "replacementPrefix": "next"
-    },
-    {
-      "snippet": "getmetatable(${1:obj})$0",
-      "type": "function",
-      "rightLabelHTML": "getmetatable(obj)",
-      "description": "Returns the metatable of an object. This function ignores the metatable's __metatable field.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-getmetatable",
-      "replacementPrefix": "getmeta"
-    },
-    {
-      "snippet": "setmetatable(${1:obj}, ${2:metatbl})$0",
-      "type": "function",
-      "rightLabelHTML": "setmetatable(obj, metatbl)",
-      "description": "Sets, changes or removes a object's metatable. Returns the given object.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-setmetatable",
-      "replacementPrefix": "setmeta"
-    },
-    {
-      "snippet": "pairs(${1:tbl})$0",
-      "type": "function",
-      "rightLabelHTML": "pairs(tbl)",
-      "description": "Returns an iterator function(next) for a for loop that will return the values of the specified table in an arbitrary order.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-pairs",
-      "replacementPrefix": "pairs"
-    },
-    {
-      "snippet": "ipairs(${1:tbl})$0",
-      "type": "function",
-      "rightLabelHTML": "ipairs(tbl)",
-      "description": "Returns an iterator function for a for loop, to return ordered key-value pairs from a table.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-ipairs",
-      "replacementPrefix": "ipairs"
-    },
-    {
-      "snippet": "dofile(${1:file})$0",
-      "type": "function",
-      "rightLabelHTML": "dofile([file])",
-      "description": "Opens the named file and executes its contents as a Lua chunk.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-dofile",
-      "replacementPrefix": "dofile"
-    },
-    {
-      "snippet": "load(${1:chunk}${2:, ${3:chunk_name}${4:, ${5:mode}${6:, ${7:env}}}})$0",
-      "type": "function",
-      "rightLabelHTML": "load(chunk[, chunk_name[, mode[, env]]])",
-      "description": "Loads a chunk.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-load",
-      "replacementPrefix": "load"
-    },
-    {
-      "snippet": "loadfile(${1:file}${2:, ${3:mode}${4:, ${5:env}}})$0",
-      "type": "function",
-      "rightLabelHTML": "loadfile([file[, mode[, env]]])",
-      "description": "Loads a chunk from the named file or from the standard input, if no file name is given.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-loadfile",
-      "replacementPrefix": "loadfile"
-    },
-    {
-      "snippet": "pcall(${1:func}$2:, ${3:args}})$0",
-      "type": "function",
-      "rightLabelHTML": "pcall(func[, args])",
-      "description": "Calls a function and catches an error that can be thrown while the execution of the call.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-pcall",
-      "replacementPrefix": "pcall"
-    },
-    {
       "snippet": "xpcall(${1:func}, ${2:msgh}${3:, ${4:args}})$0",
       "type": "function",
       "rightLabelHTML": "xpcall(func, msgh[, args])",
       "description": "Attempts to call the first function. If the execution succeeds, this returns true followed by the returns of the function. If execution fails, this returns false and the second function is called with the error message.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-xpcall",
       "replacementPrefix": "xpcall"
-    },
-    {
-      "snippet": "rawget(${1:tbl}, ${2:index})$0",
-      "type": "function",
-      "rightLabelHTML": "rawget(tbl, index)",
-      "description": "Gets the value with the specified key from the table without calling the __index method.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawget",
-      "replacementPrefix": "rawget"
-    },
-    {
-      "snippet": "rawset(${1:tbl}, ${2:index}, ${3:value})$0",
-      "type": "function",
-      "rightLabelHTML": "rawset(tbl, index, value)",
-      "description": "Sets the value with the specified key from the table without calling the __newindex method.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawset",
-      "replacementPrefix": "rawset"
-    },
-    {
-      "snippet": "rawequal(${1:value1}, ${2:value2})$0",
-      "type": "function",
-      "rightLabelHTML": "rawequal(value1, value2)",
-      "description": "Compares the two values without calling their __eq operator.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawequal",
-      "replacementPrefix": "rawequal"
-    },
-    {
-      "snippet": "rawlen(${1:obj})$0",
-      "type": "function",
-      "rightLabelHTML": "rawlen(obj)",
-      "description": "Returns the length of the object, which must be a table or a string, without invoking the __len method. Returns an integer.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-rawlen",
-      "replacementPrefix": "rawlen"
     }
   ],
   "coroutine": [
@@ -203,28 +203,12 @@
       "replacementPrefix": "corcreate"
     },
     {
-      "snippet": "coroutine.wrap(${1:func})$0",
+      "snippet": "coroutine.isyieldable()",
       "type": "function",
-      "rightLabelHTML": "coroutine.wrap(func)",
-      "description": "Returns a function which calling is equivalent with calling coroutine.resume with the coroutine and all extra parameters.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.wrap",
-      "replacementPrefix": "corwrap"
-    },
-    {
-      "snippet": "coroutine.status(${1:coro})$0",
-      "type": "function",
-      "rightLabelHTML": "coroutine.status(coro)",
-      "description": "Returns the status of the coroutine passed to it, the possible statuses are \"suspended\", \"running\" and \"dead\".",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.status",
-      "replacementPrefix": "corstatus"
-    },
-    {
-      "snippet": "coroutine.running()",
-      "type": "function",
-      "rightLabelHTML": "coroutine.running()",
-      "description": "Returns the active coroutine or nil if we are not within a coroutine.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.running",
-      "replacementPrefix": "corrun"
+      "rightLabelHTML": "coroutine.isyieldable()",
+      "description": "Returns true when the running coroutine can yield.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.isyieldable",
+      "replacementPrefix": "corisyield"
     },
     {
       "snippet": "coroutine.resume(${1:coro}${2:, ${3:args}})$0",
@@ -235,12 +219,28 @@
       "replacementPrefix": "corres"
     },
     {
-      "snippet": "coroutine.isyieldable()",
+      "snippet": "coroutine.running()",
       "type": "function",
-      "rightLabelHTML": "coroutine.isyieldable()",
-      "description": "Returns true when the running coroutine can yield.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.isyieldable",
-      "replacementPrefix": "corisyield"
+      "rightLabelHTML": "coroutine.running()",
+      "description": "Returns the active coroutine or nil if we are not within a coroutine.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.running",
+      "replacementPrefix": "corrun"
+    },
+    {
+      "snippet": "coroutine.status(${1:coro})$0",
+      "type": "function",
+      "rightLabelHTML": "coroutine.status(coro)",
+      "description": "Returns the status of the coroutine passed to it, the possible statuses are \"suspended\", \"running\" and \"dead\".",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.status",
+      "replacementPrefix": "corstatus"
+    },
+    {
+      "snippet": "coroutine.wrap(${1:func})$0",
+      "type": "function",
+      "rightLabelHTML": "coroutine.wrap(func)",
+      "description": "Returns a function which calling is equivalent with calling coroutine.resume with the coroutine and all extra parameters.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-coroutine.wrap",
+      "replacementPrefix": "corwrap"
     },
     {
       "snippet": "coroutine.yield(${1:extra})$0",
@@ -269,15 +269,15 @@
       "replacementPrefix": "req"
     },
     {
-      "snippet": "package.path",
+      "text": "package.config",
       "type": "variable",
-      "rightLabelHTML": "package.path",
-      "description": "The path used by function(require) to search for a Lua loader.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.path",
-      "replacementPrefix": "packpath"
+      "rightLabelHTML": "package.config",
+      "description": "A string describing some compile-time configurations for packages.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.config",
+      "replacementPrefix": "packconfig"
     },
     {
-      "snippet": "package.cpath",
+      "text": "package.cpath",
       "type": "variable",
       "rightLabelHTML": "package.cpath",
       "description": "The path used by function(require) to search for a C loader.",
@@ -285,15 +285,7 @@
       "replacementPrefix": "packcpath"
     },
     {
-      "snippet": "package.preload",
-      "type": "variable",
-      "rightLabelHTML": "package.preload",
-      "description": "A table to store loaders for specific modules.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.preload",
-      "replacementPrefix": "packpreload"
-    },
-    {
-      "snippet": "package.loaded",
+      "text": "package.loaded",
       "type": "variable",
       "rightLabelHTML": "package.loaded",
       "description": "A table used by function(require) to control which modules are already loaded.",
@@ -309,7 +301,23 @@
       "replacementPrefix": "packloadlib"
     },
     {
-      "snippet": "package.searchers",
+      "text": "package.path",
+      "type": "variable",
+      "rightLabelHTML": "package.path",
+      "description": "The path used by function(require) to search for a Lua loader.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.path",
+      "replacementPrefix": "packpath"
+    },
+    {
+      "text": "package.preload",
+      "type": "variable",
+      "rightLabelHTML": "package.preload",
+      "description": "A table to store loaders for specific modules.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.preload",
+      "replacementPrefix": "packpreload"
+    },
+    {
+      "text": "package.searchers",
       "type": "variable",
       "rightLabelHTML": "package.searchers",
       "description": "A table used by function(require) to control how to load modules.",
@@ -323,14 +331,6 @@
       "description": "Searches for the given name in the given path.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.searchpath",
       "replacementPrefix": "packspath"
-    },
-    {
-      "snippet": "package.config",
-      "type": "variable",
-      "rightLabelHTML": "package.config",
-      "description": "A string describing some compile-time configurations for packages.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-package.config",
-      "replacementPrefix": "packconfig"
     }
   ],
   "string": [
@@ -375,12 +375,60 @@
       "replacementPrefix": "strformat"
     },
     {
+      "snippet": "string.gmatch(${1:str}, ${2:pattern})$0",
+      "type": "function",
+      "rightLabelHTML": "string.gmatch(str, pattern)",
+      "description": "Returns an iterator which will return either one value if no capture groups are defined, or any capture group matches.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.gmatch",
+      "replacementPrefix": "strgmatch"
+    },
+    {
+      "snippet": "string.gsub(${1:str}, ${2:pattern}, ${3:repl}${4:, ${5:n}})$0",
+      "type": "function",
+      "rightLabelHTML": "string.gsub(str, pattern, repl[, n])",
+      "description": "This functions main purpose is to replace certain character sequences in a string.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.gsub",
+      "replacementPrefix": "strgsub"
+    },
+    {
       "snippet": "string.len(${1:str})$0",
       "type": "function",
       "rightLabelHTML": "string.len(str)",
       "description": "Counts the number of characters in the string (length). This is equivalent to using the length operator (#).",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.len",
       "replacementPrefix": "strlen"
+    },
+    {
+      "snippet": "string.lower(${1:str})$0",
+      "type": "function",
+      "rightLabelHTML": "string.lower(str)",
+      "description": "Changes any upper-case letters in a string to lower-case letters.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.lower",
+      "replacementPrefix": "strlower"
+    },
+    {
+      "snippet": "string.match(${1:str}, ${2:pattern}${3:, ${4:i_start}})$0",
+      "type": "function",
+      "rightLabelHTML": "string.match(str, pattern[, i_start])",
+      "description": "Finds a pattern in a string.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.match",
+      "replacementPrefix": "strmatch"
+    },
+    {
+      "snippet": "string.pack(${1:format}, ${2:args})$0",
+      "type": "function",
+      "rightLabelHTML": "string.pack(format, args)",
+      "description": "Returns a binary string containing arguments packed according to the format string.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.pack",
+      "replacementPrefix": "strpack"
+    },
+    {
+      "snippet": "string.packsize(${1:format})$0",
+      "type": "function",
+      "rightLabelHTML": "string.packsize(format)",
+      "description": "Returns the size of a string resulting from string.pack with the given format.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.packsize",
+      "replacementPrefix": "strpacksize"
     },
     {
       "snippet": "string.rep(${1:str}, ${2:n}${3:, ${4:sep}})$0",
@@ -399,46 +447,6 @@
       "replacementPrefix": "strreverse"
     },
     {
-      "snippet": "string.upper(${1:str})$0",
-      "type": "function",
-      "rightLabelHTML": "string.upper(str)",
-      "description": "Changes any lower-case letters in a string to upper-case letters.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.upper",
-      "replacementPrefix": "strupper"
-    },
-    {
-      "snippet": "string.lower(${1:str})$0",
-      "type": "function",
-      "rightLabelHTML": "string.lower(str)",
-      "description": "Changes any upper-case letters in a string to lower-case letters.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.lower",
-      "replacementPrefix": "strlower"
-    },
-    {
-      "snippet": "string.gmatch(${1:str}, ${2:pattern})$0",
-      "type": "function",
-      "rightLabelHTML": "string.gmatch(str, pattern)",
-      "description": "Returns an iterator which will return either one value if no capture groups are defined, or any capture group matches.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.gmatch",
-      "replacementPrefix": "strgmatch"
-    },
-    {
-      "snippet": "string.gsub(${1:str}, ${2:pattern}, ${3:repl}${4:, ${5:n}})$0",
-      "type": "function",
-      "rightLabelHTML": "string.gsub(str, pattern, repl[, n])",
-      "description": "This functions main purpose is to replace certain character sequences in a string.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.gsub",
-      "replacementPrefix": "strgsub"
-    },
-    {
-      "snippet": "string.match(${1:str}, ${2:pattern}${3:, ${4:i_start}})$0",
-      "type": "function",
-      "rightLabelHTML": "string.match(str, pattern[, i_start])",
-      "description": "Finds a pattern in a string.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.match",
-      "replacementPrefix": "strmatch"
-    },
-    {
       "snippet": "string.sub(${1:str}, ${2:i_start}${3:, ${4:i_end}})$0",
       "type": "function",
       "rightLabelHTML": "string.sub(str, i_start, i_end)",
@@ -455,20 +463,12 @@
       "replacementPrefix": "strunpack"
     },
     {
-      "snippet": "string.pack(${1:format}, ${2:args})$0",
+      "snippet": "string.upper(${1:str})$0",
       "type": "function",
-      "rightLabelHTML": "string.pack(format, args)",
-      "description": "Returns a binary string containing arguments packed according to the format string.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.pack",
-      "replacementPrefix": "strpack"
-    },
-    {
-      "snippet": "string.packsize(${1:format})$0",
-      "type": "function",
-      "rightLabelHTML": "string.packsize(format)",
-      "description": "Returns the size of a string resulting from string.pack with the given format.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.packsize",
-      "replacementPrefix": "strpacksize"
+      "rightLabelHTML": "string.upper(str)",
+      "description": "Changes any lower-case letters in a string to upper-case letters.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-string.upper",
+      "replacementPrefix": "strupper"
     }
   ],
   "utf8": [
@@ -481,20 +481,12 @@
       "replacementPrefix": "utfchar"
     },
     {
-      "snippet": "utf8.charpattern",
+      "text": "utf8.charpattern",
       "type": "variable",
       "rightLabelHTML": "utf8.charpattern",
       "description": "Returns \"[%z\\x01-\\x7F\\xC2-\\xF4][\\x80-\\xBF]*\", which matches exactly one UTF-8 byte sequence, assuming that the subject is a valid UTF-8 string.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-utf8.charpattern",
       "replacementPrefix": "utfcharpattern"
-    },
-    {
-      "snippet": "utf8.codes(${1:str})$0",
-      "type": "function",
-      "rightLabelHTML": "utf8.codes(str)",
-      "description": "Returns an iterator (like string.gmatch) which returns both the position and codepoint of each utf8 character in the string. It raises an error if it meets any invalid byte sequence.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-utf8.codes",
-      "replacementPrefix": "utfcodes"
     },
     {
       "snippet": "utf8.codepoint(${1:str}${2:, ${3:i_start}${4:, ${5:i_end}}})$0",
@@ -503,6 +495,14 @@
       "description": "Returns the codepoints (as numbers) from all characters in the given string that start between byte position i_start and i_end. It raises an error if it meets any invalid byte sequence. This functions similarly to string.byte.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-utf8.codepoint",
       "replacementPrefix": "utfcodepoint"
+    },
+    {
+      "snippet": "utf8.codes(${1:str})$0",
+      "type": "function",
+      "rightLabelHTML": "utf8.codes(str)",
+      "description": "Returns an iterator (like string.gmatch) which returns both the position and codepoint of each utf8 character in the string. It raises an error if it meets any invalid byte sequence.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-utf8.codes",
+      "replacementPrefix": "utfcodes"
     },
     {
       "snippet": "utf8.len(${1:str}${2:, ${3:i_start}${4:, ${5:i_end}}})$0",
@@ -539,20 +539,28 @@
       "replacementPrefix": "tabins"
     },
     {
-      "snippet": "table.remove(${1:tbl}${2:, ${3:i}})$0",
-      "type": "function",
-      "rightLabelHTML": "table.remove(tbl[, i])",
-      "description": "Removes a value from a table and shifts any other values down to fill the gap.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.remove",
-      "replacementPrefix": "tabrem"
-    },
-    {
       "snippet": "table.move(${1:tbl1}, ${2:f}, ${3:e}, ${4:t}${5:, ${6:tbl2}})$0",
       "type": "function",
       "rightLabelHTML": "table.move(tbl1, f, e, t[, tbl2])",
       "description": "Moves elements from table tbl1 to table tbl2.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.move",
       "replacementPrefix": "tabmove"
+    },
+    {
+      "snippet": "table.pack(${1:args})$0",
+      "type": "function",
+      "rightLabelHTML": "table.pack(args)",
+      "description": "Returns a new table with all parameters stored into keys 1, 2, etc. and with a field \"n\" with the total number of parameters.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.pack",
+      "replacementPrefix": "tabpack"
+    },
+    {
+      "snippet": "table.remove(${1:tbl}${2:, ${3:i}})$0",
+      "type": "function",
+      "rightLabelHTML": "table.remove(tbl[, i])",
+      "description": "Removes a value from a table and shifts any other values down to fill the gap.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.remove",
+      "replacementPrefix": "tabrem"
     },
     {
       "snippet": "table.sort(${1:tbl}${2:, ${3:func}})$0",
@@ -569,25 +577,9 @@
       "description": "Returns the elements from the given table.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.unpack",
       "replacementPrefix": "tabunpack"
-    },
-    {
-      "snippet": "table.pack(${1:args})$0",
-      "type": "function",
-      "rightLabelHTML": "table.pack(args)",
-      "description": "Returns a new table with all parameters stored into keys 1, 2, etc. and with a field \"n\" with the total number of parameters.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-table.pack",
-      "replacementPrefix": "tabpack"
     }
   ],
   "math": [
-    {
-      "text": "math.pi",
-      "type": "variable",
-      "rightLabelHTML": "math.pi",
-      "description": "Returns a variable containing the mathematical constant pi.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.pi",
-      "replacementPrefix": "mathpi"
-    },
     {
       "snippet": "math.abs(${1:x})$0",
       "type": "function",
@@ -669,20 +661,20 @@
       "replacementPrefix": "mathfmod"
     },
     {
-      "snippet": "math.log(${1:x}${2:, ${3:base}})$0",
-      "type": "function",
-      "rightLabelHTML": "math.log(x[, base])",
-      "description": "With one argument, return the natural logarithm of x (to base e). With two arguments, return the logarithm of x to the given base, calculated as log(x)/log(base).",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.log",
-      "replacementPrefix": "mathlog"
-    },
-    {
       "text": "math.huge",
       "type": "variable",
       "rightLabelHTML": "math.huge",
       "description": "Returns a variable that effectively represents infinity, in the sense that in any numerical comparison every number will be less than this.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.huge",
       "replacementPrefix": "mathhuge"
+    },
+    {
+      "snippet": "math.log(${1:x}${2:, ${3:base}})$0",
+      "type": "function",
+      "rightLabelHTML": "math.log(x[, base])",
+      "description": "With one argument, return the natural logarithm of x (to base e). With two arguments, return the logarithm of x to the given base, calculated as log(x)/log(base).",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.log",
+      "replacementPrefix": "mathlog"
     },
     {
       "snippet": "math.max(${1:args})$0",
@@ -723,6 +715,14 @@
       "description": "Returns the integral and fractional component of the modulo operation.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.modf",
       "replacementPrefix": "mathmodf"
+    },
+    {
+      "text": "math.pi",
+      "type": "variable",
+      "rightLabelHTML": "math.pi",
+      "description": "Returns a variable containing the mathematical constant pi.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-math.pi",
+      "replacementPrefix": "mathpi"
     },
     {
       "snippet": "math.rad(${1:x})$0",
@@ -961,14 +961,6 @@
       "replacementPrefix": "osdate"
     },
     {
-      "snippet": "os.time(${1:tbl})$0",
-      "type": "function",
-      "rightLabelHTML": "os.time([tbl])",
-      "description": "Returns the system time in seconds past the unix epoch. If a table is supplied, the function attempts to build a system time with the specified table members.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.time",
-      "replacementPrefix": "ostime"
-    },
-    {
       "snippet": "os.difftime(${1:t2}, ${2:t1})$0",
       "type": "function",
       "rightLabelHTML": "os.difftime(t2, t1)",
@@ -993,6 +985,14 @@
       "replacementPrefix": "osexit"
     },
     {
+      "snippet": "os.getenv(${1:var})$0",
+      "type": "function",
+      "rightLabelHTML": "os.getenv(var)",
+      "description": "Returns the value of the give process environment variable. Returns nil if the variable is not defined.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.getenv",
+      "replacementPrefix": "osgenv"
+    },
+    {
       "snippet": "os.remove(${1:file})$0",
       "type": "function",
       "rightLabelHTML": "os.remove(file)",
@@ -1009,20 +1009,20 @@
       "replacementPrefix": "osren"
     },
     {
-      "snippet": "os.getenv(${1:var})$0",
-      "type": "function",
-      "rightLabelHTML": "os.getenv(var)",
-      "description": "Returns the value of the give process environment variable. Returns nil if the variable is not defined.",
-      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.getenv",
-      "replacementPrefix": "osgenv"
-    },
-    {
       "snippet": "os.setlocale(${1:locale}${2:, ${3:category}})$0",
       "type": "function",
       "rightLabelHTML": "os.setlocale(locale[, category])",
       "description": "Sets the current locale of the program.",
       "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.setlocale",
       "replacementPrefix": "osslocale"
+    },
+    {
+      "snippet": "os.time(${1:tbl})$0",
+      "type": "function",
+      "rightLabelHTML": "os.time([tbl])",
+      "description": "Returns the system time in seconds past the unix epoch. If a table is supplied, the function attempts to build a system time with the specified table members.",
+      "descriptionMoreURL": "https://www.lua.org/manual/5.3/manual.html#pdf-os.time",
+      "replacementPrefix": "ostime"
     },
     {
       "snippet": "os.tmpname()",

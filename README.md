@@ -124,6 +124,91 @@ print 'text'
 print(args)
 ```
 
+`assert`
+```lua
+assert(value, msg)
+```
+
+`cgar`
+```lua
+collectgarbage(action, arg)
+```
+
+`dofile`
+```lua
+dofile(file)
+```
+
+`error`
+```lua
+error(msg, level)
+```
+
+`getmeta`
+```lua
+getmetatable(obj)
+```
+
+`ipairs`
+```lua
+ipairs(tbl)
+```
+
+`load`
+```lua
+load(chunk, chunk_name, mode, env)
+```
+
+`loadfile`
+```lua
+loadfile(file, mode, env)
+```
+
+`next`
+```lua
+next(tbl, index)
+```
+
+`pairs`
+```lua
+pairs(tbl)
+```
+
+`pcall`
+```lua
+pcall(func, args)
+```
+
+`rawequal`
+```lua
+rawequal(value1, value2)
+```
+
+`rawget`
+```lua
+rawget(tbl, index)
+```
+
+`rawlen`
+```lua
+rawlen(obj)
+```
+
+`rawset`
+```lua
+rawset(tbl, index, value)
+```
+
+`select`
+```lua
+select(arg, args)
+```
+
+`setmeta`
+```lua
+setmetatable(obj, metatbl)
+```
+
 `tonumber`
 ```lua
 tonumber(value, base)
@@ -139,94 +224,9 @@ tostring(value)
 type(var)
 ```
 
-`assert`
-```lua
-assert(value, msg)
-```
-
-`cgar`
-```lua
-collectgarbage(action, arg)
-```
-
-`error`
-```lua
-error(msg, level)
-```
-
-`select`
-```lua
-select(param, args)
-```
-
-`next`
-```lua
-next(tbl, index)
-```
-
-`getmeta`
-```lua
-getmetatable(obj)
-```
-
-`setmeta`
-```lua
-setmetatable(obj, metatbl)
-```
-
-`pairs`
-```lua
-pairs(tbl)
-```
-
-`ipairs`
-```lua
-ipairs(tbl)
-```
-
-`dofile`
-```lua
-dofile(file)
-```
-
-`load`
-```lua
-load(chunk, chunk_name, mode, env)
-```
-
-`loadfile`
-```lua
-loadfile(file, mode, env)
-```
-
-`pcall`
-```lua
-pcall(func, args)
-```
-
 `xpcall`
 ```lua
 xpcall(func, msgh, args)
-```
-
-`rawget`
-```lua
-rawget(tbl, index)
-```
-
-`rawset`
-```lua
-rawset(tbl, index, value)
-```
-
-`rawequal`
-```lua
-rawequal(value1, value2)
-```
-
-`rawlen`
-```lua
-rawlen(obj)
 ```
 
 ### Coroutine
@@ -236,19 +236,9 @@ rawlen(obj)
 coroutine.create(func)
 ```
 
-`corwrap`
+`corisyield`
 ```lua
-coroutine.wrap(func)
-```
-
-`corstatus`
-```lua
-coroutine.status(coro)
-```
-
-`corrun`
-```lua
-coroutine.running()
+coroutine.isyieldable()
 ```
 
 `corres`
@@ -256,9 +246,19 @@ coroutine.running()
 coroutine.resume(coro, args)
 ```
 
-`corisyield`
+`corrun`
 ```lua
-coroutine.isyieldable()
+coroutine.running()
+```
+
+`corstatus`
+```lua
+coroutine.status(coro)
+```
+
+`corwrap`
+```lua
+coroutine.wrap(func)
 ```
 
 `coryield`
@@ -278,19 +278,14 @@ require 'name'
 require(name)
 ```
 
-`packpath`
+`packconfig`
 ```lua
-package.path
+package.config
 ```
 
 `packcpath`
 ```lua
 package.cpath
-```
-
-`packpreload`
-```lua
-package.preload
 ```
 
 `packloaded`
@@ -303,6 +298,16 @@ package.loaded
 package.loadlib(lib, func)
 ```
 
+`packpath`
+```lua
+package.path
+```
+
+`packpreload`
+```lua
+package.preload
+```
+
 `packs`
 ```lua
 package.searchers
@@ -311,11 +316,6 @@ package.searchers
 `packspath`
 ```lua
 package.searchpath(name, path, sep, rep)
-```
-
-`packconfig`
-```lua
-package.config
 ```
 
 ### String
@@ -345,9 +345,39 @@ string.find(str, pattern, i_start, plain)
 string.format(format, args)
 ```
 
+`strgmatch`
+```lua
+string.gmatch(str, pattern)
+```
+
+`strgsub`
+```lua
+string.gsub(str, pattern, repl, n)
+```
+
 `strlen`
 ```lua
 string.len(str)
+```
+
+`strlower`
+```lua
+string.lower(str)
+```
+
+`strmatch`
+```lua
+string.match(str, pattern, i_start)
+```
+
+`strpack`
+```lua
+string.pack(format, args)
+```
+
+`strpacksize`
+```lua
+string.packsize(format)
 ```
 
 `strrep`
@@ -360,31 +390,6 @@ string.rep(str, n, sep)
 string.reverse(str)
 ```
 
-`strupper`
-```lua
-string.upper(str)
-```
-
-`strlower`
-```lua
-string.lower(str)
-```
-
-`strgmatch`
-```lua
-string.gmatch(str, pattern)
-```
-
-`strgsub`
-```lua
-string.gsub(str, pattern, repl, n)
-```
-
-`strmatch`
-```lua
-string.match(str, pattern, i_start)
-```
-
 `strsub`
 ```lua
 string.sub(str, i_start, i_end)
@@ -395,15 +400,10 @@ string.sub(str, i_start, i_end)
 string.unpack(format, str, i)
 ```
 
-`strpack`
+`strupper`
 ```lua
-string.pack(format, args)
+string.upper(str)
 ```
-
-`strpacksize`
-```lua
-string.packsize(format)
-```                    |
 
 ### UTF-8
 
@@ -417,14 +417,14 @@ utf8.char(number)
 utf8.charpattern
 ```
 
-`utfcodes`
-```lua
-utf8.codes(str)
-```
-
 `utfcodepoint`
 ```lua
 utf8.codepoint(str, i_start, i_end)
+```
+
+`utfcodes`
+```lua
+utf8.codes(str)
 ```
 
 `utflen`
@@ -449,14 +449,19 @@ table.concat(tbl, sep, i_start, i_end)
 table.insert(tbl, i, value)
 ```
 
-`tabrem`
-```lua
-table.remove(tbl, i)
-```
-
 `tabmove`
 ```lua
 table.move(tbl1, f, e, t, tbl2)
+```
+
+`tabpack`
+```lua
+table.pack(args)
+```
+
+`tabrem`
+```lua
+table.remove(tbl, i)
 ```
 
 `tabsort`
@@ -469,17 +474,7 @@ table.sort(tbl, func)
 table.unpack(tbl, i_start, i_end)
 ```
 
-`tabpack`
-```lua
-table.pack(args)
-```
-
 ### Math
-
-`mathpi`
-```lua
-math.pi
-```
 
 `mathabs`
 ```lua
@@ -531,14 +526,14 @@ math.floor(x)
 math.fmod(x, y)
 ```
 
-`mathlog`
-```lua
-math.log(x, base)
-```
-
 `mathhuge`
 ```lua
 math.huge
+```
+
+`mathlog`
+```lua
+math.log(x, base)
 ```
 
 `mathmax`
@@ -564,6 +559,11 @@ math.mininteger
 `mathmodf`
 ```lua
 math.modf(x)
+```
+
+`mathpi`
+```lua
+math.pi
 ```
 
 `mathrad`
@@ -715,11 +715,6 @@ os.clock()
 os.date(format, time)
 ```
 
-`ostime`
-```lua
-os.time(tbl)
-```
-
 `osdiff`
 ```lua
 os.difftime(t2, t1)
@@ -735,6 +730,11 @@ os.execute(cmd)
 os.exit(code, close)
 ```
 
+`osgenv`
+```lua
+os.getenv(var)
+```
+
 `osrem`
 ```lua
 os.remove(file)
@@ -745,14 +745,14 @@ os.remove(file)
 os.rename(old_name, new_name)
 ```
 
-`osgenv`
-```lua
-os.getenv(var)
-```
-
 `osslocale`
 ```lua
 os.setlocale(locale, category)
+```
+
+`ostime`
+```lua
+os.time(tbl)
 ```
 
 `ostmpname`
