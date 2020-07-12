@@ -2,6 +2,7 @@
   "name": "language-lua-plus",
   "version": "1.7.0",
   "description": "Lua grammar and snippets for Atom.",
+  "main": "lib/main",
   "keywords": [
     "tree-sitter",
     "language",
@@ -9,22 +10,14 @@
     "grammar",
     "snippets"
   ],
-  "license": "MIT",
-  "homepage": "https://github.com/Azganoth/language-lua-plus#readme",
-  "bugs": {
-    "url": "https://github.com/Azganoth/language-lua-plus/issues"
-  },
   "repository": "https://github.com/Azganoth/language-lua-plus",
-  "author": "Ademir Ferreira <ademir.ferreira.zorah@gmail.com> (https://github.com/Azganoth)",
-  "main": "./lib/main",
+  "author": "Ademir J. Ferreira Junior <ademirj.ferreirajunior@gmail.com> (https://github.com/Azganoth)",
+  "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
     "tree-sitter-lua": "1.6.0"
-  },
-  "devDependencies": {
-    "eslint": "^6.2.2"
   },
   "providedServices": {
     "autocomplete.provider": {
