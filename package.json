@@ -17,7 +17,7 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
-    "tree-sitter-lua": "1.6.0"
+    "tree-sitter-lua": "1.6.1"
   },
   "providedServices": {
     "autocomplete.provider": {
